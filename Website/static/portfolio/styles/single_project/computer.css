@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('http://fonts.cdnfonts.com/css/agency-fb');
+:root {
+	--accentColor: #0081af;
+}
+
+@media screen and (min-width: 1000px){
+	section#entry {
+			background-attachment: fixed;
+			background-size: cover;
+			width: 100%;
+			height: 80vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+	}
+
+	#entry > div {
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.75);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+	}
+
+	#entry > div > h2 {
+			color: #fff;
+			font-family: 'Agency FB';
+			font-size: 5em;
+			font-weight: 100;
+	}
+
+	section#content {
+		width: 100%;
+		height: 150vh;
+		background-color: #111;
+		justify-content: start;
+		align-items: start;
+		text-align: start;
+	}
+	
+	section#content > p {
+		tab-size: 4;
+		color: white;
+		font-weight: 100;
+		font-family: 'Quicksand';
+		font-size: 1.25em;
+	}
+
+	div.content-snippet-cover {
+		width: 100%;
+		height: 60%;
+		background-attachment: fixed;
+		background-size: cover;
+		margin-bottom: 2em;
+	}
+
+}

@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('http://fonts.cdnfonts.com/css/agency-fb');
+:root {
+	--accentColor:  #0081af;
+  font-family: 'Agency FB', 'Quicksand';
+}
+
+
+@media screen and (min-width: 1000px){
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	a {
+		text-decoration: none;
+		outline: none;
+	}
+
+	header {
+		background-color: transparent;
+		padding: 0 10%;
+		width: 100%;
+		height: 15vh;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		position: fixed;
+		z-index: 999;
+		transition: 500ms ease;
+	}
+
+	#header_title {
+		color: #fff;
+		font-size: 3em;
+		font-weight: 900;
+		font-family: 'Agency FB';
+		letter-spacing: 2px;
+	}
+
+	a.active_tab {
+		color: var(--accentColor);
+    font-weight: 500;
+	}
+
+	header nav a {
+		color: #888;
+		font-weight: 100;
+		font-family: 'Quicksand';
+		font-size: 1.25em;
+		margin: 0 6px;
+		transition: 500ms ease;
+	}
+	
+	header nav a:hover {
+		color: #fff;
+	}
+
+	div.black_color_layer {
+		background-color: rgba(0, 0, 0, 0.75);
+		display: flex;
+		width: 100%;
+		height: 100%;
+	}
+
+	.main_button {
+		background-color: #111;
+		display: flex;
+		width: 192px;
+		height: 64px;
+		border: #111 1.5px solid;
+		justify-content: center;
+		align-items: center;
+		border-radius: 12px;
+		color: #fff;
+		transition: 500ms ease;
+    font-size: 1.5em;
+	}
+
+	.main_button:hover {
+		border: #fff 1.5px solid;
+		background-color: transparent;
+		
+	}
+
+	.shadow_button {
+		display: flex;
+		width: 96px;
+		height: 64px;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+    font-size: 1.5em;
+	}
+
+	.main_button_white {
+		width: 70%;
+		height: 100%;
+		display: inline-block;
+		justify-content: center;
+		align-items: center;
+		margin: 8px 12px;
+		border: #fff;
+		border-radius: 12px;
+		font-size: 1.5em;
+		color: #fff;
+		font-family: 'Agency FB';
+		font-weight: 100;
+
+	}
+
+	.column_content {
+		height: 100%;
+		width: 30%;
+		justify-content: space-between;
+		align-items: start;
+		flex-direction: column;
+		display: flex;
+		margin: 0 10%;
+		padding: 10% 0;
+	}
+
+	.column_content > h3 {
+		font-size: 3.5em;
+		font-weight: 500;
+		color: #fff;
+		font-family: 'Agency FB';
+		letter-spacing: 2px;
+
+	}
+
+	.column_content > p {
+		font-family: 'Quicksand';
+		font-size: 1em;
+		color: rgba(255, 255, 255, 0.75);
+		font-weight: 100;
+		text-align: start;
+	}
+
+	.column_content > a {
+		font-family: 'Quicksand';
+	}
+
+	.vector {
+		width: 50%;
+		height: 100%;
+		object-fit: contain;
+		display: flex;
+		background-repeat: no-repeat;
+	}
+
+	footer {
+			display: flex;
+			width: 100%;
+			height: 80vh;
+			background-color: black;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 10%;
+	}
+
+	.footer_column {
+			width: 25%;
+			height: 100%;
+			flex-direction: column;
+			justify-content: center;
+			align-items: start;
+			padding: 10% 0;
+	}
+
+	#footer_logo {
+			width: 128px;
+			height: 128px;
+			background-image: url('./images/logo-white-128.png');
+			background-size: contain;
+			display: flex;
+	}
+
+	.footer_column > h3 {
+			font-family: 'Agency FB';
+			color: white;
+			font-weight: 900;
+			font-size: 2.5em;
+			margin: 12px 0;
+			letter-spacing: 4px;
+	}
+
+	.footer_column > p {
+			font-size: 1em;
+			font-weight: 100;
+			font-family: 'Quicksand';
+			margin: 6px;
+			color: rgba(255, 255, 255, 0.5);
+			padding-right: 12px;
+	}
+
+	a.social_media_icon {
+			width: 64px;
+			height: 64px;
+			display: flex;
+			background-size: contain;
+			background-repeat: no-repeat;
+			margin: 0 12px;
+	}
+
+	a#facebook {
+			background-image: url(./icons/facebook.png);
+	}
+
+	a#linkedin {
+			background-image: url(./icons/linkedin.png);
+	}
+
+	a#instagram {
+			background-image: url(./icons/instagram.png);
+	}
+
+	#tabs {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+	}
+
+	.footer_tab {
+		color: #888;
+		font-weight: 100;
+		font-family: 'Quicksand';
+		font-size: 1.25em;
+		margin: 12px;
+		transition: 500ms ease;
+	}
+	
+	.footer_tab:hover {
+		color: #fff;
+	}
+
+
+
+}

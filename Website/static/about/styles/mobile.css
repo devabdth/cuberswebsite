@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('http://fonts.cdnfonts.com/css/agency-fb');
+:root {
+	--accentColor: #0081af;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 999px){
+	section#entry {
+			background-image: url(./images/entry.jpg);
+			background-attachment: fixed;
+			background-size: cover;
+			width: 100%;
+			height: 50vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+	}
+
+	#entry > div {
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.75);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+	}
+
+	#entry > div > h2 {
+			color: #fff;
+			font-family: 'Agency FB';
+			font-size: 4em;
+			font-weight: 100;
+	}
+
+	#entry > div > h2 > span {
+			color: var(--accentColor);
+			font-family: 'Agency FB';
+			font-weight: 900;
+			letter-spacing: 4px;
+	}
+
+	section#short_brief {
+		width: 100%;
+		height: 130vh;
+		display: flex;
+		background-image: url(./images/terms.webp);
+		background-attachment: fixed;
+		background-size: cover;
+		flex-direction: column-reverse;
+		background-color: #111;
+	}
+
+
+	#short_brief_vector {
+			background-image: url(./vectors/inquiries.png);
+			background-size: contain;
+	}
+
+	section#vision {
+		background-color: rgba(0, 0, 0, 0.9);
+		width: 100%;
+		height: 300vh;
+		display: flex;
+		flex-direction: column;
+	}
+
+	section#vision > h2 {
+		color: #fff;
+		font-size: 2em;
+		text-align: center;
+		margin-top: 10%;
+		font-weight: 900;
+		font-family: 'Agency FB';
+	}
+
+	div.vision-part {
+		display: flex;
+		height: 100vh;
+		width: 100%;
+		padding: 0 10%;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
+	}
+	
+
+	#vision_pt_one {
+		content: url(./images/brainstorming.png);
+	}
+
+	#vision_pt_two {
+		content: url(./images/expert.png);
+	}
+	
+	#vision_pt_three {
+		content: url(./images/maintainance.png);
+	}
+
+}
