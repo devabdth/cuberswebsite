@@ -1,0 +1,12 @@
+{
+  "0": {
+    "id": 0,
+    "name": "The First Course on Cubers Academy",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor ex vel congue rutrum. Mauris iaculis blandit sodales. Nunc euismod venenatis risus. Nullam dolor dolor, laoreet vitae facilisis sit amet, pharetra porttitor eros. Aliquam purus ante, condimentum id ex id, ullamcorper pharetra nibh. Integer suscipit et sem ac blandit. Morbi dignissim, ipsum eu maximus aliquam, sem neque tincidunt erat, tristique sagittis justo turpis vestibulum tortor. Cras vel lectus ipsum. Donec efficitur faucibus ipsum, at dapibus erat. Phasellus odio odio, lacinia non nibh vitae, venenatis efficitur turpis. Duis sit amet convallis erat.",
+    "instructorId": 0,
+    "lectures": 12,
+    "cost": "1200",
+    "starts_in": "Sep 1, 2022",
+    "space": 0
+  }
+}

@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title>Application</title>
+		<link rel="stylesheet" href="{{url_for('static', filename='./styles/forms/computer.css')}}"/>
+		<link rel="stylesheet" href="{{url_for('static', filename='./styles/forms/smallDevices.css')}}"/>
+		<script src="{{url_for('static', filename='./scripts/forms/main.js')}}"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="This is description"/>
+	</head>
+
+	<body>
+		<div id="header" style='background-image: url("../../courses/images/{{course_id}}/")'>
+			<div class="black-color-layer">
+				<h1>{{course["name"]}}</h1>
+			</div>
+		</div>
+
+		<div id="form">
+			<h3 class="form-section-title">Course Information</h3>
+      <div id="course-bg" style='background-image: url("../../courses/images/{{course_id}}/");'></div>
+      <p id="course-bio">{{course["bio"]}}</p> 
+      <p class="property" href="/"><span>Instructor: </span>{{instructor["name"]}}</p>
+      <p class="property" ><span>Price: </span>{{course["cost"]}}<span style="font-size: 16px;"> L.E.</span></p>
+	  <div class="section-divider"></div>
+	  <h3 class="form-section-title">Venue of the event</h3>
+      <div id="location-container">
+		<div style="flex: 8; display: flex; flex-direction: column; align-items: start; justify-content: space-between;">
+			<p class="property" id="space-name">{{space["name"]}}</p>
+			<p class="property"><span class="property-title">Space Address: </span>{{space["name"]}}</p>
+			<p class="property"><span class="property-title">Space Governorate: </span>{{space["name"]}}</p>
+			<p class="property"><span class="property-title">Space Phone Number: </span>{{space["name"]}}</p>
+		</div>
+	  <a id="space-image" href="{{space['href']}}" target="_blank">
+	  	<div id="course-bg" style='background-image: url("../../spaces/images/{{course_id}}/"); height: 30vh;'></div>
+	 </a>
+	 </div>
+      <div class="section-divider"></div>
+			<h3 class="form-section-title">Personal Information</h3>
+			<input id="name" class="single-line-field" placeholder="Name" type="name"></input>
+      <p class="field-attached-paragraph">*Entering wrong data may cancel your reservation, So, Please! Make sure the data you enter is valid!</p>
+			<input id="email" class="single-line-field" placeholder="E-mail" type="email"></input>
+      <p class="field-attached-paragraph">*Entering wrong data may cancel your reservation, So, Please! Make sure the data you enter is valid!</p>
+	  <div style="display: flex; align-items:center; justify-content: center; width: 100%;">
+		  <p class="property"><span class="property-title">+20</span></p>
+		  <input id="phone" style="flex: 10;" class="single-line-field" placeholder="Phone" type="tel" pattern="^(00201|\+201|01)[0-2,5]{1}[0-9]{8}$"</input>
+		</div>
+      <p class="field-attached-paragraph">*Entering wrong data may cancel your reservation, So, Please! Make sure the data you enter is valid!</p>
+      <input id="birth" class="single-line-field" style="letter-spacing: 4px;" placeholder="Date of Birth" type="date" value="2001-07-25"
+       min="2021-12-31" max="2022-01-01"></input>
+      <p class="field-attached-paragraph">*Our Courses & Training Tracks is only available for 17~27 Years old applicants!</p>
+			<input id="address" class="single-line-field" placeholder="Address" type="address"></input>
+      <div style="display: flex; width: 100%; align-items: center; justify-content: space-between;">
+  			<input id="state" class="single-line-field" placeholder="State" style="flex: 1;" type="address"></input>
+  			<input id="govern" class="single-line-field" placeholder="Governorate" style="flex: 1;" type="address"></input>
+      </div>
+
+		<button onclick="validation()" id="confirmation">Submit</button>
+		</div>
+	<footer>
+		
+	</footer>
+	</body>
+</html>
