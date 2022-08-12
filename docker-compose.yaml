@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  academy:
+    build: ./Academy
+    restart: always
+    ports: 
+      - 4000:4000
+    env_file:
+      - .docker.env
+
+
+  website:
+    build: ./Website
+    restart: always
+    ports: 
+      - 8000:8000
+    env_file: .docker.env
+
