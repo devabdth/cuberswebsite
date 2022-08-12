@@ -10,6 +10,6 @@ COPY . /srv/academy_app
 WORKDIR /srv/academy_app
 RUN pip3 install --upgrade pip
 RUN pip3 install -r requirments.txt --src /usr/local/src
-RUN pip3 intall uwsgi
+RUN pip3 install uwsgi
 
 CMD service nginx start && uwsgi --ini uwsgi.ini
