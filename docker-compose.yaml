@@ -11,8 +11,6 @@ services:
     networks:
       app-tier:
         ipv4_address: 172.55.1.201
-    volumes:
-      - 'log_volume:/home/node/log'
     extra_hosts:
       - 'dockerhost:172.55.1.1'
   website:
@@ -25,7 +23,5 @@ services:
     networks:
       app-tier:
         ipv4_address: 172.55.1.201
-    volumes:
-      - 'log_volume:/home/node/log'
     extra_hosts:
       - 'dockerhost:172.55.1.1'
