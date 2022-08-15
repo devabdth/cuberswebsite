@@ -9,4 +9,4 @@ class DatabaseHelper:
         self.courses: CoursesHelper = CoursesHelper()
         self.instructors: InstructorsHelper = InstructorsHelper()
         self.spaces: SpacesHelper = SpacesHelper()
-        self.froms: FormsHelper = FormsHelper()
+        self.forms: FormsHelper = FormsHelper()

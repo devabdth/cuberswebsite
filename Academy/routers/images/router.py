@@ -10,6 +10,7 @@ class ImagesRouter:
     def assign_routers(self):
         self.send_course_image_router()
         self.send_space_image_router()
+        self.send_instructor_image_router()
 
     def send_course_image_router(self):
         @self.app.route("/courses/{}/<course_id>/".format(self.prefix), methods=["GET"])
@@ -20,3 +21,8 @@ class ImagesRouter:
         @self.app.route("/spaces/{}/<course_id>/".format(self.prefix), methods=["GET"])
         def send_space_image(course_id):
             return send_file("./images/spaces/{}.jpg".format(course_id))
+
+    def send_instructor_image_router(self):
+        @self.app.route("/instructors/{}/<instructor_id>/".format(self.prefix), methods=["GET"])
+        def send_instructor_image(instructor_id):
+            return send_file("./images/instructors/{}.jpg".format(instructor_id))

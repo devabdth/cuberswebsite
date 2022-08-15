@@ -1,0 +1,262 @@
+@media screen and (min-width: 1000px) {
+#entry {
+  width: 100%;
+  height: 80vh;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.black-color-layer {
+  backdrop-filter: blur(12px) grayscale(100%);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  padding: 0 10%;
+}
+
+#instructor-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20%;
+  height: 50vh;
+  background-color: white;
+  border-radius: 12px;
+  border: 4px white solid;
+  display: flex;
+}
+
+#instructor-data {
+  display: flex;
+  margin-left: 5%;
+  width: 60%;
+  height: 40vh;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+#instructor-name {
+  color: white;
+  font-family: "Agency FB";
+  font-size: 4em;
+  font-weight: 500;
+}
+
+#instructor-bio {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Quicksand";
+  font-size: 1.25;
+  font-weight: 100;
+  margin: 12px 0;
+  text-align: start;
+}
+
+#instructor-cats {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Quicksand";
+  font-size: 1.25;
+  font-weight: 100;
+  text-align: start;
+}
+
+#rank {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Quicksand";
+  font-size: 1.25;
+  font-weight: 100;
+  margin: 12px 0;
+  text-align: start;
+}
+
+#rank > span {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Quicksand";
+  font-size: 2em;
+  font-weight: 100;
+  margin: 12px 0;
+  text-align: start;
+}
+
+#navigate-to-courses {
+  color: white;
+  font-family: "Quicksand";
+  font-size: 1.5em;
+  padding: 8px 16px;
+  background-color: #4e8ece;
+  border-radius: 12px;
+}
+
+#courses {
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  padding: 5% 10%;
+  display: flex;
+  background-color: #111;
+}
+
+#section-header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#section-title {
+  font-family: "Quicksand";
+  font-weight: 300;
+  font-size: 3em;
+  color: white;
+}
+
+#courses-cards {
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  margin-top: 5%;
+}
+
+.course-card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 50vh;
+  height: 100%;
+  margin: 24px 32px;
+  transition: 500ms ease;
+}
+
+.course-card:hover{
+  transform: scale(1.1);
+}
+
+.course-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  border-radius: 0 0 12px 12px;
+  background: linear-gradient(0deg, #111 0%, rgba(0, 0, 0, 0) 100%);
+  backdrop-filter: blur(1.5px);
+  padding: 12px 8px;
+}
+
+.course-card-content > h3 {
+  color: white;
+  font-family: "Agency FB";
+  font-weight: 200;
+  font-size: 1.5em;
+}
+
+.course-card-content > p {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Quicksand";
+  font-size: 1em;
+  font-weight: 100;
+  margin-bottom: 8px;
+}
+
+.course-card-content > p > span {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Quicksand";
+  font-size: 0.75em;
+  font-weight: 100;
+}
+
+#applicable-title {
+  font-family: "Quicksand";
+  font-size: 1em;
+  font-weight: 100;
+  color: greenyellow;
+}
+
+#coming-soon-title {
+  font-family: "Quicksand";
+  font-size: 1em;
+  font-weight: 100;
+  color: red;
+}
+
+.course-card-status {
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 8px;
+  display: flex;
+}
+
+#nav-to-course{
+  color: white;
+  font-family: "Quicksand";
+  font-size: 1em;
+  font-weight: 100;
+  padding: 8px 16px;
+  background-color: #4e8ece;
+  border-radius: 12px;
+  border: 2px #4e8ece solid;
+  transition: 500ms ease;
+}
+
+#nav-to-course:hover{
+  background-color: transparent;
+  
+}
+
+#contact {
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  padding: 5% 10%;
+  display: flex;
+  background-color: #111;
+}
+
+.single-line-field {
+    height: 64px;
+    border: 1px rgba(255, 255, 255, 0.75) solid;
+    border-radius: 12px;
+    background-color: transparent;
+    color: white;
+    font-family: "Quicksand";
+    font-size: 18px;
+    font-weight: "100";
+    padding: 12px 8px;
+    margin: 2.5vh 12px;
+}
+.field-attached-paragraph {
+    color: rgba(255, 255, 255, 0.25);
+    font-weight: 100;
+    font-size: 0.75em;
+    margin-bottom: 24px;
+    margin-left: 24px;
+    font-family: "Quicksand";
+}
+
+.multiline-field {
+    height: 128px;
+    border: 1px rgba(255, 255, 255, 0.75) solid;
+    border-radius: 12px;
+    background-color: transparent;
+    color: white;
+    font-family: "Quicksand";
+    font-size: 18px;
+    font-weight: "100";
+    padding: 12px 8px;
+    margin: 2.5vh 12px;
+}
+}

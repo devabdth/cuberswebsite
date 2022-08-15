@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{instructor["name"]}}</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='./styles/instructors/computer.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='./styles/instructors/smallDevices.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='./styles/global/computer.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='./styles/global/smallDevices.css')}}"
+    />
+    <script src="{{url_for('static', filename='./scripts/instructors/main.js')}}"></script>
+    <script src="{{url_for('static', filename='./scripts/global/header.js')}}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{url_for('static', filename='./styles/global/images/logo-accent.ico')}}"
+    />
+    <meta name="description" content="This is description" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="http://fonts.cdnfonts.com/css/agency-fb" rel="stylesheet" />
+  </head>
+  <body>
+    <header id="header">
+      <a href="/" id="header_title">CUBERS ACADEMY</a>
+      <nav>
+        <a href="/home">Home</a>
+        <a href="/about">About</a>
+        <a href="/courses">Courses</a>
+        <a href="/instructors">Instructors</a>
+        <a href="/instructos/form" id="join">Join Us</a>
+      </nav>
+    </header>
+
+    <div
+      id="entry"
+      style="background-image: url('../instructors/images/{{instructor_id}}')"
+    >
+      <div class="black-color-layer">
+        <div
+          id="instructor-image"
+          style="background-image: url('../instructors/images/{{instructor_id}}')"
+        ></div>
+        <div id="instructor-data">
+          <h2 id="instructor-name">{{instructor["name"]}}</h2>
+          <p id="instructor-bio">{{instructor["bio"]}}</p>
+          <h4 id="instructor-cats">
+            {% for cat in instructor["cats"] %} {% if cat ==
+            instructor["cats"][-1]%}
+            <span>{{cat}}</span>
+            {% else %}
+            <span>{{cat}} | </span>
+            {% endif %} {% endfor %}
+          </h4>
+          <p id="rank">
+            Rate:
+            <span> {{total_rate}} </span>
+            / 5.0
+          </p>
+          <a id="navigate-to-courses" href="#courses" >
+            Coueses >
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="courses">
+      <div id="section-header">
+        <h4 id="section-title">Courses</h4>
+		<a id="navigate-to-courses" href="/courses/?instructor={{instructor['name'].lower()}}">See more!</a>
+      </div>
+      <div id="courses-cards">
+        {% for course in courses %}
+        <div
+          class="course-card"
+          style="background-image: url('../../courses/images/{{course["id"]}}');"
+        >
+        <div class="course-card-content">
+          <p>{{course["cat"]}} | {{course["rate"]}} <span> / 5.0</span></p>
+          <h3>{{course["name"]}}</h3>
+          <p>{{course["bio"][0:100]}}...</p>
+          <div class="course-card-status">  
+            {% if course["active"] %}
+            <p id="applicable-title">Applicable</p>
+            {% else %}
+            <p id="coming-soon-title">Coming soon...</p>
+            {% endif %}
+            <a id="nav-to-course" href="/courses/{{course['id']}}/forms">Learn More ></a>
+          </div>
+        </div>
+      </div>
+        {% endfor %}
+      </div>
+    </div>
+	<div id="contact">
+		<div id="section-header">
+			<h4 id="section-title">Contact</h4>
+		</div>
+		<input id="name" class="single-line-field" placeholder="Name" type="name"></input>
+      <p class="field-attached-paragraph">*Entering wrong data may cancel your reservation, So, Please! Make sure the data you enter is valid!</p>
+			<input id="email" class="single-line-field" placeholder="E-mail" type="email"></input>
+      <p class="field-attached-paragraph">*Entering wrong data may cancel your reservation, So, Please! Make sure the data you enter is valid!</p>
+		<textarea style="resize: none;" id="msg" class="multiline-field" placeholder="Message" rows="4" type="text"></textarea>
+      <div style="justify-content: end;" id="section-header">
+		<button class="footer_tab" style="background-color: transparent; border: none;" onclick="clear()">Clear</button>
+        <button id="navigate-to-courses" onclick="messageSubmit()">Send</button>
+      </div>
+
+	</div>
+
+    <footer>
+      <div class="footer_column">
+        <div id="footer_logo"></div>
+        <h3><span style="letter-spacing: 8px">CUBERS</span><br />Academy</h3>
+        <p>{{meta_info['address']}}<br /></p>
+        <p>{{meta_info['phone']}}</p>
+        <p>{{meta_info['email']}}</p>
+        <div
+          style="
+            justify-content: space-between;
+            width: 70%;
+            margin-top: 10%;
+            height: 64px;
+            flex-direction: row;
+            display: flex;
+            align-items: center;
+          "
+        >
+          <a
+            class="social_media_icon"
+            href="{{meta_info['facebook']}}"
+            id="facebook"
+          ></a>
+          <a
+            class="social_media_icon"
+            href="{{meta_info['linkedin']}}"
+            id="linkedin"
+          ></a>
+          <a
+            class="social_media_icon"
+            href="{{meta_info['instagram']}}"
+            id="instagram"
+          ></a>
+        </div>
+      </div>
+      <div id="tabs" class="footer_column">
+        <a class="footer_tab" href="/">Home<br /></a>
+        <a class="footer_tab" href="/about">About<br /></a>
+        <a class="footer_tab" href="/instructors">Instructors<br /></a>
+        <a class="footer_tab" href="/courses">Courses<br /></a>
+      </div>
+      <div class="footer_column"></div>
+    </footer>
+  </body>
+</html>

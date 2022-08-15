@@ -26,6 +26,16 @@ class CoursesHelper:
             data = json.load(file)
             self.spaces_data: dict = dict(data)
 
+    def get_all_courses(self):
+        courses_ = []
+        for course in list(self.courses_data.values()):
+            course["instructor"] = self.instructors_data["{}".format(
+                course["instructorId"])]["name"]
+            course["space_name"] = self.spaces_data["{}".format(
+                course["space"])]["name"]
+            courses_.append(course)
+        return self.courses_data.values()
+
     def get_course_by_id(self, id: int) -> dict:
         data: dict = {}
         data["course"] = self.courses_data["{}".format(id)]
@@ -34,3 +44,12 @@ class CoursesHelper:
         data["space"] = self.spaces_data["{}".format(
             data["course"]["space"])]
         return data
+
+    def get_courses_by_instructor_id(self, instructor_id: int) -> list:
+        courses: list = []
+        for course in self.courses_data.values():
+            if course["instructorId"] == instructor_id:
+                course["rate"] = sum(course["rates"]) / len(course["rates"])
+                courses.append(course)
+
+        return courses

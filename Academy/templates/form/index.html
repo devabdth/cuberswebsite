@@ -1,15 +1,35 @@
 <html>
 	<head>
-		<title>Application</title>
+		<title>{{course["name"]}}</title>
 		<link rel="stylesheet" href="{{url_for('static', filename='./styles/forms/computer.css')}}"/>
 		<link rel="stylesheet" href="{{url_for('static', filename='./styles/forms/smallDevices.css')}}"/>
+		<link rel="stylesheet" href="{{url_for('static', filename='./styles/global/computer.css')}}"/>
+		<link rel="stylesheet" href="{{url_for('static', filename='./styles/global/smallDevices.css')}}"/>
 		<script src="{{url_for('static', filename='./scripts/forms/main.js')}}"></script>
+		<script src="{{url_for('static', filename='./scripts/global/header.js')}}"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="{{url_for('static', filename='./styles/global/images/logo-accent.ico')}}">
 		<meta name="description" content="This is description"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<link href="http://fonts.cdnfonts.com/css/agency-fb" rel="stylesheet">
+	  
 	</head>
 
 	<body>
-		<div id="header" style='background-image: url("../../courses/images/{{course_id}}/")'>
+		<header id="header">
+			<a href="/" id="header_title">CUBERS ACADEMY</a>
+			<nav>
+				<a href="/home" >Home</a>
+				<a href="/about">About</a>
+				<a href="/courses">Courses</a>
+				<a href="/instructors">Instructors</a>
+				<a  href="/instructos/form" id="join">Join Us</a>
+			</nav>
+		</header>
+	
+		<div id="entry" style='background-image: url("../../../courses/images/{{course_id}}/")'>
 			<div class="black-color-layer">
 				<h1>{{course["name"]}}</h1>
 			</div>
@@ -17,21 +37,22 @@
 
 		<div id="form">
 			<h3 class="form-section-title">Course Information</h3>
-      <div id="course-bg" style='background-image: url("../../courses/images/{{course_id}}/");'></div>
+      <div id="course-bg" style='background-image: url("../../../courses/images/{{course_id}}/");'></div>
       <p id="course-bio">{{course["bio"]}}</p> 
-      <p class="property" href="/"><span>Instructor: </span>{{instructor["name"]}}</p>
+      <a href="/instructor/{{course['instructorId']}}" target="_blank" class="property" href="/"><span>Instructor: </span>{{instructor["name"]}}</a>
       <p class="property" ><span>Price: </span>{{course["cost"]}}<span style="font-size: 16px;"> L.E.</span></p>
+      <p class="property" ><span>Lectures: </span>{{course["lectures"]}}<span style="font-size: 16px;"> Lecture/s</span></p>
 	  <div class="section-divider"></div>
 	  <h3 class="form-section-title">Venue of the event</h3>
       <div id="location-container">
 		<div style="flex: 8; display: flex; flex-direction: column; align-items: start; justify-content: space-between;">
 			<p class="property" id="space-name">{{space["name"]}}</p>
-			<p class="property"><span class="property-title">Space Address: </span>{{space["name"]}}</p>
-			<p class="property"><span class="property-title">Space Governorate: </span>{{space["name"]}}</p>
-			<p class="property"><span class="property-title">Space Phone Number: </span>{{space["name"]}}</p>
+			<p class="property"><span class="property-title">Space Address: </span>{{space["address"]}}</p>
+			<p class="property"><span class="property-title">Space Governorate: </span>{{space["govern"]}}</p>
+			<p class="property"><span class="property-title">Space Phone Number: </span>{{space["phone"]}}</p>
 		</div>
 	  <a id="space-image" href="{{space['href']}}" target="_blank">
-	  	<div id="course-bg" style='background-image: url("../../spaces/images/{{course_id}}/"); height: 30vh;'></div>
+	  	<div id="course-bg" style='background-image: url("../../../spaces/images/{{space_id}}/"); height: 30vh;'></div>
 	 </a>
 	 </div>
       <div class="section-divider"></div>
@@ -56,8 +77,34 @@
 
 		<button onclick="validation()" id="confirmation">Submit</button>
 		</div>
-	<footer>
-		
+
+		<footer>
+			<div class="footer_column">
+					<div id="footer_logo"></div>
+					<h3><span style="letter-spacing: 8px;">CUBERS</span><br>Academy</h3>
+          <p>{{meta_info['address']}}<br></p>
+          <p>{{meta_info['phone']}}</p>
+          <p>{{meta_info['email']}}</p>
+					<div style="justify-content: space-between; width: 70%; margin-top: 10%; height: 64px; flex-direction: row; display: flex; align-items: center;">
+              <a class="social_media_icon" href="{{meta_info['facebook']}}" id="facebook"></a>
+              <a class="social_media_icon" href="{{meta_info['linkedin']}}" id="linkedin"></a>
+              <a class="social_media_icon" href="{{meta_info['instagram']}}" id="instagram"></a>
+					</div>
+			</div>
+			<div id="tabs" class="footer_column">
+					<a  class="footer_tab" href="/">Home<br></a>
+					<a  class="footer_tab" href="/about">About<br></a>
+					<a  class="footer_tab" href="/instructors">Instructors<br></a>
+					<a  class="footer_tab" href="/courses">Courses<br></a>
+
+			</div>
+			<div class="footer_column"></div>
 	</footer>
+		<div id="toast">
+			<p id="toast-text">This is a Toast</p>
+		</div>
+
+
+	
 	</body>
 </html>
