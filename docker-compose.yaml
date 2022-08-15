@@ -2,18 +2,30 @@ version: '3'
 
 services:
   academy:
-    build: ./Academy
+    build: Academy
     restart: always
-    ports: 
-      - 4000:4000
     env_file:
       - .docker.env
-
-
+    ports:
+      - '4000:4000'
+    networks:
+      app-tier:
+        ipv4_address: 172.55.1.201
+    volumes:
+      - 'log_volume:/home/node/log'
+    extra_hosts:
+      - 'dockerhost:172.55.1.1'
   website:
-    build: ./Website
+    build: Website
     restart: always
-    ports: 
-      - 8000:8000
-    env_file: .docker.env
-
+    env_file:
+      - .docker.env
+    ports:
+      - '8000:8000'
+    networks:
+      app-tier:
+        ipv4_address: 172.55.1.201
+    volumes:
+      - 'log_volume:/home/node/log'
+    extra_hosts:
+      - 'dockerhost:172.55.1.1'
