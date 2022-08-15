@@ -8,9 +8,6 @@ services:
       - .docker.env
     ports:
       - '4000:4000'
-    networks:
-      app-tier:
-        ipv4_address: 172.55.1.201
     extra_hosts:
       - 'dockerhost:172.55.1.1'
   website:
@@ -20,8 +17,5 @@ services:
       - .docker.env
     ports:
       - '8000:8000'
-    networks:
-      app-tier:
-        ipv4_address: 172.55.1.201
     extra_hosts:
       - 'dockerhost:172.55.1.1'
