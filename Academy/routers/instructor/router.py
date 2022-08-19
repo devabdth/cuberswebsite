@@ -4,11 +4,20 @@ import json
 
 
 class InstructorRouter:
-    def __init__(self, app: Flask, config, database_helper, contact_info: dict = {}):
+    def __init__(self, app: Flask, config):
         self.app = app
         self.prefix = "instructor"
-        self.database_helper = database_helper
-        self.contact_info = contact_info
+        self.contact_info: dict = {
+            'facebook': config.facebook, 
+            'instagram': config.instagram,
+            'linkedin': config.linkedin,
+            'email': config.email,
+            'phone': config.phone,
+            'address': config.address,
+        }       
+        self.database_helper = config.database_helper
+        self.emailing_model = config.emailing
+        self.header_desc = config.header_desc
 
     def assign_routers(self):
         self.assign_instructor()
@@ -42,5 +51,6 @@ class InstructorRouter:
                 courses=courses,
                 total_rate=sum(data["instructor"]["rates"]) /
                 len(list(data["instructor"]["rates"])),
-                images_url="http://127.0.0.1:3000/images"
+                images_url="http://127.0.0.1:3000/images",
+                header_desc = self.header_desc
             )

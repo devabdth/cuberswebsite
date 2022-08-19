@@ -16,6 +16,11 @@ class InstructorsHelper:
             data = json.load(file)
             self.instructors_data: dict = dict(data)
 
+    def get_all_instructors(self):
+        return list(self.instructors_data.values())
+
+
+
     def get_instructor_by_id(self, id: int) -> dict:
         data: dict = {}
         data["instructor"] = self.instructors_data["{}".format(id)]

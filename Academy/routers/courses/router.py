@@ -1,13 +1,21 @@
 from flask import Flask, render_template, request
-import pandas as pd
 
 
 class CoursesRouter:
-    def __init__(self, app: Flask, config, database_helper, contact_info: dict = {}):
+    def __init__(self, app: Flask, config):
         self.app = app
         self.prefix = "courses"
-        self.database_helper = database_helper
-        self.contact_info = contact_info
+        self.contact_info: dict = {
+            'facebook': config.facebook, 
+            'instagram': config.instagram,
+            'linkedin': config.linkedin,
+            'email': config.email,
+            'phone': config.phone,
+            'address': config.address,
+        }       
+        self.emailing_model = config.emailing
+        self.database_helper = config.database_helper
+        self.header_desc= config.header_desc
 
     def assign_routers(self):
         self.assign_all_courses()
@@ -25,7 +33,7 @@ class CoursesRouter:
     def assign_all_courses(self):
 
         @self.app.route("/{}/".format(self.prefix), methods=["GET"])
-        def course():
+        def courses():
             self.database_helper.courses.load()
             params = dict(request.values)
 
@@ -39,14 +47,11 @@ class CoursesRouter:
             else:
                 instructor_token = ""
 
-
             courses = list(self.database_helper.courses.get_all_courses())
-            courses = [courses[0] for _ in range(0, 31)]
             courses = self.search(
                 course=course_token,
                 instructor=instructor_token,
             )
-            print(courses)
 
             def calculate_rate(rates: list):
                 if len(rates) == 0:
@@ -60,6 +65,7 @@ class CoursesRouter:
                 instructor=instructor_token,
                 courses=courses,
                 calculate_rate=calculate_rate,
-                images_url="http://127.0.0.1:3000/images"
+                images_url="http://127.0.0.1:3000/images", 
+                header_desc= self.header_desc
 
             )

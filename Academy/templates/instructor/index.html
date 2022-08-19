@@ -4,11 +4,11 @@
     <title>{{instructor["name"]}}</title>
     <link
       rel="stylesheet"
-      href="{{url_for('static', filename='./styles/instructors/computer.css')}}"
+      href="{{url_for('static', filename='./styles/instructor/computer.css')}}"
     />
     <link
       rel="stylesheet"
-      href="{{url_for('static', filename='./styles/instructors/smallDevices.css')}}"
+      href="{{url_for('static', filename='./styles/instructor/smallDevices.css')}}"
     />
     <link
       rel="stylesheet"
@@ -26,14 +26,14 @@
       type="image/x-icon"
       href="{{url_for('static', filename='./styles/global/images/logo-accent.ico')}}"
     />
-    <meta name="description" content="This is description" />
+    <meta name="description" content="{{header_desc}}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link href="http://fonts.cdnfonts.com/css/agency-fb" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/agency-fb" rel="stylesheet" />
   </head>
   <body>
     <header id="header">
@@ -106,22 +106,6 @@
         {% endfor %}
       </div>
     </div>
-	<div id="contact">
-		<div id="section-header">
-			<h4 id="section-title">Contact</h4>
-		</div>
-		<input id="name" class="single-line-field" placeholder="Name" type="name"></input>
-      <p class="field-attached-paragraph">*Entering wrong data may cancel your reservation, So, Please! Make sure the data you enter is valid!</p>
-			<input id="email" class="single-line-field" placeholder="E-mail" type="email"></input>
-      <p class="field-attached-paragraph">*Entering wrong data may cancel your reservation, So, Please! Make sure the data you enter is valid!</p>
-		<textarea style="resize: none;" id="msg" class="multiline-field" placeholder="Message" rows="4" type="text"></textarea>
-      <div style="justify-content: end;" id="section-header">
-		<button class="footer_tab" style="background-color: transparent; border: none;" onclick="clear()">Clear</button>
-        <button id="navigate-to-courses" onclick="messageSubmit()">Send</button>
-      </div>
-
-	</div>
-
     <footer>
       <div class="footer_column">
         <div id="footer_logo"></div>

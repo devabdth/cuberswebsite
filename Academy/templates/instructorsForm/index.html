@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>Join us</title>
+		<link rel="stylesheet" href="{{url_for('static', filename='./styles/instructorsForm/computer.css')}}"/>
+		<link rel="stylesheet" href="{{url_for('static', filename='./styles/instructorsForm/smallDevices.css')}}"/>
+		<link rel="stylesheet" href="{{url_for('static', filename='./styles/global/computer.css')}}"/>
+		<link rel="stylesheet" href="{{url_for('static', filename='./styles/global/smallDevices.css')}}"/>
+		<script src="{{url_for('static', filename='./scripts/home/main.js')}}"></script>
+		<script src="{{url_for('static', filename='./scripts/global/header.js')}}"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="{{url_for('static', filename='./styles/global/images/logo-accent.ico')}}">
+		<meta name="description" content="{{header_desc}}"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/agency-fb" rel="stylesheet">
+	  
+	</head>
+
+	<body>
+		<header id="header">
+			<a href="/" id="header_title">CUBERS ACADEMY</a>
+			<nav>
+				<a href="/home">Home</a>
+				<a href="/about">About</a>
+				<a href="/courses">Courses</a>
+				<a href="/instructors">Instructors</a>
+			</nav>
+		</header>
+
+		<footer>
+			<div class="footer_column">
+					<div id="footer_logo"></div>
+					<h3><span style="letter-spacing: 8px;">CUBERS</span><br>Academy</h3>
+          <p>{{meta_info['address']}}<br></p>
+          <p>{{meta_info['phone']}}</p>
+          <p>{{meta_info['email']}}</p>
+					<div style="justify-content: space-between; width: 70%; margin-top: 10%; height: 64px; flex-direction: row; display: flex; align-items: center;">
+              <a class="social_media_icon" href="{{meta_info['facebook']}}" id="facebook"></a>
+              <a class="social_media_icon" href="{{meta_info['linkedin']}}" id="linkedin"></a>
+              <a class="social_media_icon" href="{{meta_info['instagram']}}" id="instagram"></a>
+					</div>
+			</div>
+			<div id="tabs" class="footer_column">
+					<a  class="footer_tab" href="/">Home<br></a>
+					<a  class="footer_tab" href="/about">About<br></a>
+					<a  class="footer_tab" href="/instructors">Instructors<br></a>
+					<a  class="footer_tab" href="/courses">Courses<br></a>
+
+			</div>
+			<div class="footer_column"></div>
+	</footer>
+		<div id="toast">
+			<p id="toast-text">This is a Toast</p>
+		</div>
+	</body>
+</html>

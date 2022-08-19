@@ -1,0 +1,105 @@
+@media screen and (min-width: 100px) and (max-width: 999px) {
+  #entry {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    background-image: url(./images/entry.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .black-color-layer {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15%;
+  }
+
+  .black-color-layer > h2 {
+    color: white;
+    font-family: "Agency FB";
+    font-size: 4em;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-align: center;
+  }
+
+  .black-color-layer > h2 > span {
+    font-family: "Quicksand";
+    font-weight: 100;
+    font-size: 0.25em;
+    text-align: center;
+    letter-spacing: 2 px;
+  }
+
+  #courses {
+    width: 100%;
+    min-height: 125vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #111;
+    padding: 5vh 5%;
+  }
+
+  #courses-grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    row-gap: 10vh;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 10vh 0;
+  }
+
+  .section-header {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: "Quicksand";
+    font-size: 1em;
+    font-weight: 100;
+  }
+
+  .search-field {
+    flex: 2;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px white solid;
+    font-weight: 100;
+    font-size: 0.75em;
+    font-family: "Quicksand";
+    padding: 8px 12px;
+    margin: 0 8px;
+    color: white;
+    border-radius: 12px;
+  }
+
+  #fields {
+    margin-top: 2.5vh;
+  }
+
+  #search-button {
+    color: white;
+    font-weight: 100;
+    font-family: "Quicksand";
+    font-size: 0.5em;
+    padding: 12px 16px;
+    border: 1px #4ea827 solid;
+    border-radius: 12px;
+    background-color: #4ea827;
+    transition: 500ms ease;
+  }
+
+  #search-button:hover {
+    background-color: transparent;
+  }
+
+}

@@ -1,40 +1,15 @@
-const messageSubmit = () => {
-	const nameField = document.getElementById("name");
-	const emailField = document.getElementById("email");
-	const msgField = document.getElementById("msg");
+const search = () => {
+	const instructorField = document.getElementById("instructor");
 
-
-	if (nameField.value.trim().length < 8) {
-		nameField.style.borderColor = "red";
+	if (instructorField.value.trim().length == 0) {
+		instructorField.style.borderColor = "red";
 		return;
 	}
-	nameField.style.borderColor = "white";
 
-	const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-	if (!(String(emailField.value.trim()).toLowerCase().match(re))) {
-		emailField.style.borderColor = "red";
-		return;
-	}
-	emailField.style.borderColor = "white";
+	instructorField.style.borderColor = "white";
 
-	if (msgField.value.trim().length < 20) {
-		msgField.style.borderColor = "red";
-		return;
-	}
-	msgField.style.borderColor = "white";
+	const instructorToken = `instructor=${instructorField.value}`
 
 
-
-}
-
-const clear = () => {
-	const nameField = document.getElementById("name");
-	const emailField = document.getElementById("email");
-	const msgField = document.getElementById("msg");
-
-	// TODO
-	nameField.value = "":
-	emailFeild.value = "";
-	msgField.value = "";
-
+	open(`./?${instructorToken}`)
 }

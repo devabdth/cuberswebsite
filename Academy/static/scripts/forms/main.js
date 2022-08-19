@@ -9,7 +9,7 @@ const validation = async () => {
 
 	if (nameField.value.trim().length < 8) {
 		nameField.style.borderColor = "red";
-		showToast({borderColor: "red", msg: "Please, Enter a valid Name!"});
+		showToast({ borderColor: "red", msg: "Please, Enter a valid Name!" });
 		return;
 	}
 	nameField.style.borderColor = "white";
@@ -17,7 +17,7 @@ const validation = async () => {
 	const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 	if (!(String(emailField.value.trim()).toLowerCase().match(re))) {
 		emailField.style.borderColor = "red";
-		showToast({borderColor: "red", msg: "Please, Enter a valid E-mail!"});
+		showToast({ borderColor: "red", msg: "Please, Enter a valid E-mail!" });
 		return;
 	}
 	emailField.style.borderColor = "white";
@@ -27,28 +27,28 @@ const validation = async () => {
 	const phoneReTwo = "^01[0-2,5]{1}[0-9]{7}$";
 	if (!(String(phoneField.value.trim()).toLowerCase().match(phoneRe))) {
 		phoneField.style.borderColor = "red";
-		showToast({borderColor: "red", msg: "Please, Enter a valid Phone Number!"});
+		showToast({ borderColor: "red", msg: "Please, Enter a valid Phone Number!" });
 		return;
 	}
 	phoneField.style.borderColor = "white";
 
 	if (addressField.value.trim().length < 8) {
 		addressField.style.borderColor = "red";
-		showToast({borderColor: "red", msg: "Please, Enter a valid Address!"});
+		showToast({ borderColor: "red", msg: "Please, Enter a valid Address!" });
 		return;
 	}
 	addressField.style.borderColor = "white";
 
 	if (stateField.value.trim().length === 0) {
 		stateField.style.borderColor = "red";
-		showToast({borderColor: "red", msg: "Please, Enter your state!"});
+		showToast({ borderColor: "red", msg: "Please, Enter your state!" });
 		return;
 	}
 	stateField.style.borderColor = "white";
 
 	if (governField.value.trim().length === 0) {
 		governField.style.borderColor = "red";
-		showToast({borderColor: "red", msg: "Please, Enter your governrate!"});
+		showToast({ borderColor: "red", msg: "Please, Enter your governrate!" });
 		return;
 	}
 	governField.style.borderColor = "white";
@@ -76,7 +76,7 @@ const validation = async () => {
 		const url = window.location.href;
 		let courseId = (url.split("/"))[4];
 		courseId = parseInt(courseId);
-		
+
 		const payload = {
 			name: nameField.value.trim(),
 			email: emailField.value.trim(),
@@ -89,16 +89,16 @@ const validation = async () => {
 			birth: birthField.value.trim(),
 			courseId: courseId,
 		}
-		showToast({borderColor: "white", msg: "Loading..."});
+		showToast({ borderColor: "white", msg: "Loading..." });
 		const res = await fetch("http://127.0.0.1:3000/forms/post/", {
 			method: "post",
 			body: JSON.stringify(payload),
 			headers: { "Content-Type": "application/json" },
 		}
 		);
-	
-		if (res.status === 201){
-			showToast({borderColor: "green", msg: "Your application submitted successfully!"});
+
+		if (res.status === 201) {
+			showToast({ borderColor: "#4ea827", msg: "✅ Your application submitted successfully!" });
 			nameField.value = "";
 			emailField.value = "";
 			phoneField.value = "";
@@ -107,10 +107,14 @@ const validation = async () => {
 			govern: governField.value = "";
 			return;
 		}
-		showToast({borderColor: "red", msg: "Failed to create your application!"})
+		if (res.status === 403) {
+			showToast({ borderColor: "red", msg: "❌ Application Duplicated!" });
+			return;
+		}
+		showToast({ borderColor: "red", msg: `❌ Failed to create your application!` })
 
 
-		
+
 	} catch (e) {
 		console.log(e);
 	}
@@ -124,9 +128,9 @@ const showToast = (props) => {
 
 	toastDiv.style.borderColor = props.borderColor;
 	toastText.innerHTML = props.msg;
-	toastDiv.style.display = "block";
+	toastDiv.style.display = "flex";
 
-	setInterval(()=> {
+	setTimeout(() => {
 		toastDiv.style.display = "none";
 	}, 5000)
 }

@@ -95,8 +95,7 @@
 
   #course-bg {
     background-image: url(https://media.istockphoto.com/videos/colored-smoke-on-a-dark-background-blue-and-red-light-with-smoke-video-id1341408852?b=1&k=20&m=1341408852&s=640x640&h=C6ymXpr_Jn6-WqQmHHuS8z6TGBtkWDQ9x6tFs_hsBjs=);
-    background-size: contain;
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     border-radius: 8px;
@@ -146,14 +145,15 @@
     justify-content: center;
     margin: 10vh 40%;
     border-radius: 12px;
-    background-color: #111;
+    background-color: #4ea827;
     border: 1px white solid;
     transition: 500ms ease;
+    border: 1px #4ea827 solid;
   }
-
+  
   #confirmation:hover {
-    background-color: #4e8ece;
-    border: 1px #4e8ece solid;
+    color: #4ea827;
+    background-color: transparent;
   }
 
   footer {

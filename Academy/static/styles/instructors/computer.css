@@ -1,262 +1,178 @@
 @media screen and (min-width: 1000px) {
-#entry {
-  width: 100%;
-  height: 80vh;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.black-color-layer {
-  backdrop-filter: blur(12px) grayscale(100%);
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-  padding: 0 10%;
-}
+  #entry {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    background-image: url(./images/entry.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 
-#instructor-image {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 20%;
-  height: 50vh;
-  background-color: white;
-  border-radius: 12px;
-  border: 4px white solid;
-  display: flex;
-}
+  .black-color-layer {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-#instructor-data {
-  display: flex;
-  margin-left: 5%;
-  width: 60%;
-  height: 40vh;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-}
+  .black-color-layer > h2 {
+    color: white;
+    font-family: "Agency FB";
+    font-size: 12em;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-align: center;
+  }
 
-#instructor-name {
-  color: white;
-  font-family: "Agency FB";
-  font-size: 4em;
-  font-weight: 500;
-}
+  .black-color-layer > h2 > span {
+    font-family: "Quicksand";
+    font-weight: 100;
+    font-size: 0.15em;
+    letter-spacing: 2 px;
+  }
 
-#instructor-bio {
-  color: rgba(255, 255, 255, 0.75);
-  font-family: "Quicksand";
-  font-size: 1.25;
-  font-weight: 100;
-  margin: 12px 0;
-  text-align: start;
-}
+  #instructors {
+    width: 100%;
+    min-height: 125vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #111;
+    padding: 10vh 10%;
+  }
 
-#instructor-cats {
-  color: rgba(255, 255, 255, 0.5);
-  font-family: "Quicksand";
-  font-size: 1.25;
-  font-weight: 100;
-  text-align: start;
-}
+  #instructors-grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    row-gap: 10vh;
+	column-gap: 5%;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10vh 0;
+  }
 
-#rank {
-  color: rgba(255, 255, 255, 0.5);
-  font-family: "Quicksand";
-  font-size: 1.25;
-  font-weight: 100;
-  margin: 12px 0;
-  text-align: start;
-}
-
-#rank > span {
-  color: rgba(255, 255, 255, 0.75);
-  font-family: "Quicksand";
-  font-size: 2em;
-  font-weight: 100;
-  margin: 12px 0;
-  text-align: start;
-}
-
-#navigate-to-courses {
-  color: white;
-  font-family: "Quicksand";
-  font-size: 1.5em;
-  padding: 8px 16px;
-  background-color: #4e8ece;
-  border-radius: 12px;
-}
-
-#courses {
-  height: 100vh;
-  width: 100%;
-  flex-direction: column;
-  padding: 5% 10%;
-  display: flex;
-  background-color: #111;
-}
-
-#section-header {
-  width: 100%;
-  height: 10vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-#section-title {
-  font-family: "Quicksand";
-  font-weight: 300;
-  font-size: 3em;
-  color: white;
-}
-
-#courses-cards {
-  width: 100%;
-  height: 100%;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  display: flex;
-  margin-top: 5%;
-}
-
-.course-card {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  border-radius: 12px;
-  width: 100%;
-  max-width: 50vh;
-  height: 100%;
-  margin: 24px 32px;
-  transition: 500ms ease;
-}
-
-.course-card:hover{
-  transform: scale(1.1);
-}
-
-.course-card-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40%;
-  border-radius: 0 0 12px 12px;
-  background: linear-gradient(0deg, #111 0%, rgba(0, 0, 0, 0) 100%);
-  backdrop-filter: blur(1.5px);
-  padding: 12px 8px;
-}
-
-.course-card-content > h3 {
-  color: white;
-  font-family: "Agency FB";
-  font-weight: 200;
-  font-size: 1.5em;
-}
-
-.course-card-content > p {
-  color: rgba(255, 255, 255, 0.75);
-  font-family: "Quicksand";
-  font-size: 1em;
-  font-weight: 100;
-  margin-bottom: 8px;
-}
-
-.course-card-content > p > span {
-  color: rgba(255, 255, 255, 0.75);
-  font-family: "Quicksand";
-  font-size: 0.75em;
-  font-weight: 100;
-}
-
-#applicable-title {
-  font-family: "Quicksand";
-  font-size: 1em;
-  font-weight: 100;
-  color: greenyellow;
-}
-
-#coming-soon-title {
-  font-family: "Quicksand";
-  font-size: 1em;
-  font-weight: 100;
-  color: red;
-}
-
-.course-card-status {
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 8px;
-  display: flex;
-}
-
-#nav-to-course{
-  color: white;
-  font-family: "Quicksand";
-  font-size: 1em;
-  font-weight: 100;
-  padding: 8px 16px;
-  background-color: #4e8ece;
-  border-radius: 12px;
-  border: 2px #4e8ece solid;
-  transition: 500ms ease;
-}
-
-#nav-to-course:hover{
-  background-color: transparent;
-  
-}
-
-#contact {
-  height: 100vh;
-  width: 100%;
-  flex-direction: column;
-  padding: 5% 10%;
-  display: flex;
-  background-color: #111;
-}
-
-.single-line-field {
-    height: 64px;
-    border: 1px rgba(255, 255, 255, 0.75) solid;
-    border-radius: 12px;
-    background-color: transparent;
+  .section-header {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: white;
     font-family: "Quicksand";
-    font-size: 18px;
-    font-weight: "100";
-    padding: 12px 8px;
-    margin: 2.5vh 12px;
-}
-.field-attached-paragraph {
-    color: rgba(255, 255, 255, 0.25);
+    font-size: 2em;
+    font-weight: 100;
+  }
+
+  #fields {
+    padding: 0 12px;
+    margin-top: 5vh;
+  }
+
+  .search-field {
+    flex: 2;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px white solid;
     font-weight: 100;
     font-size: 0.75em;
-    margin-bottom: 24px;
-    margin-left: 24px;
     font-family: "Quicksand";
-}
-
-.multiline-field {
-    height: 128px;
-    border: 1px rgba(255, 255, 255, 0.75) solid;
-    border-radius: 12px;
-    background-color: transparent;
+    padding: 8px 12px;
+    margin: 0 12px;
     color: white;
+    border-radius: 12px;
+  }
+
+  #search-button {
+    color: white;
+    font-weight: 100;
     font-family: "Quicksand";
-    font-size: 18px;
-    font-weight: "100";
-    padding: 12px 8px;
-    margin: 2.5vh 12px;
-}
+    font-size: 0.5em;
+    padding: 12px 16px;
+    border: 1px #4ea827 solid;
+    border-radius: 12px;
+    background-color: #4ea827;
+    transition: 500ms ease;
+  }
+
+  #search-button:hover {
+    background-color: transparent;
+  }
+
+  .instructor-card {
+    width: 100%;
+    height: 100%;
+	min-width: 30%;
+	min-height: 60vh;
+    margin: 16px 32px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 12px;
+    transition: 500ms ease;
+  }
+
+  .instructor-card:hover {
+    transform: scale(1.1);
+  }
+
+  #filter {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    border-radius: 12px;
+  }
+
+  .instructor-card-content {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(17, 17, 17, 0.9) 25%,
+      rgba(0, 212, 255, 0) 100%
+    );
+    padding: 8px 16px;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    flex-direction: column;
+    transition: 500ms ease;
+  }
+
+  .instructor-card-content > h3 {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 100;
+    font-family: "Agency FB";
+  }
+
+  .instructor-card-content > p {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 100;
+    font-size: 0.75em;
+    font-family: "Quicksand";
+  }
+
+  .instructor-card-content > h4 {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 100;
+    font-size: 0.75em;
+    font-family: "Quicksand";
+  }
+
+  .instructor-card-content > div {
+    width: 100%;
+    height: 10vh;
+    justify-content: end;
+    align-items: end;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+  }
 }
