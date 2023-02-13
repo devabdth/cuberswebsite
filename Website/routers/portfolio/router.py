@@ -19,7 +19,7 @@ def portfolio_routes(app: Flask, config):
     @ app.route('/gallery/<id>/')
     def single_project_index(id: str):
         config.database_helper.projects.load()
-        return render_template('portfolio/single_project/index.html', header_desc=config.header_desc, project=config.database_helper.projects.get_project_by_id(id), meta_info=config.meta_info, url="http://127.0.0.1:4000")
+        return render_template('portfolio/single_project/index.html', header_desc=config.header_desc, project=config.database_helper.projects.get_project_by_id(id), meta_info=config.meta_info, url="https://cubersio.com")
 
     @ app.route('/projects/covers/<id>/')
     def project_cover(id: str):
