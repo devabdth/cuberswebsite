@@ -20,6 +20,7 @@
     />
     <script src="{{url_for('static', filename='./scripts/instructors/main.js')}}"></script>
     <script src="{{url_for('static', filename='./scripts/global/header.js')}}"></script>
+    <script src="{{url_for('static', filename='./scripts/global/drawer.js')}}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="icon"
@@ -43,8 +44,7 @@
         <a href="/about">About</a>
         <a href="/courses">Courses</a>
         <a href="/instructors">Instructors</a>
-        <a href="/instructos/form" id="join">Join Us</a>
-      </nav>
+      <button id="drawer-icon" onclick="openDrawer();">≡</button>
     </header>
 
     <div
@@ -75,6 +75,50 @@
           <a id="navigate-to-courses" href="#courses" >
             Coueses >
           </a>
+          <div style="display: flex; flex-direction: row; margin-top: 1.5vh;">
+            {% if instructor["facebook"] != "" %}
+            <a
+            class="social_media_icon-small" target="_blank"
+            href="{{instructor['facebook']}}"
+            id="facebook"
+            ></a>
+            {% endif %}
+            {% if instructor["linkedin"] != "" %}
+            <a
+            class="social_media_icon-small" target="_blank"
+            href="{{instructor['linkedin']}}"
+            id="linkedin"
+            ></a>
+            {% endif %}
+            {% if instructor["instagram"] != "" %}
+            <a
+            class="social_media_icon-small" target="_blank"
+            href="{{instructor['instagram']}}"
+            id="instagram"
+            ></a>
+            {% endif %}
+            {% if instructor["vimeo"] != "" %}
+            <a
+            class="social_media_icon-small" target="_blank"
+            href="{{instructor['vimeo']}}"
+            id="vimeo"
+            ></a>
+            {% endif %}
+            {% if instructor["tiktok"] != "" %}
+            <a
+            class="social_media_icon-small" target="_blank"
+            href="{{instructor['tiktok']}}"
+            id="tiktok"
+            ></a>
+            {% endif %}
+            {% if instructor["pinterest"] != "" %}
+            <a
+            class="social_media_icon-small" target="_blank"
+            href="{{instructor['pinterest']}}"
+            id="pinterest"
+            ></a>
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>
@@ -149,5 +193,46 @@
       </div>
       <div class="footer_column"></div>
     </footer>
+    
+    <div id="drawer-overlay" onclick="closeDrawer()"></div>
+    <div id="drawer">
+      <div id="drawer-header">
+        <button id="drawer-icon" onclick="closeDrawer();">x</button>
+      </div>
+      <div id="footer_logo"></div>
+      <nav>
+        <a href="/home">Home</a>
+        <a href="/about">About</a>
+        <a href="/courses">Courses</a>
+        <a href="/instructors">Instructors</a>
+      </nav>
+      <div
+        style="
+          justify-content: space-between;
+          width: 70%;
+          margin-top: 10%;
+          height: 64px;
+          flex-direction: row;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <a
+          class="social_media_icon"
+          href="{{meta_info['facebook']}}"
+          id="facebook"
+        ></a>
+        <a
+          class="social_media_icon"
+          href="{{meta_info['linkedin']}}"
+          id="linkedin"
+        ></a>
+        <a
+          class="social_media_icon"
+          href="{{meta_info['instagram']}}"
+          id="instagram"
+        ></a>
+      </div>
+    </div>
   </body>
 </html>

@@ -60,6 +60,11 @@
     margin: 1.5vh 12px;
   }
 
+  .single-line-field:focus {
+    outline: none !important;
+    border: 1px #4ea827 solid;
+  }
+
   .form-section-title {
     margin: 12px 0;
     color: white;
@@ -74,6 +79,7 @@
     font-family: "Quicksand";
     font-size: 0.75em;
     margin: 12px;
+    white-space: pre-wrap;
   }
 
   .property {
@@ -97,13 +103,12 @@
 
   #course-bg {
     background-image: url(https://media.istockphoto.com/videos/colored-smoke-on-a-dark-background-blue-and-red-light-with-smoke-video-id1341408852?b=1&k=20&m=1341408852&s=640x640&h=C6ymXpr_Jn6-WqQmHHuS8z6TGBtkWDQ9x6tFs_hsBjs=);
-    background-size: cover;
-    background-repeat: none;
-    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
     border-radius: 8px;
     width: 92%;
-    height: 40vh;
+	height: 30vh;
     margin: 0 12px;
   }
 

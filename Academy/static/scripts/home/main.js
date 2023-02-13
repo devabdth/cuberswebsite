@@ -34,19 +34,18 @@ const getNotified = async () => {
     try {
         showToast({ borderColor: "white", msg: "Loading..." });
         const payload = {
-            name: nameField.value.toLowerCase().trim(),
+            name: nameField.value.trim(),
             email: emailField.value.toLowerCase().trim(),
         }
 
         const res = await fetch(
-            "http://127.0.0.1:3000/subscriptions/",
+            "https://academy.cubersio.com/subscriptions/",
             {
                 method: "post",
                 body: JSON.stringify(payload),
                 headers: { "Content-Type": "application/json" },
             }
         );
-        return;
 
         if (res.status === 201) {
             nameField.value = "";

@@ -20,10 +20,10 @@ class OperationsRouter:
             data = dict(json.loads(request.data))
             try:
                 emails = []
-                for dict_ in self.database_helper.subscriptions.subscriptions_data.values():
+                for dict_ in list(self.database_helper.subscriptions.subscriptions_data["data"]):
                     emails.append(dict_["email"])
 
-                if not data["email"] in emails:
+                if data["email"] not in emails:
                     self.database_helper.subscriptions.subscriptions_data["data"].append(
                         data)
                     self.database_helper.subscriptions.save()

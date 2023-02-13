@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="{{url_for('static', filename='./styles/global/smallDevices.css')}}"/>
 		<script src="{{url_for('static', filename='./scripts/forms/main.js')}}"></script>
 		<script src="{{url_for('static', filename='./scripts/global/header.js')}}"></script>
+    	<script src="{{url_for('static', filename='./scripts/global/drawer.js')}}"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/x-icon" href="{{url_for('static', filename='./styles/global/images/logo-accent.ico')}}">
 		<meta name="description" content="{{header_desc}}"/>
@@ -25,9 +26,9 @@
 				<a href="/about">About</a>
 				<a href="/courses">Courses</a>
 				<a href="/instructors">Instructors</a>
-				<a  href="/instructos/form" id="join">Join Us</a>
 			</nav>
-		</header>
+      <button id="drawer-icon" onclick="openDrawer();">≡</button>
+	</header>
 	
 		<div id="entry" style='background-image: url("../../../courses/images/{{course_id}}/")'>
 			<div class="black-color-layer">
@@ -42,20 +43,7 @@
       <a href="/instructor/{{course['instructorId']}}" target="_blank" class="property" href="/"><span>Instructor: </span>{{instructor["name"]}}</a>
       <p class="property" ><span>Price: </span>{{course["cost"]}}<span style="font-size: 16px;"> L.E.</span></p>
       <p class="property" ><span>Lectures: </span>{{course["lectures"]}}<span style="font-size: 16px;"> Lecture/s</span></p>
-	  <div class="section-divider"></div>
-	  <h3 class="form-section-title">Venue of the event</h3>
-      <div id="location-container">
-		<div style="flex: 8; display: flex; flex-direction: column; align-items: start; justify-content: space-between;">
-			<p class="property" id="space-name">{{space["name"]}}</p>
-			<p class="property"><span class="property-title">Space Address: </span>{{space["address"]}}</p>
-			<p class="property"><span class="property-title">Space Governorate: </span>{{space["govern"]}}</p>
-			<p class="property"><span class="property-title">Space Phone Number: </span>{{space["phone"]}}</p>
-		</div>
-	  <a id="space-image" href="{{space['href']}}" target="_blank">
-	  	<div id="course-bg" style='background-image: url("../../../spaces/images/{{space_id}}/"); height: 30vh;'></div>
-	 </a>
-	 </div>
-      <div class="section-divider"></div>
+  <div class="section-divider"></div>
 			<h3 class="form-section-title">Personal Information</h3>
 			<input id="name" class="single-line-field" placeholder="Name" type="name"></input>
       <p class="field-attached-paragraph">*Entering wrong data may cancel your reservation, So, Please! Make sure the data you enter is valid!</p>
@@ -66,15 +54,7 @@
 		  <input id="phone" style="flex: 10;" class="single-line-field" placeholder="Phone" type="tel" pattern="^(00201|\+201|01)[0-2,5]{1}[0-9]{8}$"</input>
 		</div>
       <p class="field-attached-paragraph">*Entering wrong data may cancel your reservation, So, Please! Make sure the data you enter is valid!</p>
-      <input id="birth" class="single-line-field" style="letter-spacing: 4px;" placeholder="Date of Birth" type="date" value="2001-07-25"
-       min="2021-12-31" max="2022-01-01"></input>
-      <p class="field-attached-paragraph">*Our Courses & Training Tracks is only available for 17~27 Years old applicants!</p>
 			<input id="address" class="single-line-field" placeholder="Address" type="address"></input>
-      <div style="display: flex; width: 100%; align-items: center; justify-content: space-between;">
-  			<input id="state" class="single-line-field" placeholder="State" style="flex: 1;" type="address"></input>
-  			<input id="govern" class="single-line-field" placeholder="Governorate" style="flex: 1;" type="address"></input>
-      </div>
-
 		<button onclick="validation()" id="confirmation">Submit</button>
 		</div>
 
@@ -100,6 +80,48 @@
 			</div>
 			<div class="footer_column"></div>
 	</footer>
+
+	
+    <div id="drawer-overlay" onclick="closeDrawer()"></div>
+    <div id="drawer">
+      <div id="drawer-header">
+        <button id="drawer-icon" onclick="closeDrawer();">x</button>
+      </div>
+      <div id="footer_logo"></div>
+      <nav>
+        <a href="/home">Home</a>
+        <a href="/about">About</a>
+        <a href="/courses">Courses</a>
+        <a href="/instructors">Instructors</a>
+      </nav>
+      <div
+        style="
+          justify-content: space-between;
+          width: 70%;
+          margin-top: 10%;
+          height: 64px;
+          flex-direction: row;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <a
+          class="social_media_icon"
+          href="{{meta_info['facebook']}}"
+          id="facebook"
+        ></a>
+        <a
+          class="social_media_icon"
+          href="{{meta_info['linkedin']}}"
+          id="linkedin"
+        ></a>
+        <a
+          class="social_media_icon"
+          href="{{meta_info['instagram']}}"
+          id="instagram"
+        ></a>
+      </div>
+    </div>
 		<div id="toast">
 			<p id="toast-text">This is a Toast</p>
 		</div>

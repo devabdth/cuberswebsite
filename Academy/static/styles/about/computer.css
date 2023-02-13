@@ -1,0 +1,123 @@
+@media screen and (min-width: 1000px) {
+  section {
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    display: flex;
+    flex-direction: row;
+    padding: 5vh 5%;
+  }
+
+  #entry {
+    height: 80vh;
+    background-image: url(./images/entry.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 0;
+  }
+
+  .black-color-layer {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h2 {
+    color: white;
+    font-weight: 900;
+    font-family: "Agency FB";
+    font-size: 12em;
+  }
+
+  h2 > span {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.2em;
+    font-weight: 100;
+    font-family: "Quicksand";
+    letter-spacing: 8px;
+  }
+
+  #story,
+  #vision {
+    height: 70vh;
+  }
+
+  .content-column {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .content-column > h3 {
+    color: white;
+    font-size: 2.5em;
+    font-weight: 500;
+    font-family: "Agency FB";
+    margin: 12px 0;
+  }
+
+  .section-paragraph {
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: 100;
+    font-family: "Quicksand";
+    font-size: 0.85em;
+  }
+
+  .section-image {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 5%;
+  }
+
+  #vision-image {
+    background-image: url(./images/visionAndMission.webp);
+  }
+  #story-image {
+    background-image: url(./images/story.webp);
+  }
+
+  #join-us {
+    width: 100%;
+    height: 25vh;
+    background-color: rgb(78, 168, 39);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #join-us > .section-paragraph {
+    color: white;
+    font-weight: 500;
+    font-size: 1em;
+  }
+
+  .main-button {
+    padding: 8px 16px;
+    margin: 12px 8px;
+    color: white;
+    font-family: "Quicksand";
+    font-weight: 100;
+    background-color: transparent;
+    font-size: 1em;
+    border-radius: 12px;
+    border: 1px white solid;
+    transition: 500ms ease;
+  }
+
+  .main-button:hover {
+    background-color: white;
+    color: #e6c229;
+  }
+}

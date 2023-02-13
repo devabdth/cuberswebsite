@@ -1,127 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-@import url('http://fonts.cdnfonts.com/css/agency-fb');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("http://fonts.cdnfonts.com/css/agency-fb");
 :root {
-	--accentColor: #0081af;
+  --accentColor: #0081af;
 }
 
-@media screen and (min-width: 1000px){
-	section#entry {
-			background-image: url(./images/entry.jpg);
-			background-attachment: fixed;
-			background-size: cover;
-			width: 100%;
-			height: 80vh;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-	}
+@media screen and (min-width: 1000px) {
+  section#entry {
+    background-image: url(./images/entry.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-	#entry > div {
-			width: 100%;
-			height: 100%;
-			background-color: rgba(0, 0, 0, 0.75);
-			display: flex;
-			justify-content: center;
-			align-items: center;
-	}
+  #entry > div {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-	#entry > div > h2 {
-			color: #fff;
-			font-family: 'Agency FB';
-			font-size: 5em;
-			font-weight: 100;
-	}
+  #entry > div > h2 {
+    color: #fff;
+    font-family: "Agency FB";
+    font-size: 5em;
+    font-weight: 100;
+  }
 
-	#entry > div > h2 > span {
-			color: var(--accentColor);
-			font-family: 'Agency FB';
-			font-weight: 900;
-			letter-spacing: 4px;
-	}
+  #entry > div > h2 > span {
+    color: var(--accentColor);
+    font-family: "Agency FB";
+    font-weight: 900;
+    letter-spacing: 4px;
+  }
 
-	section#short_brief {
-			background-color: #111;
-			width: 100%;
-			height: 100vh;
-			display: flex;
-			padding: 10%;
-			justify-content: space-between;
-			align-items: center;
-			flex-direction: row;
-	}
+  section#short_brief {
+    background-color: #111;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding: 10%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
 
-	.column_content {
-			justify-content: center;
-			align-items: start;
-			margin: 0;
-			flex-direction: column;
-			width: 40%;
-			height: 100%;
-	}
+  .column_content {
+    justify-content: center;
+    align-items: start;
+    margin: 0;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+  }
 
-	.column_content > h3 {
-			font-size: 4em;
-			font-weight: 500;
-			font-family: 'Agency FB';
-			color: var(--accentColor);
-	}
+  .column_content > h3 {
+    font-size: 4em;
+    font-weight: 500;
+    font-family: "Agency FB";
+    color: var(--accentColor);
+  }
 
-	.column_content > p {
-			font-size: 0.85em;
-			font-weight: 100;
-			font-family: 'Quicksand';
-			color: rgba(255, 255, 255, 0.5);
-	}
+  .column_content > p {
+    font-size: 0.85em;
+    font-weight: 100;
+    font-family: "Quicksand";
+    color: rgba(255, 255, 255, 0.5);
+  }
 
-	#short_brief_vector {
-			background-image: url(./vectors/inquiries.png);
-			background-size: contain;
-	}
+  #short_brief_vector {
+    background-image: url(./vectors/inquiries.png);
+    background-size: contain;
+  }
 
-	section#vision {
-		background-color: rgba(0, 0, 0, 0.9);
-		width: 100%;
-		height: 300vh;
-		display: flex;
-		flex-direction: column;
-	}
+  section#vision {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 300vh;
+    display: flex;
+    flex-direction: column;
+  }
 
-	section#vision > h2 {
-		color: #fff;
-		font-size: 3em;
-		text-align: center;
-		margin-top: 10%;
-		font-weight: 900;
-		font-family: 'Agency FB';
-	}
+  section#vision > h2 {
+    color: #fff;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 10%;
+    font-weight: 900;
+    font-family: "Agency FB";
+  }
 
-	div.vision-part {
-		display: flex;
-		height: 100vh;
-		width: 100%;
-		padding: 0 10%;
-		align-items: center;
-		justify-content: space-between;
-		flex-direction: row;
-	}
-	
-	.vision-part > .column_content > h3 {
-		color: #fff;
-		font-size: 3em;
-		font-weight: 500;
-		font-family: 'Agency FB';
-	}
+  div.vision-part {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    padding: 0 10%;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
 
-	#vision_pt_one {
-		content: url(./images/brainstorming.png);
-	}
+  .vision-part > .column_content > h3 {
+    color: #fff;
+    font-size: 3em;
+    font-weight: 500;
+    font-family: "Agency FB";
+  }
 
-	#vision_pt_two {
-		content: url(./images/expert.png);
-	}
-	
-	#vision_pt_three {
-		content: url(./images/maintainance.png);
-	}
+  #vision_pt_one {
+    content: url(./vectors/brainstorming.png);
+  }
 
+  #vision_pt_two {
+    content: url(./vectors/expert.png);
+  }
+
+  #vision_pt_three {
+    content: url(./vectors/maintainance.png);
+  }
 }

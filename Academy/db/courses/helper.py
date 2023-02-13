@@ -48,7 +48,7 @@ class CoursesHelper:
     def get_courses_by_instructor_id(self, instructor_id: int) -> list:
         courses: list = []
         for course in self.courses_data.values():
-            if course["instructorId"] == instructor_id:
+            if course["instructorId"] == str(instructor_id):
                 course["rate"] = sum(course["rates"]) / len(course["rates"])
                 courses.append(course)
 

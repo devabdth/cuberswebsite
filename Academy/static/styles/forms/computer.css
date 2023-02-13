@@ -28,7 +28,7 @@
 
   h1 {
     color: white;
-    font-family: "Quicksand";
+    font-family: "Raleway";
     font-size: 2em;
     font-weight: "500";
   }
@@ -51,7 +51,7 @@
     border-radius: 12px;
     background-color: transparent;
     color: white;
-    font-family: "Quicksand";
+    font-family: "Raleway";
     font-size: 18px;
     font-weight: "100";
     padding: 12px 8px;
@@ -69,9 +69,10 @@
   #course-bio {
     color: rgba(255, 255, 255, 0.75);
     font-weight: normal;
-    font-family: "Quicksand";
+    font-family: "Raleway";
     font-size: 1em;
     margin: 12px;
+    white-space: pre-wrap;
   }
 
   .property {
@@ -96,11 +97,11 @@
   #course-bg {
     background-image: url(https://media.istockphoto.com/videos/colored-smoke-on-a-dark-background-blue-and-red-light-with-smoke-video-id1341408852?b=1&k=20&m=1341408852&s=640x640&h=C6ymXpr_Jn6-WqQmHHuS8z6TGBtkWDQ9x6tFs_hsBjs=);
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: center;
+	background-size: contain;
     border-radius: 8px;
     width: 100%;
-    height: 80vh;
+    height: 60vh;
     margin: 12px;
   }
 
@@ -131,30 +132,25 @@
     font-size: 0.75em;
     margin-bottom: 24px;
     margin-left: 24px;
-    font-family: "Quicksand";
+    font-family: "Raleway";
   }
 
   #confirmation {
-    color: white;
+    color: #111;
     width: 25%;
     height: 10vh;
     font-size: 1.25em;
-    font-weight: 100;
-    font-family: "Quicksand";
+    font-weight: 300;
+    font-family: "Raleway";
     align-items: center;
     justify-content: center;
     margin: 10vh 40%;
     border-radius: 12px;
-    background-color: #4ea827;
-    border: 1px white solid;
+    background: linear-gradient(45deg, #e6c229 75%,  #f37933 100%);
     transition: 500ms ease;
-    border: 1px #4ea827 solid;
+    cursor: pointer;
   }
-  
-  #confirmation:hover {
-    color: #4ea827;
-    background-color: transparent;
-  }
+
 
   footer {
     width: 100%;

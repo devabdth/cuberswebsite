@@ -19,6 +19,7 @@ class FormsHelper:
             json.dump(self.forms_data, file)
 
     def get_all_forms(self):
+        self.load()
         forms_: list = []
         for form in list(self.forms_data.values()):
             forms_.append(form)
@@ -29,22 +30,23 @@ class FormsHelper:
         if len(self.get_all_forms()) == 0:
             return True
 
-        ids: list = []
-        emails: list = []
         for form in self.get_all_forms():
-            ids.append(form["courseId"])
-            emails.append(form["email"])
+            if form["courseId"] == course_id and form["email"] == email:
+                return False
 
-        return len(ids) == 0 and len(emails) == 0
+        return True
 
     def create_form(self, payload):
-        if not self.validate_unique_form(payload["email"], payload["courseId"]):
-            return None
-        if len(list(self.forms_data.keys())) == 0:
-            id: int = 0
-        else:
-            print(type(list(self.forms_data.keys())[-1]))
-            id: int = int(list(self.forms_data.keys())[-1]) + 1
+        try:
+            if not self.validate_unique_form(payload["email"], payload["courseId"]):
+                return None
+            if len(list(self.forms_data.keys())) == 0:
+                id: int = 0
+            else:
+                id: int = int(list(self.forms_data.keys())[-1]) + 1
+        except Exception as e:
+            print("Error: {}".format(e))
+
 
         self.forms_data["{}".format(id)] = dict(payload)
         self.save()

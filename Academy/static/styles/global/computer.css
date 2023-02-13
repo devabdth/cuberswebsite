@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.cdnfonts.com/css/agency-fb");
 :root {
-  --accentColor: #4ea827;
+  --accentColor: #e6c229;
   font-family: "Agency FB", "Quicksand";
 }
 
@@ -15,6 +15,10 @@
   a {
     text-decoration: none;
     outline: none;
+  }
+
+  #drawer-icon {
+    display: none;
   }
 
   header {
@@ -42,7 +46,7 @@
   a.active_tab:hover {
     color: var(--accentColor);
   }
-  
+
   a.active_tab {
     color: var(--accentColor);
     font-weight: 500;
@@ -86,8 +90,8 @@
   }
 
   #join:hover {
-    background-color: #4ea827;
-    border: 1px #4ea827 solid;
+    background: linear-gradient(45deg, #e6c229 75%,  #f37933 100%);
+    border: 1px #e6c229 solid;
   }
 
   .main_button {
@@ -229,6 +233,15 @@
     margin: 0 12px;
   }
 
+  a.social_media_icon-small {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 12px;
+  }
+
   a#facebook {
     background-image: url(./icons/facebook.png);
   }
@@ -239,6 +252,18 @@
 
   a#instagram {
     background-image: url(./icons/instagram.png);
+  }
+
+  a#vimeo {
+    background-image: url(./icons/vimeo.png);
+  }
+
+  a#pinterest {
+    background-image: url(./icons/pinterest.png);
+  }
+
+  a#tiktok {
+    background-image: url(./icons/tiktok.png);
   }
 
   #tabs {
@@ -259,7 +284,7 @@
   .footer_tab:hover {
     color: #fff;
   }
-  
+
   #toast {
     position: fixed;
     bottom: 12px;
@@ -267,7 +292,7 @@
     background-color: #111;
     box-shadow: 0 0 30px 1px #000;
     padding: 16px 32px;
-    border: 1px #4ea827 solid;
+    border: 1px #e6c229 solid;
     border-radius: 12px;
     display: none;
     flex-direction: row;
@@ -335,7 +360,7 @@
     font-family: "Quicksand";
     font-size: 1em;
     font-weight: 100;
-    color: #4ea827yellow;
+    color: #e6c229;
   }
 
   #coming-soon-title {
@@ -359,13 +384,17 @@
     font-size: 1em;
     font-weight: 100;
     padding: 8px 16px;
-    background-color: #4ea827;
+    background: linear-gradient(45deg, #e6c229 75%,  #f37933 100%);
     border-radius: 12px;
-    border: 2px #4ea827 solid;
+    border: 2px #e6c229 solid;
     transition: 500ms ease;
   }
 
   #nav-to-course:hover {
     background-color: transparent;
+  }
+
+  #drawer {
+    display: none;
   }
 }

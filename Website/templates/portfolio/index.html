@@ -1,77 +1,193 @@
 <!DOCTYPE html>
 <head>
-	<title>Cubers</title>
+  <title>Cubers</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale= 1.0"/>
-	<meta name="description" content="Lorem Ispum"/>
-	<link rel="stylesheet" href="{{url_for('static', filename='global/styles/computer.css')}}" />
-	<link rel="stylesheet" href="{{url_for('static', filename='global/styles/tablet.css')}}" />
-	<link rel="stylesheet" href="{{url_for('static', filename='global/styles/mobile.css')}}" />
-	<link rel="stylesheet" href="{{url_for('static', filename='portfolio/styles/computer.css')}}" />
-	<link rel="stylesheet" href="{{url_for('static', filename='portfolio/styles/tablet.css')}}" />
-	<link rel="stylesheet" href="{{url_for('static', filename='protfolio/styles/mobile.css')}}" />
-	<script src="{{url_for('static', filename='global/scripts/header.js')}}"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="http://fonts.cdnfonts.com/css/agency-fb" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="{{url_for('static', filename='global/styles/computer.css')}}"
+  />
+  <link
+    rel="stylesheet"
+    href="{{url_for('static', filename='global/styles/mobile.css')}}"
+  />
+  <link
+    rel="stylesheet"
+    href="{{url_for('static', filename='portfolio/styles/computer.css')}}"
+  />
+  <link
+    rel="stylesheet"
+    href="{{url_for('static', filename='portfolio/styles/mobile.css')}}"
+  />
+  <script src="{{url_for('static', filename='global/scripts/header.js')}}"></script>
+  <script src="{{url_for('static', filename='global/scripts/drawer.js')}}"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link href="http://fonts.cdnfonts.com/css/agency-fb" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale= 1.0" />
+  <meta name="description" content="{{header_desc}}" />
+  <meta name="keywords" content="{{keywords}}" />
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="{{url_for('static', filename='./global/styles/icons/logo-accent.ico')}}"
+  />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Cubers IO - We take business to the next level!",
+      "description": {{header_desc}},
+      "image": "https://www.cubersio.com",
+      "url": "https://www.cubersio.com",
+      "datePublished": "2022-8-23",
+      "dateCreated": "2022-8-23",
+      "dateModified": "2022-8-23",
+      "publisher": "Cubers IO",
+      "author": {
+        "@type": "Company",
+        "name": "Cubers IO"
+      }
+    }
+  </script>
 </head>
 
 <body>
-	<header id="header">
-		<a href="/" id="header_title">CUBERS</a>
-		<nav>
-			<!-- TODO: Links -->
-			<a href="/home">Home</a>
-			<a href="/about">About</a>
-			<a href="/services">Services</a>
-			<a href="/contact">Contact</a>
-			<a href="/terms">Terms</a>
-			<a class="active_tab" href="/portfolio">Portfolio</a>
-		</nav>
-	</header>
+  <header id="header">
+    <button onclick="openDrawer()">
+      <img
+        id="drawer-icon"
+        src="{{url_for('static', filename='./global/styles/icons/menu.svg')}}"
+        alt="Cubers Drawer Icon"
+      />
+    </button>
+    <a href="/" id="header_title">CUBERS</a>
+    <nav>
+      <a href="/home">Home</a>
+      <a href="/about">About</a>
+      <a href="/services">Services</a>
+      <a href="/contact">Contact</a>
+      <a href="/terms">Terms</a>
+      <a class="active_tab" href="/portfolio">Portfolio</a>
+    </nav>
+  </header>
 
-	<section id="entry">
-		<div>
-			<h2>Our Humble <span>Portfolio</span></h2>
-		</div>
-	</section>
+  <section id="entry">
+    <div>
+      <h2>Our Humble <span>Portfolio</span></h2>
+    </div>
+  </section>
 
   <section id="projects-cards">
     <div>
       {% for project in projects.keys() %}
-	  <a href="/project/{{project}}" class="project_card">
-				<div class="hall_of_honor_card_bg" style="background-image: url({{url}}/projects/covers/{{project}});"></div>
-			  	<div class="project_card_content">
-              <h4 class="project_card_title">{{projects[project]['title']}}<span> ({{projects[project]['type']}})</span></h4>
-              <p class="project_card_desc"><br>{{projects[project]['short_brief']}}</p>
-	  			</div>
-		  	</a>		
+      <a href="/project/{{project}}" class="project_card">
+        <div
+          class="hall_of_honor_card_bg"
+          style="background-image: url({{url}}/projects/covers/{{project}});"
+        ></div>
+        <div class="project_card_content">
+          <h4 class="project_card_title">
+            {{projects[project]['title']}}<span>
+              ({{projects[project]['type']}})</span
+            >
+          </h4>
+          <p class="project_card_desc">
+            <br />{{projects[project]['short_brief'][:100]}}...
+          </p>
+        </div>
+      </a>
       {% endfor %}
-
     </div>
   </section>
 
-	<footer>
-			<div class="footer_column">
-					<div id="footer_logo"></div>
-					<h3>cubers</h3>
-          <p>{{meta_info['address']}}<br></p>
-          <p>{{meta_info['phone']}}</p>
-					<div style="justify-content: space-between; width: 70%; margin-top: 10%; height: 64px; flex-direction: row; display: flex; align-items: center;">
-              <a class="social_media_icon" href="{{meta_info['facebook']}}" id="facebook"></a>
-              <a class="social_media_icon" href="{{meta_info['linkedin']}}" id="linkedin"></a>
-              <a class="social_media_icon" href="{{meta_info['instagram']}}" id="instagram"></a>
-					</div>
-			</div>
-			<div id="tabs" class="footer_column">
-					<a  class="footer_tab" href="/">home<br></a>
-					<a  class="footer_tab" href="/about">about<br></a>
-					<a  class="footer_tab" href="/services">services<br></a>
-					<a  class="footer_tab" href="/tecnologies">technologies<br></a>
-					<a  class="footer_tab" href="terms">terms<br></a>
+  <footer>
+    <div class="footer_column">
+      <div id="footer_logo"></div>
+      <h3>cubers</h3>
+      <p>{{meta_info['address']}}<br /></p>
+      <p>{{meta_info['phone']}}</p>
+      <div
+        style="
+          justify-content: space-between;
+          width: 70%;
+          margin-top: 10%;
+          height: 64px;
+          flex-direction: row;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <a
+          class="social_media_icon"
+          href="{{meta_info['facebook']}}"
+          id="facebook"
+        ></a>
+        <a
+          class="social_media_icon"
+          href="{{meta_info['linkedin']}}"
+          id="linkedin"
+        ></a>
+        <a
+          class="social_media_icon"
+          href="{{meta_info['instagram']}}"
+          id="instagram"
+        ></a>
+      </div>
+    </div>
+    <div id="tabs" class="footer_column">
+      <a class="footer_tab" href="/">home<br /></a>
+      <a class="footer_tab" href="/about">about<br /></a>
+      <a class="footer_tab" href="/services">services<br /></a>
+      <a class="footer_tab" href="/services">Services<br /></a>
+      <a class="footer_tab" href="terms">terms<br /></a>
+    </div>
+    <div class="footer_column"></div>
+  </footer>
 
-			</div>
-			<div class="footer_column"></div>
-	</footer>
+  <div id="drawer-overlay" onclick="closeDrawer()"></div>
+  <div id="drawer">
+    <div id="drawer-header">
+      <button id="drawer-icon" onclick="closeDrawer();">x</button>
+    </div>
+    <div id="footer_logo"></div>
+    <nav>
+      <a href="/home">Home</a>
+      <a href="/about">About</a>
+      <a href="/services">Services</a>
+      <a href="/contact">Contact</a>
+      <a href="/terms">Terms</a>
+      <a href="/portfolio" class="active_tab">Portfolio</a>
+    </nav>
+    <div
+      style="
+        justify-content: space-between;
+        width: 70%;
+        margin-top: 10%;
+        height: 64px;
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+      "
+    >
+      <a
+        class="social_media_icon"
+        href="{{meta_info['facebook']}}"
+        id="facebook"
+      ></a>
+      <a
+        class="social_media_icon"
+        href="{{meta_info['linkedin']}}"
+        id="linkedin"
+      ></a>
+      <a
+        class="social_media_icon"
+        href="{{meta_info['instagram']}}"
+        id="instagram"
+      ></a>
+    </div>
+  </div>
 </body>

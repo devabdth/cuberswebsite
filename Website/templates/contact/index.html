@@ -2,8 +2,6 @@
 <head>
 	<title>Cubers</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale= 1.0"/>
-	<meta name="description" content="Lorem Ispum"/>
 	<link rel="stylesheet" href="{{url_for('static', filename='contact/styles/computer.css')}}" />
 	<link rel="stylesheet" href="{{url_for('static', filename='contact/styles/tablet.css')}}" />
 	<link rel="stylesheet" href="{{url_for('static', filename='contact/styles/mobile.css')}}" />
@@ -11,16 +9,44 @@
 	<link rel="stylesheet" href="{{url_for('static', filename='global/styles/tablet.css')}}" />
 	<link rel="stylesheet" href="{{url_for('static', filename='global/styles/mobile.css')}}" />
 	<script src="{{url_for('static', filename='global/scripts/header.js')}}"></script>
+	<script src="{{url_for('static', filename='global/scripts/drawer.js')}}"></script>
 	<script src="{{url_for('static', filename='contact/scripts/main.js')}}"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="http://fonts.cdnfonts.com/css/agency-fb" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale= 1.0" />
+  <meta name="description" content="{{header_desc}}" />
+  <meta name="keywords" content="{{keywords}}" />
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="{{url_for('static', filename='./global/styles/icons/logo-accent.ico')}}"
+  />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Cubers IO - We take business to the next level!",
+      "description": {{header_desc}},
+      "image": "https://www.cubersio.com",
+      "url": "https://www.cubersio.com",
+      "datePublished": "2022-8-23",
+      "dateCreated": "2022-8-23",
+      "dateModified": "2022-8-23",
+      "publisher": "Cubers IO",
+      "author": {
+        "@type": "Company",
+        "name": "Cubers IO"
+      }
+    }
+  </script>
 </head>
 
 <body>
 	<header id="header">
+    <button onclick="openDrawer()"><img id="drawer-icon" src="{{url_for('static', filename='./global/styles/icons/menu.svg')}}" alt="Cubers Drawer Icon"></button>
 		<a href="/" id="header_title">CUBERS</a>
 		<nav>
 			<a href="/home">Home</a>
@@ -44,7 +70,6 @@
         <a target="_blank" href="{{meta_info['map']}}"><div id="map"></div></a>
         <p id="address">{{meta_info['address']}}</p>
       </div>
-      <div style="width: 5%;"></div>
       <div>
         <div class="single-field">
           <input type="name" class="contact-field" id="name-field" placeholder="Name"></input>
@@ -83,13 +108,60 @@
 			<div id="tabs" class="footer_column">
 					<a  class="footer_tab" href="/">Home<br></a>
 					<a  class="footer_tab" href="/about">About<br></a>
-					<a  class="footer_tab" href="/tecnologies">Technologies<br></a>
+					<a  class="footer_tab" href="/services">Services<br></a>
 					<a  class="footer_tab" href="terms">Terms<br></a>
 					<a  class="footer_tab" href="/portfolio">Portfolio<br></a>
 
 			</div>
 			<div class="footer_column"></div>
 	</footer>
+
+  
+  <div id="drawer-overlay" onclick="closeDrawer()"></div>
+  <div id="drawer">
+    <div id="drawer-header">
+      <button id="drawer-icon" onclick="closeDrawer();">x</button>
+    </div>
+    <div id="footer_logo"></div>
+    <nav>
+      <a href="/home">Home</a>
+      <a href="/about">About</a>
+      <a href="/services">Services</a>
+      <a href="/contact" class="active_tab">Contact</a>
+      <a href="/terms">Terms</a>
+      <a href="/portfolio">Portfolio</a>
+
+    </nav>
+    <div
+      style="
+        justify-content: space-between;
+        width: 70%;
+        margin-top: 10%;
+        height: 64px;
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+      "
+    >
+      <a
+        class="social_media_icon"
+        href="{{meta_info['facebook']}}"
+        id="facebook"
+      ></a>
+      <a
+        class="social_media_icon"
+        href="{{meta_info['linkedin']}}"
+        id="linkedin"
+      ></a>
+      <a
+        class="social_media_icon"
+        href="{{meta_info['instagram']}}"
+        id="instagram"
+      ></a>
+    </div>
+  </div>
+
+
 </body>
 
 
