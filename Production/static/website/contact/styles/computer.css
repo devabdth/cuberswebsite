@@ -1,0 +1,253 @@
+@media screen and (min-width: 1024px) {
+  section#entry {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url(./images/entry.jpg);
+  }
+
+  section#entry #overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.65);
+    gap: 12px;
+  }
+
+  section#entry h2 {
+    font-weight: 900;
+    font-size: 4em;
+    font-family: var(--pff);
+    color: white;
+  }
+
+  section#entry p {
+    font-weight: 500;
+    font-size: 1em;
+    font-family: var(--sff);
+    color: ghostwhite;
+  }
+
+  section#send-message {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh 5%;
+    flex-direction: column;
+  }
+
+  section#send-message h3 {
+    font-weight: 700;
+    font-size: 2em;
+    font-family: var(--pff);
+    color: var(--secondaryColor);
+  }
+
+  section#send-message > p {
+    font-weight: 300;
+    font-size: 1em;
+    font-family: var(--sff);
+    color: var(--secondaryVarientColor);
+  }
+
+  section#send-message #form {
+    margin-top: 5vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0 30px 1px #111;
+    border-radius: 12px;
+    width: 60%;
+    padding: 8px 16px;
+    transition: 500ms ease;
+  }
+
+  section#subscribe #form > #content {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  section#subscribe #form {
+    transition: 500ms ease;
+    margin-top: 5vh;
+    padding: 8px 16px;
+    border-radius: 12px;
+    width: 60%;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.05);;
+    box-shadow: none;
+  }
+
+  section#send-message #form p,
+  section#subscribe #form #content p {
+    font-weight: 300;
+    font-size: 0.75em;
+    font-family: var(--sff);
+    color: #999;
+    margin-bottom: 2.5vh;
+  }
+
+  section#send-message #form:hover {
+    box-shadow: 0 0 30px 1px var(--primaryColor);
+  }
+
+  section#subscribe #form:hover {
+    box-shadow: 0 0 30px 1px var(--primaryColor);
+  }
+
+  section #options {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+  }
+  section#send-message #send-msg-form-status,
+  section#subscribe #subscribe-form-status {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 12px 0;
+  }
+
+  section#subscribe {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background-image: url(./images/newletter.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 5vh 10%;
+  }
+
+  section#subscribe #title {
+    flex-direction: column;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+  }
+
+  section#subscribe #title h3 {
+    font-weight: 700;
+    font-size: 3em;
+    font-family: var(--pff);
+    color: white;
+    text-align: start;
+  }
+
+  section#subscribe #title p {
+    font-weight: 500;
+    font-size: 1em;
+    font-family: var(--sff);
+    color: ghostwhite;
+  }
+  section#subscribe #form #content > label {
+    font-weight: 500;
+    font-size: 1em;
+    font-family: var(--sff);
+    color: white;
+  }
+
+  section#subscribe #form #content #topics {
+    width: 100%;
+    height: 100;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    padding: 0 5%;
+  }
+
+  /* Customize the label (the container) */
+  .container {
+    margin: 0 12px;
+    display: inline-flex;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: var(--pff);
+    color: white;
+    font-size: 0.8em;
+  }
+
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: white;
+    border-radius: 4px;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: var(--secondaryVarientColor);
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: var(--primaryColor);
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}

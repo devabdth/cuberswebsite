@@ -1,0 +1,220 @@
+@media screen and (min-width: 1024px) {
+  section#entry {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./images/entry.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  section#entry > #overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+  }
+
+  section#entry h3 {
+    font-size: 4em;
+    font-weight: 700;
+    font-family: var(--pff);
+    color: white;
+  }
+
+  section.category {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5vh 5%;
+    flex-direction: row;
+    gap: 5%;
+  }
+
+  section.category.dark-bg {
+    background-color: var(--bg-color);
+  }
+
+  section.category.left {
+    flex-direction: row;
+  }
+
+  section.category.right {
+    flex-direction: row-reverse;
+  }
+
+  section.category > .content {
+    width: 30%;
+    height: 100%;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 32px;
+    display: flex;
+  }
+
+  section.category h3 {
+    color: var(--secondaryColor);
+    font-weight: 700;
+    font-size: 2em;
+    font-family: var(--pff);
+    text-align-last: justify;
+  }
+
+  section.category h3 span {
+    font-weight: 700;
+    font-size: 1.65em;
+    font-family: var(--pff);
+  }
+
+  section.category#application h3 span {
+    font-size: 1.25em;
+  }
+
+  section.category > .cards {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .cards > .carousel {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .carousel > .fragment {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--body-bg-color);
+    border: 2px var(--primaryColor) solid;
+    border-radius: 12px;
+    flex-direction: column;
+    position: relative;
+    overflow-y: hidden;
+  }
+
+  .carousel > .left-carousel-controller:hover,
+  .carousel > .right-carousel-controller:hover {
+    background-color: var(--primaryVarientColor);
+  }
+
+  .carousel > .left-carousel-controller,
+  .carousel > .right-carousel-controller {
+    width: 64px;
+    height: 64px;
+    background-color: var(--primaryColor);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+    cursor: pointer;
+    transition: 500ms ease;
+  }
+
+  .slides {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .carousel-slide {
+    width: 0.5em;
+    height: 4px;
+    background-color: #444;
+    display: flex;
+    border-radius: 12px;
+    margin: 4px;
+    cursor: pointer;
+    transition: 500ms ease;
+  }
+
+  .carousel-slide.active {
+    width: 2em;
+    background-color: var(--primaryColor);
+  }
+
+  .fragment-slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    flex-direction: column;
+    border-radius: 12px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    transition: 500ms ease;
+  }
+
+  .fragment-slide .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    flex-direction: column;
+    border-radius: 0px 0px 12px 12px;
+    padding: 8px 16px;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  .fragment-slide.active {
+    top: 0;
+  }
+
+  .fragment-slide .actions {
+    max-height: 20vh;
+    margin-top: 5vh;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    flex-direction: row;
+  }
+
+  .fragment-slide h3 {
+    color: white !important;
+    font-weight: 500;
+    font-size: 2em;
+    font-family: var(--pff);
+  }
+
+  .fragment-slide p {
+    color: ghostwhite;
+    font-weight: 300;
+    font-size: 0.75em;
+    font-family: var(--sff);
+  }
+}

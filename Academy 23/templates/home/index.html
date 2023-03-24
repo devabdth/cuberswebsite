@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en", dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='home/styles/computer.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='home/styles/mobiles.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='global/styles/computer.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='global/styles/mobiles.css')}}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<title>CubAcademy</title>
+</head>
+<body>
+	<header id="header">
+		<h1>Academy</h1>
+		<nav id="tabs">
+			<a href="{{cfg.base_url}}/" class="active">{{con.tabs[lang]["home"] |safe}}</a>
+			<a href="{{cfg.base_url}}/about/">{{con.tabs[lang]["aboutUs"] |safe}}</a>
+			<a href="{{cfg.base_url}}/courses/">{{con.tabs[lang]["courses"] |safe}}</a>
+			<a href="{{cfg.base_url}}/instructors/">{{con.tabs[lang]["instructors"] |safe}}</a>
+			<a href="{{cfg.base_url}}/blog/">{{con.tabs[lang]["blog"] |safe}}</a>
+			<a href="{{cfg.base_url}}/feedbacks/">{{con.tabs[lang]["feedbacks"] |safe}}</a>
+		</nav>
+		<nav id="actions">
+			<a class="main-btn" href="{{cfg.base_url}}/getStarted/">{{con.actions[lang]["getStarted"] |safe}}</a>
+		</nav>
+	</header>
+	<section id="entry">
+		<div id="content">
+			<h3>{{con.global_content[lang]['entrySectionMsg'] |safe}}</h3>
+			<p></p>
+			<div id="actions">
+				<a href="#" class="main-btn">{{con.actions[lang]["getStarted"] |safe}}</a>
+				<a href="#" class="shadow-btn"><i id="play-icon"></i>{{con.actions[lang]["watchFeedbacks"] |safe}}</a>
+			</div>
+		</div>
+		<div id="illustration"></div>
+	</section>
+	<section id="counts">
+		<div class="count-property">
+			<h4><span>200+</span><br>{{con.global_content[lang]['students'] |safe}}</h4>
+		</div>
+		<div class="count-property">
+			<h4><span>20+</span><br>{{con.global_content[lang]['jobsAfforded'] |safe}}</h4>
+		</div>
+		<div class="count-property">
+			<h4><span>5+</span><br>{{con.global_content[lang]['qualityCourses'] |safe}}</h4>
+		</div>
+		<div class="count-property">
+			<h4><span>5+</span><br>{{con.global_content[lang]['experiencedMentors'] |safe}}</h4>
+		</div>
+	</section>
+	<section id="about">
+		<h2>{{con.global_content[lang]['whoAreWe'] | safe}}!</h2>
+		<div class="about-property con-first">
+			<div class="content">
+				<h3>{{con.global_content[lang]['whoAreWePropertyOneTitle'] | safe}}</h3>
+				<p>{{con.global_content[lang]['whoAreWePropertyOneBio'] | safe}}</p>
+			</div>
+			<div class="about-property-img" id="one"></div>
+		</div>
+		<div class="about-property img-first">
+			<div class="content">
+				<h3>{{con.global_content[lang]['whoAreWePropertyTwoTitle'] | safe}}</h3>
+				<p>{{con.global_content[lang]['whoAreWePropertyTwoBio'] | safe}}</p>
+			</div>
+			<div class="about-property-img" id="one"></div>
+		</div>
+		<div class="about-property con-first">
+			<div class="content">
+				<h3>{{con.global_content[lang]['whoAreWePropertyThreeTitle'] | safe}}</h3>
+				<p>{{con.global_content[lang]['whoAreWePropertyThreeBio'] | safe}}</p>
+			</div>
+			<div class="about-property-img" id="one"></div>
+		</div>
+	</section>
+	<section id="hot-courses">
+		<h3>{{con.global_content[lang]['mostPobulerCourses'] | safe}}</h3>
+		<div id="cards">
+			<div class="course-card">
+				<div class="cover"></div>
+				<h2>Introduction to Everything</h2>
+				<div class="rating">
+					<div>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+
+					</div>
+					<p>(18)</p>
+				</div>
+				<div class="actions">
+					<button id="action">
+						<i class="fa fa-arrow-right"></i>
+					</button>
+				</div>
+			</div>
+			<div class="course-card">
+				<div class="cover"></div>
+				<h2>Introduction to Everything</h2>
+				<div class="rating">
+					<div>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+
+					</div>
+					<p>(18)</p>
+				</div>
+				<div class="actions">
+					<button id="action">
+						<i class="fa fa-arrow-right"></i>
+					</button>
+				</div>
+			</div>
+			<div class="course-card">
+				<div class="cover"></div>
+				<h2>Introduction to Everything</h2>
+				<div class="rating">
+					<div>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+
+					</div>
+					<p>(18)</p>
+				</div>
+				<div class="actions">
+					<button id="action">
+						<i class="fa fa-arrow-right"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

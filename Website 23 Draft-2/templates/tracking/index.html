@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Track your Project</title>
+
+  <link
+    rel="stylesheet"
+    href="{{url_for('static', filename='global/styles/computer.css')}}"
+  />
+  <link
+    rel="stylesheet"
+    href="{{url_for('static', filename='global/styles/mobile.css')}}"
+  />
+  <link
+    rel="stylesheet"
+    href="{{url_for('static', filename='tracking/styles/computer.css')}}"
+  />
+  <link
+    rel="stylesheet"
+    href="{{url_for('static', filename='tracking/styles/mobile.css')}}"
+  />
+  <script src="{{url_for('static', filename='tracking/scripts/main.js')}}"></script>
+  <meta name="viewport" content="width=device-width, initial-scale= 1.0" />
+  <meta name="description" content="{{header_desc}}" />
+  <meta name="keywords" content="{{keywords}}" />
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="{{url_for('static', filename='./global/styles/icons/logo-accent.ico')}}"
+  />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Cubers IO - We take business to the next level!",
+      "description": {{header_desc}},
+      "image": "https://www.cubersio.com",
+      "url": "https://www.cubersio.com",
+      "datePublished": "2022-8-23",
+      "dateCreated": "2022-8-23",
+      "dateModified": "2022-8-23",
+      "publisher": "Cubers IO",
+      "author": {
+        "@type": "Company",
+        "name": "Cubers IO"
+      }
+    }
+  </script>
+<body>
+	<section id="main">
+		<div id="side-panel">
+			<div id="header">
+				<div id="client-logo"></div>
+				<h3 id="project-name">Project Name</h3>
+				<div id="header-options" class="dropdown">
+  					<button class="dropbtn"></button>
+  					<div class="dropdown-content">
+					    <button>Raise a Complain</button>
+					    <button class="red-option" >Logout</button>
+  					</div>
+				</div>
+			</div>
+			<div id="options">
+				<div id="milestones">
+				</div>
+			</div>
+			<div id="copyright">
+				<div id="logo"></div>
+				<div id="copyright-msg">All rights reserved @ Cubers IO for Software Development</div>
+			</div>
+		</div>
+		<div id="body">
+			<div id="header">
+				<h3 id="body-title">Milestone One</h3>
+				<p id="body-desc">This is the Project One description. In this panel you can track your project and all its insiders miletones!</p>
+			</div>
+			<div id="overview">
+				<legend>Overview</legend>
+				<div id="cards">
+				</div>
+			</div>
+			<div id="parts">
+				<legend>Parts</legend>
+				<div id="cards">
+				</div>
+			</div>
+		</div>
+		<div id="information-panel-placeholder">
+			<p>Please, Choose the part you want to view its log and results!</p>
+		</div>
+		<div id="information-panel">
+			<div id="header">
+				<h3 id="information-panel-title"><span>Milestone One</span><br>Part One</h3>
+				<p id="information-panel-desc">This is the first part of the milestone one parts. In this part you can find...</p>
+			</div>
+			<div id="body">
+				<div id="controllers">
+					<button onclick="toggleLogToResults();" id="log-controller">Log</button>
+					<button onclick="toggleResultsToLog();" id="results-controller">Results</button>
+				</div>
+				<div id="fragments">
+					<div id="result-fragment">
+					</div>
+					<div id="log-fragment">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript">
+		initialization(
+			{
+				"id": "cub-web-0",
+        "title": "Project Alpha",
+        "short_brief": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+        "status": -2,
+        "expectedEndDate": "03/01/2023",
+        "category": 0,
+        "subCategory": "E-Commerce",
+        "milestones": [
+        	{
+	            "title": "Milestone 1",
+	            "startDate": "01/01/2023",
+	            "status": -1,
+	            "expectedEndDate": "03/01/2023",
+	            "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+	            "parts": [{
+                "title": "This is a part title!",
+                "status": -1,
+                "desc": "Part Description",
+                "expectedEndDate": "03/01/2023",
+                "category": "Programming",
+                "log": [
+                  {
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },
+                  {
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },
+                  {
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },
+                ], 
+                "results": [
+                  {
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },
+                  {
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },
+                  {
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },
+                ]
+              }]
+        	},{
+	            "title": "Milestone 2",
+	            "startDate": "01/01/2023",
+	            "status": -1,
+	            "expectedEndDate": "03/01/2023",
+	            "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+	            "parts": [{
+                "title": "This is a part title!",
+                "status": -1,
+                "desc": "Part Description",
+                "expectedEndDate": "03/01/2023",
+                "category": "Programming",
+                "log": [
+                  {
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },
+                  {
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },
+                  {
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023"
+                  },
+                ], 
+                "results": [
+                  {
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },
+                  {
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },
+                  {
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },{
+                    "title": "This is a log Part for a part of milestone part",
+                    "desc": "This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page. This Project Alpha Tracking Page.",
+                    "publishedIn": "02/16/2023",
+                    "asset": "x.png"
+                  },
+                ]
+              }]
+        	}
+        ]
+    });
+	</script>
+</body>
+</html>

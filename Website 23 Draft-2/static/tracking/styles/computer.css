@@ -1,0 +1,597 @@
+@media screen and (min-width: 1024px) {
+	body {
+		background-color: #111;
+	}
+
+	section#main {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
+		gap: 1.25%;
+	}
+
+	div#side-panel {
+		width: 20%;
+		max-width: 20%;
+		height: 100%;
+		overflow-y: auto;
+		display: flex;
+		align-items: start;
+		justify-content: start;
+		flex-direction: column;
+		padding: 8px 16px;
+		background-color: var(--accentColor);
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+
+	div#side-panel > #header {
+		width: 100%;
+		height: 10%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
+	}
+
+	div#side-panel > #header #client-logo {
+		min-width: 32px;
+		min-height: 32px;
+		max-width: 32px;
+		max-height: 32px;
+		border-radius: 50%;
+		background-color: white;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin-right: 8px;
+	}
+
+	div#side-panel > #header h3 {
+		font-weight: 900;
+		font-size: 1em;
+		font-family: 'Raleway';
+		color: white;
+	}
+
+	/* Dropdown Button */
+	.dropbtn {
+	  border: none;
+	  width: 32px;
+	  height: 32px;
+	  cursor: pointer;
+	  background-repeat: no-repeat;
+	  background-size: contain;
+	  background-position: center;
+	  background: url(./icons/options.png);
+	}
+
+	/* The container <div> - needed to position the dropdown content */
+	.dropdown {
+	  position: relative;
+	  display: inline-block;
+	}
+
+	/* Dropdown Content (Hidden by Default) */
+	.dropdown-content {
+	  display: none;
+	  position: fixed;
+	  background-color: #f1f1f1;
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  z-index: 10;
+	  border-radius: 12px;
+	  overflow: hidden;
+	  transition: 500ms ease;
+	}
+
+	/* Links inside the dropdown */
+	.dropdown-content button {
+	  color: var(--accentColor);
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	  border: none;
+	  text-decoration: none;
+	  font-weight: 500;
+	  font-size: 1em;
+	  font-family: 'Raleway';
+	  transition: 500ms ease;
+	  width: 100%;
+	}
+
+	/* Links inside the dropdown */
+	.dropdown-content button.red-option {
+	  color: red;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	  border: none;
+	  text-decoration: none;
+	  font-weight: 500;
+	  font-size: 1em;
+	  font-family: 'Raleway';
+	  transition: 500ms ease;
+	  width: 100%;
+	}
+
+	/* Change color of dropdown links on hover */
+	.dropdown-content button:hover {
+		background-color: var(--accentColor);
+		color: white;
+	}
+
+	/* Change color of dropdown links on hover */
+	.dropdown-content button.red-option:hover {
+		background-color: red;
+		color: white;
+	}
+
+	/* Show the dropdown menu on hover */
+	.dropdown:hover .dropdown-content {display: block;}
+
+	div#side-panel > #options {
+		display: flex;
+		align-items: start;
+		justify-content: start;
+		flex-direction: column;
+	}
+
+	div#side-panel > #options div {
+		display: flex;
+		align-items: start;
+		justify-content: start;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	div#side-panel > #options legend {
+		font-weight: 700;
+		font-size: 1.5em;
+		font-family: 'Raleway';
+		color: white;
+	}
+
+	div#side-panel #options div button.active {
+		background-color: rgba(0, 0, 0, 0.25);
+	}
+
+	div#side-panel #options div button {
+		font-family: 'Raleway';
+		text-decoration: none;
+		background-color: transparent;
+		border: none;
+		color: white;
+		font-weight: 500;
+		font-size: 1em;
+		padding: 0 8px;
+		margin: 6px 0;
+		cursor: pointer;
+		width: 500px;
+		padding: 8px 16px;
+		height: 48px;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+	}
+
+	div#side-panel #copyright {
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		flex-direction: row;
+	}
+
+	div#side-panel #copyright > #logo {
+		width: 32px;
+		height: 32px;
+		margin: 0 12px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		background-image: url(./images/logo-white.png);
+	}
+
+	div#side-panel #copyright > #copyright-msg {
+		font-weight: 500;
+		font-size: 0.5em;
+		color: white;
+		font-family: 'Raleway';
+	}
+
+	div#body {
+		width: 50%;
+		height: 100%;
+		display: flex;
+		align-items: start;
+		justify-content: start;
+		flex-direction: column;
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding: 8px 16px;
+		gap: 2.5vh;
+	}
+
+	div#body #header {
+		height: 10%;
+		width: 100%;
+		align-items: start;
+		justify-content: start;
+		display: flex;
+		flex-direction: column;
+	}
+
+	div#body #header h3 span {
+		font-size: 0.75em;
+		font-weight: 500;
+		color: white;
+		background-color: #999;
+		padding: 3px 6px;
+		border-radius: 6px;
+	}
+
+	div#body #header h3 {
+		font-weight: 900;
+		font-size: 1em;
+		font-family: 'Raleway';
+		color: white;
+	}
+
+	div#body #header p {
+		font-weight: 300;
+		font-size: 0.75em;
+		font-family: 'Raleway';
+		color: ghostwhite;
+	}
+
+	div#body #overview {
+		width: 100%;
+		max-height: 100vh;
+		flex-direction: column;
+		align-items: start;
+		justify-content: start;
+		gap: 1.25vh;
+	}
+
+	div#body legend {
+		font-weight: 700;
+		font-size: 1.25em;
+		font-family: 'Raleway';
+		color: white;
+		margin-bottom: 12px;
+	}
+
+	div#body #overview #cards {
+		width: 100%;
+		max-height: 100%;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 1.25vw;
+		grid-row-gap: 1.25vh;
+	}
+
+	.overview-card {
+		padding: 8px 16px;
+		width: 100%;
+		min-height: 20vh;
+		max-height: 30vh;
+		background-color: rgba(255, 255, 255, 0.15);
+		border-radius: 12px;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		display: flex;
+		gap: 16px;
+	}
+
+	.overview-card h4  {
+		font-weight: 500;
+		font-size: 1em;
+		font-family: 'Raleway';
+		text-align: center;
+		color: white;
+	}
+
+	.overview-card h4 span {
+		color: var(--accentColor);
+		font-size: 3em;
+		font-weight: 900;
+		font-family: 'Poppins';
+	}
+
+	.overview-card p {
+		font-weight: 300;
+		font-size: 0.75em;
+		font-family: 'Raleway';
+		color: ghostwhite;
+		text-align: center;
+	}
+
+	div#body #parts {
+		display: flex;
+		align-items: start;
+		justify-content: start;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+		margin-bottom: 5vh;
+	}
+
+	div#body #parts #cards {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 2.5vh;
+	}
+
+	.part-card {
+		display: flex;
+		align-items: start;
+		justify-content: start;
+		flex-direction: column;
+		width: 100%;
+		max-height: 40vh;
+		padding: 8px 16px;
+		background-color: rgba(255, 255, 255, 0.05);
+		border-radius: 12px;
+		transition: 500ms ease;
+		cursor: pointer;
+	}
+
+	.part-card:hover {
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+
+	.part-card h4 {
+		color: white;
+		font-weight: 700;
+		font-size: 1.25em;
+		font-family: 'Raleway';
+	}
+
+	.part-card p {
+		color: ghostwhite;
+		font-weight: 500;
+		font-size: 0.75em;
+		font-family: 'Raleway';
+	}
+
+	.part-card #labels {
+		width: 100%;
+		height: 32px;
+		display: flex;
+		align-items: center;
+		justify-content: end;
+		flex-direction: row;
+		gap: 16px;
+	}
+
+	.label-card {
+		padding: 4px 8px;
+		font-weight: 300;
+		font-size: 0.75em;
+		font-family: 'Raleway';
+		border: 2px white solid;
+		color: white;
+		background-color: rgba(255, 255, 255, 0.5);
+		border-radius: 12px;
+	}
+
+	.label-card.blue {
+		color: rgb(125, 125, 255);
+		background-color: rgba(125, 125, 255, 0.25);
+		border-color: rgb(125, 125, 255);
+	}
+
+	.label-card.green {
+		color: rgb(125, 255, 125);
+		background-color: rgba(125, 255, 125, 0.25);
+		border-color: rgb(125, 255, 125);
+	}
+
+	.label-card.red {
+		color: rgb(255, 125, 125);
+		background-color: rgba(255, 125, 125, 0.25);
+		border-color: rgb(255, 125, 125);
+	}
+
+	.label-card.yellow {
+		color: rgb(255, 255, 125);
+		background-color: rgba(255, 255, 125, 0.25);
+		border-color: rgb(255, 255, 125);
+	}
+
+	div#information-panel-placeholder {
+		height: 100%;
+		width: 30%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 500;
+		font-size: 1em;
+		color: rgba(255, 255, 255, 0.3);
+		font-family: 'Raleway';
+		padding: 0 32px;
+		text-align: center;
+	}
+
+	div#information-panel {
+		width: 30%;
+		height: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
+		flex-direction: column;
+		align-items: start;
+		justify-content: start;
+		display: none;
+		padding: 8px 16px;
+	}
+
+	div#information-panel #header {
+		display: flex;
+		align-items: start;
+		justify-content: start;
+		flex-direction: column;
+		width: 100%;
+		max-height: 20vh;
+	}
+
+	div#information-panel #header h3 span {
+		font-weight: 700;
+		background-color: rgba(255, 255, 255, 0.25);
+		border-radius: 6px;
+		padding: 4px 8px;
+		font-size: 0.75em;
+		font-family: 'Raleway';
+		color: white;
+		margin-bottom: 8px;
+	}
+
+	div#information-panel #header h3 {
+		font-weight: 700;
+		font-size: 1em;
+		font-family: 'Raleway';
+		color: white;
+	}
+
+	div#information-panel #header p {
+		font-weight: 300;
+		font-size: 0.6em;
+		font-family: 'Poppins';
+		color: ghostwhite;
+	}
+
+	div#information-panel #body {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	div#information-panel #controllers {
+		width: 100%;
+		height: 32px;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		flex-direction: row;
+		gap: 8px;
+	}
+
+	div#information-panel #controllers button {
+		background-color: transparent;
+		border: none;
+		text-decoration: none;
+		font-family: 'Raleway';
+		font-size: 1em;
+		color: #777;
+		transition: 500ms ease;
+		cursor: pointer;
+	}
+
+	div#information-panel #controllers button:hover {
+		color: #fdfdfd;
+	}
+
+	div#information-panel #controllers button.active-fragment-controller {
+		cursor: default;
+		color: var(--accentColor);
+		text-decoration: underline;
+
+	}
+
+	div#information-panel #fragments {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	div#information-panel #log-fragment, div#information-panel #result-fragment {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+	}
+	div#information-panel #log-fragment {
+		display: none;
+	}
+
+	.log-card {
+		width: 100%;
+		display: flex;
+		align-items: start;
+		justify-content: start;
+		flex-direction: column;
+	}
+
+	.log-card h5 span {
+		font-weight: 100;
+		font-size: 0.75em;
+		color: ghostwhite;
+		font-family: 'Poppins';
+	}
+
+	.log-card h5 {
+		font-weight: 300;
+		font-size: 1em;
+		color: whitesmoke;
+		font-family: 'Raleway';
+	}
+
+	.log-card p {
+		padding-left: 16px;
+		font-weight: 300;
+		font-size: 0.65em;
+		color: navajowhite;
+		font-family: 'Raleway';
+	}
+
+	.result-blog-section {
+		width: 100%;
+		display: flex;
+		align-items: start;
+		justify-content: start;
+		flex-direction: column;
+	}
+
+	.result-blog-section h5 span {
+		font-weight: 100;
+		font-size: 0.75em;
+		color: ghostwhite;
+		font-family: 'Poppins';
+	}
+
+	.result-blog-section h5 {
+		font-weight: 300;
+		font-size: 1em;
+		color: whitesmoke;
+		font-family: 'Raleway';
+	}
+
+	.result-blog-section #asset {
+		width: 100%;
+		height: 60vh;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		border-radius: 12px;
+		margin: 8px 0;
+	}
+
+	.result-blog-section p {
+		padding-left: 16px;
+		font-weight: 300;
+		font-size: 0.65em;
+		color: navajowhite;
+		font-family: 'Raleway';
+	}
+
+}

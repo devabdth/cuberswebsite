@@ -1,0 +1,141 @@
+@media screen and (min-width: 870px) and (max-width: 1024px) {
+  section#entry {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url(./images/entry.jpg);
+  }
+
+  section#entry > #overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  section#entry h2 {
+    font-weight: 900;
+    font-size: 8em;
+    font-family: "Raleway";
+    color: white;
+    text-align: center;
+  }
+
+  section#entry h2 span {
+    font-weight: 500;
+    font-size: 0.125em;
+    font-family: "Raleway";
+    color: ghostwhite;
+  }
+
+  section#cards {
+    width: 100%;
+    min-height: 40vh;
+    max-height: 5000vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    padding: 5vh 5%;
+  }
+
+  section#cards #header {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    display: flex;
+    gap: 16px;
+  }
+
+  section#cards #header > h3 {
+    font-weight: 700;
+    font-size: 4em;
+    font-family: "Raleway";
+    color: var(--secondaryColor);
+  }
+
+  section#cards #header > p {
+    font-weight: 300;
+    font-size: 1em;
+    font-family: "Poppins";
+    color: var(--secondaryVarientColor);
+  }
+
+  section#cards #filtration {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  section#cards #filtration #options {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #filtration-msg {
+    font-weight: 300;
+    font-size: 0.75em;
+    text-align: center;
+    font-family: "Poppins";
+    color: var(--secondaryVarientColor);
+  }
+
+  section#cards > #body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  section#cards > #body > #header {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  section#cards > #body > #header > h4 {
+    color: var(--secondaryColor);
+    font-weight: 500;
+    font-family: "Raleway";
+    font-size: 1.5em;
+  }
+
+  section#cards > #body > #header > button {
+    display: none;
+  }
+
+  section#cards > #body > #header > h4 > span {
+    font-weight: 900;
+    font-family: "Poppins";
+    color: var(--primaryColor);
+  }
+
+  section#cards > #body > #cards {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+
+  }
+}

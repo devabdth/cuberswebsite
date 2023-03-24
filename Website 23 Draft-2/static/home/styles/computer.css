@@ -1,0 +1,240 @@
+@media screen and (min-width: 1000px) {
+  section.entry {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: column;
+    background-image: url(./images/entry.webp);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  #entry_content {
+    width: 100%;
+    height: 100%;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    padding-left: 10%;
+  }
+
+  #entry_title {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Poppins";
+    font-weight: 100;
+    font-size: 1.5em;
+  }
+
+  #entry_title span {
+    font-size: 6em;
+    font-family: "Raleway";
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 24px;
+  }
+
+  #entry_buttons {
+    width: 25%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  section.services {
+    display: flex;
+    width: 100%;
+    height: 160vh;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 10% 10%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #services_cards {
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .service_card {
+    width: 50vh;
+    height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    background-color: 111;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.75);
+    border-radius: 12px;
+    padding: 12px 0;
+    transition: 500ms ease;
+    margin: 0 1em;
+  }
+
+  .service_card:hover {
+    transform: scale(1.1);
+  }
+
+  .service_card:hover > .service_card_title {
+    color: var(--accentColor);
+  }
+
+  .service_card_title {
+    color: #fff;
+    font-family: "Raleway";
+    font-weight: 200;
+    font-size: 2em;
+  }
+
+  .service_card_desc {
+    color: rgba(255, 255, 255, 0.75);
+    font-family: "Poppins";
+    font-size: 0.75em;
+    text-align: center;
+    padding: 0 8px;
+    font-weight: 100;
+  }
+
+  section#terms {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-image: url(./images/terms.webp);
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  #terms_vector {
+    background-image: url(./ils/terms.png);
+    margin-right: 10%;
+  }
+
+  section#portfolio {
+    display: flex;
+    width: 100%;
+    height: 110vh;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 10% 10%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .project_card {
+    width: 50vh;
+    height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    background-color: 111;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.75);
+    border-radius: 12px;
+    transition: 500ms ease;
+    position: relative;
+    margin: 0 1em;
+  }
+
+  .hall_of_honor_card_bg {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .project_card:hover {
+    transform: scale(1.1);
+  }
+
+  .project_card:hover > .project_card_title {
+    color: var(--accentColor);
+  }
+
+  .project_card_content {
+    width: 100%;
+    height: 60%;
+    bottom: 0;
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    border-radius: 12px;
+    flex-direction: column;
+    padding: 12px;
+    background: linear-gradient(0deg, #111 50%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  .project_card_title {
+    color: #fff;
+    font-family: "Raleway";
+    font-weight: 200;
+    font-size: 2em;
+  }
+
+  .project_card_title > span {
+    font-weight: 100;
+    font-family: "Poppins";
+    padding: 0;
+    font-size: 0.5em;
+    color: rgba (255, 255, 255, 0.5);
+    margin: 0;
+  }
+
+  .project_card_desc {
+    color: rgba(255, 255, 255, 0.75);
+    font-family: "Poppins";
+    font-size: 0.75em;
+    text-align: center;
+    font-weight: 100;
+    text-align: start;
+  }
+
+  h3.section_title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 2em;
+    letter-spacing: 2px;
+    font-family: "Poppins";
+  }
+
+  #academy {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accentColor);
+    flex-direction: column;
+  }
+  #academy > p {
+    font-size: 1em;
+    font-weight: 100;
+    font-family: "Poppins";
+    color: white;
+  }
+
+  #academy > .main-button {
+    background-color: white;
+    color: var(--accentColor);
+    border: 1px white solid;
+    margin-top: 12px;
+  }
+
+  #academy > .main-button:hover {
+    background-color: transparent;
+    color: white;
+  }
+}

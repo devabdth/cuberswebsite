@@ -1,0 +1,203 @@
+{
+	"websites": {
+		"cub-web-0": {
+			"title": "Aotara Group",
+			"type": "Website",
+			"short_brief": "Having a website is a big issue. You've no website without a good SEO Optmization processes, UI/UX Theory, The Suitable User Journey, and finally The Performance.",
+			"id": "cub-web-0",
+			"action": "$url/project/$id",
+			"content": [
+				{
+					"cover": "11.png",
+					"title": "Objective",
+					"paragraph": "Having a website is a big issue. You've no website without a good <span class='underline'>SEO Optmization</span>, <span class='underline'>UI/UX Theory</span>, The Suitable <span class='underline'>User Journey</span>, and finally The <span class='underline'>Performance</span>, and that's exactly what we made available for the best client from New Zelanda we ever have, Aotara Group."
+				},
+				{
+					"cover": "12.png",
+					"title": "Categorical Modeling",
+					"paragraph": ""
+				},
+				{
+					"cover": "8.png",
+					"title": "Technologies",
+					"paragraph": "As the founders of Aotara Group wanted we developed the website in Flutter Framework connected to Flask Rest API as they wanted the most up-to-date technology in labor market to make them a real compatitor from the first day and the SEO was optmized throught additional tags added and hidden, descriptions, and keywords"
+				}
+			]
+		},
+		"cub-web-2": {
+			"title": "Bra7tak",
+			"type": "Website",
+			"short_brief": "As an E-Commerce business, You should have a strong website to display your products to the world in a unique form to convince people to buy form you!",
+			"id": "cub-web-2",
+			"action": "$url/project/$id",
+			"content": [
+				{
+					"cover": "19.png",
+					"title": "Objective",
+					"paragraph": "Having a website is a big issue. You've no website without a good SEO Optmization processes, UI/UX Researches and Designs, The Suitable User Journey, and finally The Performance, and that's exactly what we made available for Bra7tak E-Commerce."
+				},
+				{
+					"cover": "20.png",
+					"title": "Product Modelling",
+        			"paragraph": "As you are providing products to customers you must present your products in the best way you can create, So we picked this design to allow the customer to find all the actions, colors & sizes, offers, and display images in one place!"
+				},
+				{
+					"cover": "22.png",
+					"title": "The Most Minimalist",
+					"paragraph": "Despite the website including about 200 different features, we've had to build the UI/UX to be following the minimalistic trend so the customer doesn't find it confusing to reach what he wants!"
+				},
+				{
+					"cover": "22.png",
+					"title": "Options",
+					"paragraph": "We've created an inner AI Model to make the customers more satisfied in finding the products they searching for. Based on some conditions the customer input, The model analyze them and return to the user with the nearest products to the options he has inputted."
+				}
+			]
+		},
+		"cub-web-1": {
+			"title": "StoriesClub",
+			"type": "Website",
+			"short_brief": "As an E-Commerce business, You should have a strong website to display your products to the world in a unique form to convince people to buy form you!",
+			"id": "cub-web-1",
+			"action": "$url/project/$id",
+			"content": [
+				{
+					"cover": "23.png",
+					"title": "GameChanger",
+					"paragraph": "StoriesClub is a game-changer platform that aims to change the publishing market in Egypt by offering new features to publishers who can publish books, audio, or even videos."
+				},
+				{
+					"cover": null,
+					"title": "Minimalistic",
+        			"paragraph": "As the Platform is in its Beta Version we applied it to be minimalistic. So, The new user doesn't find any problems using it, publishing on it, or entertaining from it."
+				},
+				{
+					"cover": "24.png",
+					"title": "Books Support",
+					"paragraph": "The platform supports all kind of books if it is compiled in pdf files or it will be typed on StoriesClub Editor."
+				},
+				{
+					"cover": "25.png",
+					"title": "Audios Support",
+					"paragraph": "The platform supports audio publishing and listening features to make those users can publish audiobooks or recorded poems on it."
+				},
+				{
+					"cover": "26.png",
+					"title": "Video Support",
+					"paragraph": "The platform supports video publishing and watching so the users can gain maximum entertainment by watching the videos or publishing them as a review or workshop."
+				},
+				{
+					"cover": "27.png",
+					"title": "Ads Support",
+					"paragraph": "The business model of the platform depends on sharing ads with users and their profit the platform has a variety of ad spaces in its two kinds: Google Ads, and Implemented Ads."
+				}
+				
+			]
+		}
+	},
+	"applications": {
+		"cub-app-0": {
+			"id": "cub-app-0",
+			"title": "Quotmia",
+			"short_brief": "Having a mobile app is not a simple thing. You need to be sure of a couple of things as the UI/UX, The User Journey, The Data Flow, and finally The Performance, and that's exactly what we made available for Quotmia.",
+			"action": "$url/project/$id",
+			"content": [
+				{
+			        "cover": "6.png",
+			        "title": "Objective",
+			        "paragraph": "Quotmia was an application wanted to be created for Quotmia Inc. as it as an egyptian social media community for literarians people which was a party name for all the people who is interesred in Stories, Novels, and all the literature forms in the egyptian market."
+			    },
+			    {
+			        "cover": "7.png",
+			        "title": "Application",
+			        "paragraph": "You can see here three screens from the application which is his default theme is the Dark one. In these screens you can see the Home, Profile Create, Profile Display One."
+		       },
+		       {
+			        "cover": "8.png",
+			        "title": "Technologies",
+			        "paragraph": ""
+      			}
+			]
+		},
+		"cub-app-1": {
+		    "title": "Circles",
+    		"short_brief": "Circles is a social community that formed on mobile application to host mini events between a small party that aims to connect people in the real life by meeting themselves and get offers, vouchers, and exchangable reward points.",
+		    "id": "cub-app-1",
+			"action": "$url/project/$id",
+		    "content": [
+		    	{
+			        "cover": null,
+			        "title": "Objective",
+			        "paragraph": "Circles is a social community that formed on mobile application to host mini events between a small party that aims to connect people in the real life by meeting themselves and get offers, vouchers, and exchangable reward points."
+		      },
+		      {
+			        "cover": null,
+			        "title": "Creative Brief",
+			        "paragraph": "As we see people have left valuable life to be fully integrated in virtual life, We use the virtual life to create a real social one. So we give our people all the abilities to create or attend circles that depend on their interests and desires. Circles core is to give the simplest design with the least functions so that users spend as less time as it possible. Circles targets the the people from the age 21 - 45 as it targets the people with the desire to create a real social life and have the mentality to host, attend informal meetings with other people the only link between them is the interests."
+		      },
+		      {
+			        "cover": "0.png",
+			        "title": "Logo",
+			        "paragraph": "Logo is structured as a couple cups that is rounded around each others refers to a circle of people setting around a table."
+		      },
+		      {
+			        "cover": null,
+			        "title": "\"We use the virtual life to create a real social one.\"",
+			        "paragraph": "The structure of the slogan build on the same structure of Thanos famous sentence from Avengers EndGame: \n     I used the stones to destroy the stones\".\nAs of that we use the virtual life to destroy the existence of it by creating a real social life."
+		      },
+		      {
+			        "cover": null,
+			        "title": "Selling Point",
+			        "paragraph": "Circles is a profitable platform as the two profit stream in it depends on \n1- A subscriptions collected from Cafes, Restaurants, Cinemas, As the owners of places have been mentioned can create a circle in their place with custom offers.\n2- An ads can be created from the places’ owners to make their place’s circle appear more to people."
+		      },
+		      {
+			        "cover": "1.png",
+			        "title": "Color Pallette",
+			        "paragraph": "    "
+		      },
+		      {
+			        "cover": "2.png",
+			        "title": "First Look",
+			        "paragraph": "    "
+		      }
+		    ]
+		}
+	},
+	"systems": {
+		"cub-sys-0": {
+			"title": "Bra7tak",
+    		"short_brief": "For an E-Commerce Business, you need a strong-structured system that covers all the operations your team will approach.",
+		    "id": "cub-sys-0",
+			"action": "$url/project/$id",
+			"content": [
+		    	{
+			        "cover": null,
+			        "title": "Objective",
+			        "paragraph": "Bra7tak's System that we've created for Bra7tak Inc. includes ERP Modules, CRM Modules, and POS Modules. The system covers all sides of the indoor operations as:\n\n- Order Tracking and Operation Processes\n- HR Operations and team management\n- Inventory Management\n- Products Management\n- Website Managemnet\n- Website Content Management\n- Statctical Panels\n- AI Model to automate analytics processes."
+		       },
+		       {
+			        "cover": null,
+			        "title": "Note",
+			        "paragraph": "Because we care the most about our clients' privacy we did not mention any shooted materials from inside the system."
+		       }
+		    ]
+		},
+		"cub-sys-1": {
+			"title": "Bassett",
+    		"short_brief": "For a local brand, The most important asset in your board is the system that handles all thing for you!",
+		    "id": "cub-sys-1",
+			"action": "$url/project/$id",
+			"content": [
+		    	{
+			        "cover": null,
+			        "title": "Objective",
+			        "paragraph": "For a local brand, The main asset in your board is the system that handles all thing for you! That was our main purpose when we were developing Bassett's System. We was aimming to create something contains all operations inside of it to make it easy for the board to scale. \nThe system covers :\n\n- Inventory Operations.\n- POS Modules\n- Orders Management"
+		       },
+		       {
+			        "cover": null,
+			        "title": "Note",
+			        "paragraph": "Because we care the most about our clients' privacy we did not mention any shooted materials from inside the system."
+		       }
+		    ]
+		}
+	}
+}

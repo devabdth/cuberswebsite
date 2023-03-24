@@ -1,0 +1,155 @@
+{
+  "0": {
+    "name": "Bassant Hesham",
+    "phone": "01111837104",
+    "email": "b.hesham@cubersio.com",
+    "bio": "Account Manager and social media specialist.\nHave experience in this field 4 years.\nContent creator , love making strategies and identity for Clients.",
+    "id": "0",
+    "rates": [5.0],
+    "cats": [
+      "Marketing",
+      "Content Creation",
+      "Content planning",
+      "Targeting audience",
+      "Personal Marketing"
+    ],
+    "facebook": "https://www.facebook.com/bosbos.elmenyawy",
+    "instagram": "https://www.instagram.com/reel/ChDFfaBjX6L/?igshid=MDJmNzVkMjY=",
+    "linkedin": "https://www.linkedin.com/in/bassant-hesham-44296b191",
+    "tiktok": "https://www.tiktok.com/@bosboselmenyawy",
+    "pinterest": "",
+    "vimeo": "",
+    "porgrams": ["3-Days Workshops"]
+  },
+  "1": {
+    "name": "Mahmoud Khawaga",
+    "phone": "01011845263",
+    "email": "m.khawaga@cubersio.com",
+    "bio": "A filmmaker who is passionate about change. Made 6 short films; 3 of them were only one-man crew work. My films got nominated in more than 12 film festivals. A novelist who is obsessed with details. I wrote 4 novels, and the press named me (The Youngest Novelist of Egypt and The Middle East). Also, I write my own films; I have been writing scripts for 5 years now.",
+    "id": "1",
+    "rates": [5.0],
+    "cats": ["Filmmaking", "Editing", "Screenwriting", "Cinematography"],
+    "facebook": "https://www.facebook.com/mahmoodyousef.elkhawaga",
+    "instagram": "",
+    "linkedin": "",
+    "tiktok": "",
+    "pinterest": "",
+    "vimeo": "https://vimeo.com/user14510073",
+    "porgrams": [
+      "1-Day Workshop",
+      "2-Days Workshop",
+      "3-Days Workshop",
+      "Course"
+    ]
+  },
+  "2": {
+    "name": "Yassin Salah El-deen",
+    "phone": "01094515905",
+    "email": "y.salah@cubersio.com",
+    "bio": "Senior Video Editor, and Cinematic Video Editor. Worked as a freelancer editor and managed to edit populer video ads such as: Zomex, iMotion. Working now as cinematic video editor for multiple well-known art works in Ramdan Season",
+    "id": "2",
+    "rates": [5.0],
+    "cats": ["Editing", "Cinematography", "Video Editing"],
+    "facebook": "https://www.facebook.com/yassin.salah",
+    "instagram": "",
+    "linkedin": "",
+    "tiktok": "",
+    "pinterest": "",
+    "vimeo": "",
+    "porgrams": [
+      "1-Day Workshop",
+      "2-Days Workshop",
+      "3-Days Workshop",
+      "Course",
+      "Diploma"
+    ]
+  },
+  "3": {
+    "name": "Mohamed Sotouhy",
+    "phone": "01011845263",
+    "email": " m.sotouhy@cubersio.com",
+    "bio": "Senior Art Producer. Managed all the art-producing operations for the well-known and the most of his king The choise Series with all his parts (El-Ekhtiar), and beside of that, managed multiple producing operations for well-known Ramadan Season serieses.",
+    "id": "3",
+    "rates": [5.0],
+    "cats": ["Producing", "Art Producing"],
+    "facebook": "",
+    "instagram": "",
+    "linkedin": "",
+    "tiktok": "",
+    "pinterest": "",
+    "vimeo": "",
+    "porgrams": [
+      "1-Day Workshop",
+      "2-Days Workshop",
+      "3-Days Workshop",
+      "Course",
+      "Diploma"
+    ]
+  },
+  "4": {
+    "name": "Mohamed Ashraf",
+    "phone": "01124826471",
+    "email": "m.ashraf@cubersio.com",
+    "bio": "Senior Script Writer, Director, and Producer. Graduated from Holleywood Film Institute. Founder of M.A. Productions, A well-known and from the respected of its kind company specialized in writing, directing, and producing video ads.",
+    "id": "4",
+    "rates": [5.0],
+    "cats": ["Producing", "Script Writing", "Driecting"],
+    "facebook": "https://www.facebook.com/mahmoodyousef.elkhawaga",
+    "instagram": "",
+    "linkedin": "",
+    "tiktok": "",
+    "pinterest": "",
+    "vimeo": "",
+    "porgrams": [
+      "1-Day Workshop",
+      "2-Days Workshop",
+      "3-Days Workshop",
+      "Course",
+      "Diploma"
+    ]
+  },
+  "5": {
+    "name": "Mina Seweha",
+    "phone": "01011845263",
+    "email": " Mahmoodkhawaga834@gmail.com",
+    "bio": "A filmmaker who is passionate about change. Made 6 short films; 3 of them were only one-man crew work. My films got nominated in more than 12 film festivals. A novelist who is obsessed with details. I wrote 4 novels, and the press named me (The Youngest Novelist of Egypt and The Middle East). Also, I write my own films; I have been writing scripts for 5 years now.",
+    "id": "5",
+    "rates": [5.0],
+    "cats": ["Directing", "Film Making"],
+    "facebook": "https://www.facebook.com/mahmoodyousef.elkhawaga",
+    "instagram": "",
+    "linkedin": "",
+    "tiktok": "",
+    "pinterest": "",
+    "vimeo": "https://vimeo.com/user14510073",
+    "porgrams": [
+      "1-Day Workshop",
+      "2-Days Workshop",
+      "3-Days Workshop",
+      "Course",
+      "Diploma"
+    ]
+  },
+  "6": {
+    "name": "Mohamed Mohsen",
+    "phone": "01011845263",
+    "email": " Mahmoodkhawaga834@gmail.com",
+    "bio": "A filmmaker who is passionate about change. Made 6 short films; 3 of them were only one-man crew work. My films got nominated in more than 12 film festivals. A novelist who is obsessed with details. I wrote 4 novels, and the press named me (The Youngest Novelist of Egypt and The Middle East). Also, I write my own films; I have been writing scripts for 5 years now.",
+    "id": "6",
+    "rates": [5.0],
+    "cats": ["Art Directing"],
+    "facebook": "https://www.facebook.com/mahmoodyousef.elkhawaga",
+    "instagram": "",
+    "linkedin": "",
+    "tiktok": "",
+    "pinterest": "",
+    "vimeo": "https://vimeo.com/user14510073",
+    "porgrams": [
+      "1-Day Workshop",
+      "2-Days Workshop",
+      "3-Days Workshop",
+      "Course",
+      "Diploma"
+    ]
+  }
+}

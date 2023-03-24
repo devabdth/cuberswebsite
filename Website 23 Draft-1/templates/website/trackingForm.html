@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="{{lang}}" dir="{{lang}}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" name="description" content="{{cfg.header_desc}}" />
+    <meta charset="utf-8" name="keywords" content="{{cfg.header_keywords}}" />
+
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='website/global/styles/computer.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='website/global/styles/tablets.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='website/global/styles/mobile.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='website/tracking/form/styles/computer.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='website/tracking/form/styles/tablets.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='website/tracking/form/styles/mobile.css')}}"
+    />
+    <script src="{{url_for('static', filename='website/tracking/form/scripts/main.js')}}"></script>
+    <script src="{{url_for('static', filename='website/global/scripts/main.js')}}"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{url_for('static', filename='website/global/styles/icons/logo-accent.ico')}}"
+    />
+    <title>
+      {{content.global_[lang]['name']}} -
+      {{content.actions[lang]['trackYourProject']}}
+    </title>
+  </head>
+  <body>
+    <style>
+      :root {
+        --pff: "{{primary_font_family}}";
+        --sff: "{{secondary_font_family}}";
+      }
+    </style>
+
+    <header id="header">
+      <div id="brand">
+        <div id="open-drawer-header-icon" onclick="openDrawer();"></div>
+        <div
+          id="logo"
+          onclick="window.open('{{cfg.base_url |safe}}', '_self');"
+        ></div>
+        <h1 onclick="window.open('{{cfg.base_url |safe}}', '_self');">
+          {{content.global_[lang]['name']}}
+        </h1>
+      </div>
+      <nav id="tabs">
+        <a href="/" class="header-tab">{{content.tabs[lang]['home']}}</a>
+        <a href="/about/" class="header-tab">{{content.tabs[lang]['about']}}</a>
+        <a href="/projects/" class="header-tab"
+          >{{content.tabs[lang]['projects']}}</a
+        >
+        <a href="/blog/" class="header-tab">{{content.tabs[lang]['blog']}}</a>
+        <a href="/contact/" class="header-tab"
+          >{{content.tabs[lang]['contact']}}</a
+        >
+      </nav>
+      <nav id="actions">
+        <a href="/tracking/" class="main-button" id="track-project"
+          >{{content.actions[lang]['trackYourProject']}}</a
+        >
+        <a href="/contact/" class="shadow-button" id="contactUs"
+          >{{content.actions[lang]['pickQuote']}}</a
+        >
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          title="Toggles light & dark"
+          aria-label="auto"
+          aria-live="polite"
+        >
+          <svg
+            class="sun-and-moon"
+            aria-hidden="true"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <mask class="moon" id="moon-mask">
+              <rect x="0" y="0" width="100%" height="100%" fill="white" />
+              <circle cx="24" cy="10" r="6" fill="black" />
+            </mask>
+            <circle
+              class="sun"
+              cx="12"
+              cy="12"
+              r="6"
+              mask="url(#moon-mask)"
+              fill="currentColor"
+            />
+            <g class="sun-beams" stroke="currentColor">
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </g>
+          </svg>
+        </button>
+      </nav>
+    </header>
+    <section id="entry">
+      <div id="overlay">
+        <h3>{{content.global_[lang]['trackYourProject']}}</h3>
+        <p>{{content.global_[lang]['trackYouProjectMsg']}}</p>
+      </div>
+    </section>
+    <section id="form">
+      <div id="form-overlay">
+        <div id="form">
+          <h3>{{content.global_[lang]['trackYourProject']}}</h3>
+          <input
+            type="text"
+            name="Project Id"
+            placeholder="{{content.global_[lang]['projectId']}}"
+            id="project-id-field"
+            class="single-line-field"
+          />
+          <p>{{content.global_[lang]['projectIdMsg']}}</p>
+          <input
+            type="password"
+            name="Project Access Key"
+            placeholder="{{content.global_[lang]['projectAccessKey']}}"
+            id="project-access-key-field"
+            class="single-line-field"
+          />
+          <p>{{content.global_[lang]['projectAccessKeyMsg']}}</p>
+          <div id="actions">
+            <button
+              id="form-submission"
+              onclick="formSubmission()"
+              class="main-button"
+            >
+              {{content.actions[lang]['submit']}}
+            </button>
+            <button
+              id="form-clearation"
+              onclick="formClearation();"
+              class="shadow-button"
+            >
+              {{content.actions[lang]['clearForm']}}
+            </button>
+          </div>
+          <p id="status-msg"></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div id="meta-info">
+        <div id="logo"></div>
+        <h3>{{content.global_[lang]['name']}}</h3>
+        <p>{{content.global_[lang]['entryDesc']}}</p>
+        <div id="social-media-icons">
+          {% if cfg.facebook_link %}
+          <a
+            href="{{cfg.facebook_link}}"
+            class="social-media-icon fa fa-facebook"
+            id="facebook"
+          ></a>
+          {% endif %} {% if cfg.instagram_link %}
+          <a
+            href="{{cfg.instagram_link}}"
+            class="social-media-icon fa fa-instagram"
+            id="instagram"
+          ></a>
+          {% endif %} {% if cfg.linkedin_link %}
+          <a
+            href="{{cfg.linkedin_link}}"
+            class="social-media-icon fa fa-linkedin"
+            id="linkedin"
+          ></a>
+          {% endif %} {% if cfg.twitter_link %}
+          <a
+            href="{{cfg.twitter_link}}"
+            class="social-media-icon fa fa-twitter"
+            id="twitter"
+          ></a>
+          {% endif %}
+        </div>
+      </div>
+      <div id="tabs">
+        <a href="/about/" class="footer-tab">{{content.tabs[lang]['about']}}</a>
+        <a href="/projects/" class="footer-tab"
+          >{{content.tabs[lang]['projects']}}</a
+        >
+        <a href="/contact/" class="footer-tab"
+          >{{content.tabs[lang]['contact']}}</a
+        >
+        <a href="/blog/" class="footer-tab">{{content.tabs[lang]['blog']}}</a>
+      </div>
+    </footer>
+    <div id="copyright">{{cfg.copyright_msg}}</div>
+    <div id="drawer-overlay" onclick="closeDrawer()"></div>
+    <div id="drawer">
+      <div id="header">
+        <h3>{{content.global_[lang]['name']}}</h3>
+        <div onclick="closeDrawer();" id="drawer-header-close">x</div>
+      </div>
+      <div id="tabs">
+        <a href="/home/" class="header-tab">{{content.tabs[lang]['home']}}</a>
+        <a href="/about/" class="header-tab">{{content.tabs[lang]['about']}}</a>
+        <a href="/projects/" class="header-tab"
+          >{{content.tabs[lang]['projects']}}</a
+        >
+        <a href="/blog/" class="header-tab">{{content.tabs[lang]['blog']}}</a>
+        <a href="/contact/" class="header-tab"
+          >{{content.tabs[lang]['contact']}}</a
+        >
+        <a href="/tracking/" class="header-tab"
+          >{{content.actions[lang]['trackYourProject']}}</a
+        >
+      </div>
+      <div id="social-media-icons">
+        {% if cfg.facebook_link %}
+        <a
+          href="{{cfg.facebook_link}}"
+          class="social-media-icon fa fa-facebook"
+          id="facebook"
+        ></a>
+        {% endif %} {% if cfg.instagram_link %}
+        <a
+          href="{{cfg.instagram_link}}"
+          class="social-media-icon fa fa-instagram"
+          id="instagram"
+        ></a>
+        {% endif %} {% if cfg.linkedin_link %}
+        <a
+          href="{{cfg.linkedin_link}}"
+          class="social-media-icon fa fa-linkedin"
+          id="linkedin"
+        ></a>
+        {% endif %} {% if cfg.twitter_link %}
+        <a
+          href="{{cfg.twitter_link}}"
+          class="social-media-icon fa fa-twitter"
+          id="twitter"
+        ></a>
+        {% endif %}
+      </div>
+      <div id="copyright">
+        <div id="logo"></div>
+        <div id="copyright-msg">{{cfg.copyright_msg}}</div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      document.firstElementChild.setAttribute("data-theme", "{{mode | lower}}");
+    </script>
+  </body>
+</html>

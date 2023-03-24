@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{{url_for('static', filename='./styles/mailing/computer.css')}}"/>
+	<script type="text/javascript" src="{{url_for('static', filename='./scripts/mailing/main.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static', filename='./scripts/global/menu.js')}}"></script>
+
+	<title>Cubers - Leads</title>
+</head>
+<body>
+	<div id="dashboard">
+		<div id="menu">
+			<button id="toggle-button" onclick="toggleMenu();">x</button>
+			<div onclick="leads();" class="menu-tab" id="leads">
+				<div class="menu-tab-icon" id="leads-icon"></div>
+				<p class="menu-tab-title" id="leads-title">Leads</p>
+			</div>
+			<div onclick="mailing();" class="menu-tab  active-tab" id="mailing">
+				<div class="menu-tab-icon" id="mailing-icon"></div>
+				<p class="menu-tab-title" id="mailing-title">Mailing</p>
+			</div>
+			<div onclick="processes();" class="menu-tab" id="processes">
+				<div class="menu-tab-icon" id="processes-icon"></div>
+				<p class="menu-tab-title" id="processes-title">Processes</p>
+			</div>
+			<div style="height: 70%;"></div>
+			<a href="../logout/" onclick="logout();" class="menu-tab" id="logout">
+				<div class="menu-tab-icon" id="logout-icon"></div>
+				<p class="menu-tab-title" id="logout-title">Logout</p>
+			</a>
+		</div>
+		<div id="fragment">
+			<div id="header">
+				<div id="title">
+					<h3>Mailing</h3>
+					<p>This page contains mailing operations to leads.</p>
+				</div>
+				<button id="add-lead" onclick="send();">Send</button>
+			</div>
+			<div id="form">
+				<p>Dear {Company Name}</p>
+				<textarea cols="1000" row="1000" id="msg"></textarea>
+				<button onclick="toggleLeadsDropdown()" id="leads-dropbtn" class="leads-dropbtn">Pick leads...</button>
+      			<div id="leads-dropdown" class="leads-dropdown-content">
+        			<input type="text" placeholder="Search..." id="leads-search" onkeyup="filter()">
+        			{% for lead in leads %}
+           				<button style="font-family: 'Cairo';" onclick="chooseLead({{loop.index0}});">{{lead['name']}} - {{categories[lead['category']]}}</button>
+        			{% endfor %}
+	  	  </div>
+	  	  <div id="selected-leads"></div>
+		</div>
+
+	<script type="text/javascript">
+		setupLeadsData('{{leads | tojson}}');
+	</script>
+</body>
+</html>

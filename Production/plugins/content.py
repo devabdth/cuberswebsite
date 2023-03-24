@@ -1,0 +1,127 @@
+class Content:
+    def __init__(self):
+        self.tabs: dict = {
+            "en": {
+                "home": "Home",
+                "about": "About",
+                "projects": "Projects",
+                "blog": "Blog",
+                "contact": "Contact",
+                "tracking": "Tracking",
+                "websites": "Websites",
+                "applications": "Applications",
+                "systems": "Systems",
+            }
+        }
+
+        self.global_: dict = {
+            "en": {
+                "name": "Cubers",
+                "slogan": "Your dreams software is with",
+                "entryDesc": "Cubers IO is an Egyptian company based in Cairo. We Cubers IO see that the biggest benefit is to take businesses to the next level which in the business can develop itself by our Software, Designs and Researches.",
+                "countArojects": "Accomplished Projects",
+                "countHmployees": "Hired Employees",
+                "countPrticles": "Posted Articles",
+                "countHlients": "Hired by Clients",
+                "mostPobulerArticles": "Most <br><span class='underline'>Populer</span></br> Articles",
+                "entryServicesSectionTitle": "What we <span class='underline'>can</span> do?",
+                "entryServicesSectionMsg": "The services we can provide to our clients!",
+                "fullname": "Full name",
+                "companyName": "Company Name",
+                "email": "Email",
+                "yourWebsite": "Your Website (Optional)",
+                "yourMsg": "Message",
+                "freeConsultentSectionTitle": "Get free <span class='underline'>consultent</span> now!",
+                "freeConsultentSectionMsg": "Submit a ticket now to get free consultent on all the topics you need!",
+                "trustBetweenUs": "<span class='underline'> Trust</span><br>between us",
+                "whoWeAre": "Who are <span class='underline'>We</span>?",
+                "ourStory": "We’ve changed the way that our clients’ customers see the world by making services more easy as possible and we actually do this to satisfy our clients’ needs to expand vertically by making the cash flow more intelligent and horizontally by making the virtual branch (Websites / Applications) available for the whole world",
+                "whatWeProvide": "What we can <span class='underline'>Offer</span>?",
+                "whatWeProvideContent": """
+                    <h3>Websites</h3><br>\n
+                    <p>Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum</p><br><br>
+                    <h3>Mobile Applications</h3><br>\n
+                    <p>Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum</p><br><br>
+                    <h3>Systems</h3><br>\n
+                    <p>Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum</p><br><br>
+                """,
+                "highReliability": "High Reliability",
+                "highReliabilityDesc": "We use the latest in Development Technologies Stack and have a well-organized logistics structure that makes it possible to effectively harness the skills of our developers.",
+                "highSupportAndService": "High Support and Service",
+                "highSupportAndServiceDesc": "We provide services and support. We’ll be able to offer our 24h. Customer Support clients virtually",
+                "moderatePrices": "Moderate Prices",
+                "moderatePricesDesc": "We offer effective solutions at very competitive prices. We keep our development costs in-check, and pass over the savings to.",
+                "speedImplementation": "Speed Implementation",
+                "speedImplementationDesc": "Due to our strong creative resources, we can form a large work group, Customize and implement your project in extremely short time interval.",
+                "fieldsWeServe": "Fields we <br><span class='underline'>Serve</span>!",
+                "ecommerce": "Ecommerce",
+                "ecommerceDesc": "<p>E-commerce is the buying and selling of goods and services, or the transmitting of funds or data, over an electronic network, primarily the internet.</p>",
+                "portfolio": "Portfolio",
+                "portfolioDesc": "<p>A business portfolio is a document that contains important information about an organisation, including details about what the organisation does, its goals, available assets and mission. </p>",
+                "marketingSystem": "Marketing Systems",
+                "marketingSystemDesc": "<p>A market system is the network of buyers, sellers and other actors that come together to trade in a given product or service. The participants in a market system include: Direct market players such as producers, buyers, and consumers who drive economic activity in the market.</p>",
+                "managementSystems": "Management Systems",
+                "managementSystemsDesc": "<p>A management system is a set of policies, processes and procedures used by an organization to ensure that it can fulfill the tasks required to achieve its objectives. These objectives cover many aspects of the organization's operations.</p>",
+                "saasCreation": "SaaS Creation",
+                "saasCreationDesc": "<p>Software as a service is a software licensing and delivery model in which software is licensed on a subscription basis and is centrally hosted. SaaS is also known as \"on-demand software\" and Web-based/Web-hosted software.</p>",
+                "bookingPlatforms": "Booking Platforms",
+                "bookingPlatformsDesc": "<p>Computer reservation systems, or central reservation systems, are computerized systems used to store and retrieve information and conduct transactions related to air travel, hotels, car rental, or other activities.</p>",
+                "technologiesWeSpecializedIn": "Technologies We <span class='underline'>Specialized in</span>!",
+                "technologiesWeSpecializedInDesc": "Technologies we can use to deliver high scaled, secured, and modern designed apps!",
+                "designLanguages": "Design Languages",
+                "programmingLanguages": "Programming Languages",
+                "frameworks": "Frameworks",
+                "databases": "Databases",
+                "portfolioTitle": "Our Humble <span class='underline'>Portfolio</span>!",
+                "websitesProjectsTitle": "<span class='underline'>Websites</span><br> We've Created!",
+                "systemsProjectsTitle": "<span class='underline'>Systems</span><br> We've Created!",
+                "applicationsProjectsTitle": "<span class='underline'>Applications</span><br> We've Created!",
+                "blog": "Our Blog",
+                "blogSlogan": "As we always care about increasing your knowledge, we created...",
+                "blogEntry": "Read, Learn, Grow!",
+                "blogEntrySlogan": "As we <span class='underline'>Care about you</span> here you can find a lot of resources!",
+                "blogSearchPlaceholder": "Search by name, topic, etc...",
+                "category": "Category",
+                "contactEntry": "The light to <span class='underline'>Find</span> Us!",
+                "contactEntryMsg": "Send a message, Subscribe to our newsletter, or Book a meeting!",
+                "sendUsAMessage": "Send <span class='underline'>Message</span>",
+                "sendUsAMessageMsg": "We care about you and want to here from you!",
+                "contactNameHint": "* Enter your name or your business name here!",
+                "contactEmailHint": "* Enter your email here so we can reach you!",
+                "contactMessageHint": "* Consider it as an open mic and say whatever you want!",
+                "topics": "Topics",
+                "contactTopicsHint": "Pick the topics you are interested in!",
+                "subscribeNewsletter": "Subscribe to<br><span class='underline'>Newsletter</span>!",
+                "subscribeNewsletterMsg": "Be the first one to get our latest articles!",
+                "clients": "CLients",
+                "projectIdMsg": "*Enter the project Id that is mentioned in the contract!",
+                "projectAccessKeyMsg": "*Enter the project Access Key that mentioned in the contract",
+                "trackYourProject": "Track your Project",
+                "trackYouProjectMsg": "We want you to follow our process step by step so we created this section to allow you to follow us in each milestone!",
+                "projectId": "Project Id",
+                "projectAccessKey": "Project Access Key",
+                "consultNameHint": "* Enter your name or company Name!",
+                "consultEmailHint": "* Enter your email to make it easy to reacy you!",
+                "consultWebsiteHint": "Enter your website if you wish us to review it!",
+                "consultMessageHint": "Let us know more what you need!",
+                "webDevelopmentBrief": "Design, and Develop High performance, and scalable websites is not an issue any more!",
+                "mobileDevelopmentBrief": "Your startup can be a mobile application now. Discover our latest applications developed by the freshest technologies following the UI trends!",
+                "systemDevelopmentBrief": "NO SYSTEM, NO BUSINESS! Discover the latest systems we've created lately!",
+            }
+        }
+
+        self.actions: dict = {
+            "en": {
+                "trackYourProject": "Track your project",
+                "pickQuote": "Pick Quote",
+                "watchOurPortfolio": "Watch Our Portfolio",
+                "submitTicket": "Submit Ticket",
+                "submit": "Submit",
+                "clearForm": "Clear",
+                "seeMore": "See more",
+                "filter": "Filter",
+                "pickCategory": "Pick Category",
+                "clearFiltration": "Clear Filter",
+                "subscribe": "Subscribe"
+            }
+        }

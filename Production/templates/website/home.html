@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="{{lang}}" dir="{{lang}}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta charset="utf-8" name="description" content="{{cfg.header_desc}}">
+  <meta charset="utf-8" name="keywords" content="{{cfg.header_keywords}}">
+
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='website/global/styles/computer.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='website/global/styles/tablets.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='website/global/styles/mobile.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='website/home/styles/computer.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='website/home/styles/tablets.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='website/home/styles/mobile.css')}}"
+    />
+    <script src="{{url_for('static', filename='website/global/scripts/main.js')}}"></script>
+    <script src="{{url_for('static', filename='website/home/scripts/main.js')}}"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+    rel="icon"
+    type="image/x-icon"
+    href="{{url_for('static', filename='website/global/styles/icons/logo-accent.ico')}}"
+  />
+    <title>
+      {{content.global_[lang]['name']}} - {{content.tabs[lang]['home']}}
+    </title>
+  </head>
+  <body>
+    <style>
+      :root {
+        --pff: "{{primary_font_family}}";
+        --sff: "{{secondary_font_family}}";
+      }
+    </style>
+
+    <header id="header">
+      <div id="brand">
+        <div id="open-drawer-header-icon" onclick="openDrawer();"></div>
+        <div id="logo" onclick="window.open('{{cfg.base_url |safe}}', '_self');"></div>
+        <h1 onclick="window.open('{{cfg.base_url |safe}}', '_self');">{{content.global_[lang]['name']}}</h1>
+      </div>
+      <nav id="tabs">
+        <a href="/" class="header-tab underline" id="active-tab"
+          >{{content.tabs[lang]['home']}}</a
+        >
+        <a href="/about/" class="header-tab">{{content.tabs[lang]['about']}}</a>
+        <a href="/projects/" class="header-tab"
+          >{{content.tabs[lang]['projects']}}</a
+        >
+        <a href="/blog/" class="header-tab">{{content.tabs[lang]['blog']}}</a>
+        <a href="/contact/" class="header-tab"
+          >{{content.tabs[lang]['contact']}}</a
+        >
+      </nav>
+      <nav id="actions">
+        <a href="/tracking/" class="main-button" id="track-project"
+          >{{content.actions[lang]['trackYourProject']}}</a
+        >
+        <a href="/contact/" class="shadow-button" id="contactUs"
+          >{{content.actions[lang]['pickQuote']}}</a
+        >
+        <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
+          <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+            <mask class="moon" id="moon-mask">
+              <rect x="0" y="0" width="100%" height="100%" fill="white" />
+              <circle cx="24" cy="10" r="6" fill="black" />
+            </mask>
+            <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+            <g class="sun-beams" stroke="currentColor">
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+             </g>
+          </svg>
+        </button>
+      </nav>
+    </header>
+    <section class="pt1" id="entry">
+      <div id="overlay">
+        <div id="content">
+          <h3>
+            <span>{{content.global_[lang]['slogan']}}<br /></span
+            >{{content.global_[lang]['name']}}!
+          </h3>
+          <p>{{content.global_[lang]['entryDesc'] | safe}}</p>
+          <div id="actions">
+            <a href="/tracking/" class="main-button" id="track-project"
+              >{{content.actions[lang]['trackYourProject']}}</a
+            >
+            <a href="/projects/" class="outlined-button" id="see-projects"
+              ><i></i>{{content.actions[lang]['watchOurPortfolio']}}</a
+            >
+          </div>
+        </div>
+        <div id="entry-illustration"></div>
+      </div>
+    </section>
+    <section id="counts">
+      <h4 id="projects">
+        <span>14<br /></span>{{content.global_[lang]['countArojects']}}
+      </h4>
+      <h4 id="employees">
+        <span>10<br /></span>{{content.global_[lang]['countHmployees']}}
+      </h4>
+      <h4 id="articles">
+        <span>{{db.blogs | length}}<br /></span>{{content.global_[lang]['countPrticles']}}
+      </h4>
+      <h4 id="clients">
+        <span>5<br /></span>{{content.global_[lang]['clients']}}
+      </h4>
+    </section>
+    <section id="services">
+      <h3>{{content.global_[lang]['entryServicesSectionTitle'] | safe}}</h3>
+      <p>{{content.global_[lang]['entryServicesSectionMsg']}}</p>
+      <div id="cards">
+        <div class="article-card" onclick="window.open('/projects/websites/', '_self');">
+          <div class="cover" id="web"></div>
+          <h2>Web<br>Development</h2>
+          <p>{{content.global_[lang]['webDevelopmentBrief'][:50]}}...</p>
+          <div class="rating">
+            <p>({{db.get_projects_by_category('website') | length}}) Projects</p>
+          </div>
+          <div class="actions">
+            <button id="action">
+              <i class="fa fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="article-card" onclick="window.open('/projects/applications/', '_self');">
+          <div class="cover" id="mobile"></div>
+          <h2>Mobile Development</h2>
+          <p>{{content.global_[lang]['mobileDevelopmentBrief'][:50]}}...</p>
+          <div class="rating">
+            <p>({{db.get_projects_by_category('application') | length}}) Projects</p>
+          </div>
+          <div class="actions">
+            <button id="action">
+              <i class="fa fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="article-card" onclick="window.open('/projects/systems/', '_self');">
+          <div class="cover" id="software"></div>
+          <h2>Software Development</h2>
+          <p>{{content.global_[lang]['systemDevelopmentBrief'][:50]}}...</p>
+          <div class="rating">
+            <p>({{db.get_projects_by_category('system') | length}}) Projects</p>
+          </div>
+          <div class="actions">
+            <button id="action">
+              <i class="fa fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="free-consultent">
+      <div id="overlay">
+        <h3>{{content.global_[lang]['freeConsultentSectionTitle'] | safe}}</h3>
+        <p>{{content.global_[lang]['freeConsultentSectionMsg']}}</p>
+        <div id="free-consultent-from">
+          <input
+            type="name"
+            class="single-line-field"
+            id="name"
+            placeholder="{{content.global_[lang]['fullname']}} / {{content.global_[lang]['companyName']}}"
+          />
+          <p>{{content.global_[lang]['consultNameHint']}}</p>
+          <input
+            type="email"
+            class="single-line-field"
+            id="email"
+            placeholder="{{content.global_[lang]['email']}}"
+          />
+          <p>{{content.global_[lang]['consultEmailHint']}}</p>
+          <input
+            type="url"
+            class="single-line-field"
+            id="url"
+            placeholder="{{content.global_[lang]['yourWebsite']}}"
+          />
+          <p>{{content.global_[lang]['consultWebsiteHint']}}</p>
+          <textarea
+            type="text"
+            class="multi-line-field"
+            id="msg"
+            placeholder="{{content.global_[lang]['yourMsg']}}"
+          ></textarea>
+          <p>{{content.global_[lang]['consultMessageHint']}}</p>
+          <div id="actions">
+            <button class="main-button" onclick="consultingSubmission();" id="free-consultent-submit">
+              {{content.actions[lang]['submitTicket']}}
+            </button>
+            <button class="shadow-button" onclick="consultingCleartion();" id="free-consultent-clear">
+              {{content.actions[lang]['clearForm']}}
+            </button>
+          </div>
+          <p id="free-consultent-form-status"></p>
+        </div>
+      </div>
+    </section>
+    <section id="hot-articles">
+      <h3>{{content.global_[lang]['mostPobulerArticles'] | safe}}</h3>
+      <div id="cards">
+        {% for article in (db.blogs.values() | list)[:3] %}
+        <div class="article-card" onclick="window.open('/articles/{{article.id}}', '_self');">
+          <div class="cover" style="background-image: url(/images/blogCovers/{{article["id"]}})"></div>
+          <h2>{{article["title"]}}</h2>
+          <p>{{article['shortBrief'][:50]}}...</p>
+          <div class="rating">
+            <div>{{utils.generate_rating_bar(article["overallRating"]) |safe}}</div>
+            <p>({{article["reviews"] | length}})</p>
+          </div>
+          <div class="actions">
+            <button id="action" onclick="window.open(`/articles/{{article['id']}}`, '_self');">
+              <i class="fa fa-arrow-right"></i>
+            </button>
+          </div>
+
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    <footer>
+      <div id="meta-info">
+        <div id="logo"></div>
+        <h3>{{content.global_[lang]['name']}}</h3>
+        <p>{{content.global_[lang]['entryDesc'] | safe}}</p>
+        <div id="social-media-icons">
+          {% if cfg.facebook_link %}
+          <a
+            href="{{cfg.facebook_link}}"
+            class="social-media-icon fa fa-facebook"
+            id="facebook"
+          ></a>
+          {% endif %} {% if cfg.instagram_link %}
+          <a
+            href="{{cfg.instagram_link}}"
+            class="social-media-icon fa fa-instagram"
+            id="instagram"
+          ></a>
+          {% endif %} {% if cfg.linkedin_link %}
+          <a
+            href="{{cfg.linkedin_link}}"
+            class="social-media-icon fa fa-linkedin"
+            id="linkedin"
+          ></a>
+          {% endif %} {% if cfg.twitter_link %}
+          <a
+            href="{{cfg.twitter_link}}"
+            class="social-media-icon fa fa-twitter"
+            id="twitter"
+          ></a>
+          {% endif %}
+        </div>
+      </div>
+      <div id="tabs">
+        <a href="/about/" class="footer-tab">{{content.tabs[lang]['about']}}</a>
+        <a href="/projects/" class="footer-tab"
+          >{{content.tabs[lang]['projects']}}</a
+        >
+        <a href="/contact/" class="footer-tab"
+          >{{content.tabs[lang]['contact']}}</a
+        >
+        <a href="/blog/" class="footer-tab">{{content.tabs[lang]['blog']}}</a>
+      </div>
+    </footer>
+    <div id="copyright">{{cfg.copyright_msg}}</div>
+    <div id="drawer-overlay" onclick="closeDrawer()"></div>
+    <div id="drawer">
+      <div id="header">
+        <h3>{{content.global_[lang]['name']}}</h3>
+        <div onclick="closeDrawer();" id="drawer-header-close">x</div>
+      </div>
+      <div id="tabs">
+        <a href="/home/" class="header-tab underline" id="active-tab">{{content.tabs[lang]['home']}}</a>
+        <a href="/about/" class="header-tab">{{content.tabs[lang]['about']}}</a>
+        <a href="/projects/" class="header-tab">{{content.tabs[lang]['projects']}}</a>
+        <a href="/blog/" class="header-tab">{{content.tabs[lang]['blog']}}</a>
+        <a href="/contact/" class="header-tab">{{content.tabs[lang]['contact']}}</a>
+        <a href="/tracking/" class="header-tab">{{content.actions[lang]['trackYourProject']}}</a>
+      </div>
+      <div id="social-media-icons">
+        {% if cfg.facebook_link %}
+        <a
+          href="{{cfg.facebook_link}}"
+          class="social-media-icon fa fa-facebook"
+          id="facebook"
+        ></a>
+        {% endif %} {% if cfg.instagram_link %}
+        <a
+          href="{{cfg.instagram_link}}"
+          class="social-media-icon fa fa-instagram"
+          id="instagram"
+        ></a>
+        {% endif %} {% if cfg.linkedin_link %}
+        <a
+          href="{{cfg.linkedin_link}}"
+          class="social-media-icon fa fa-linkedin"
+          id="linkedin"
+        ></a>
+        {% endif %} {% if cfg.twitter_link %}
+        <a
+          href="{{cfg.twitter_link}}"
+          class="social-media-icon fa fa-twitter"
+          id="twitter"
+        ></a>
+        {% endif %}
+      </div>
+      <div id="copyright">
+				<div id="logo"></div>
+				<div id="copyright-msg">All rights reserved @ Cubers IO for Software Development</div>
+			</div>
+    </div>
+    <script type="text/javascript">
+      document.firstElementChild
+    .setAttribute('data-theme', '{{mode | lower}}');
+    </script>
+  </body>
+</html>

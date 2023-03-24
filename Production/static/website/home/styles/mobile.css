@@ -1,0 +1,264 @@
+@media screen and (max-width: 870px) {
+  section#entry {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section#entry #overlay {
+    padding: 0 5%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  section#entry #content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  section#entry h3 {
+    font-weight: 900;
+    font-size: 6em;
+    font-family: var(--pff);
+    color: white;
+    text-align: center;
+  }
+
+  section#entry h3 span {
+    font-weight: 500;
+    font-size: 0.25em;
+    font-family: var(--pff);
+    color: ghostwhite;
+  }
+
+  section#entry p {
+    padding: 0 10%;
+    font-weight: 100;
+    font-size: 0.75em;
+    font-family: var(--sff);
+    color: var(--secondaryVarientColor);
+    opacity: 0.75;
+    text-align: center;
+  }
+
+  section#entry #content > #actions {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 12px;
+  }
+
+  section#counts {
+    width: 100%;
+    padding: 8vh 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    background-color: var(--bg-color);
+  }
+
+  section#counts h4 span {
+    font-weight: 900;
+    font-size: 6em;
+    font-family: var(--sff);
+    color: var(--primaryColor);
+  }
+
+  section#counts h4 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1em;
+    font-family: var(--pff);
+    color: var(--secondaryColor);
+  }
+
+  section#services {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 5vh 5%;
+  }
+
+  section#services h3 {
+    font-weight: 700;
+    font-size: 2em;
+    font-family: var(--pff);
+    color: var(--secondaryColor);
+  }
+
+  section#services > p {
+    font-weight: 300;
+    font-size: 1em;
+    font-family: var(--sff);
+    color: var(--secondaryVarientColor);
+  }
+
+  section#services #cards {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+    gap: 16px;
+  }
+
+  section#free-consultent {
+    width: 100%;
+    min-height: 50vh;
+    max-height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-direction: column;
+    background-image: url(./images/consultentImageBg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  section#free-consultent #overlay {
+    padding: 10vh 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  div#free-consultent-from {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  section#free-consultent h3 {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: var(--pff);
+  }
+
+  section#free-consultent #overlay > p {
+    color: white;
+    font-size: 0.75em;
+    padding: 0 20%;
+    text-align: center;
+    font-weight: 300;
+    font-family: var(--sff);
+  }
+
+  div#free-consultent-from > p {
+    color: white;
+    opacity: 0.75;
+    font-size: 0.75em;
+    font-weight: 300;
+    font-family: var(--sff);
+    text-align: start;
+    width: 100%;
+    display: flex;
+  }
+
+  #free-consultent-form-status {
+    width: 100%;
+    display: flex;
+    text-align: center !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section#free-consultent div#free-consultent-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 5%;
+  }
+
+  #free-consultent-form-status {
+    font-weight: 100;
+    font-size: 1em;
+    font-family: var(--sff);
+    color: white;
+  }
+
+  section#free-consultent div#actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  section#hot-articles {
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+    flex-direction: column;
+    padding: 16px 5%;
+    background-color: var(--body-bg-color);
+  }
+
+  section#hot-articles h3 br {
+    display: none;
+  }
+
+  section#hot-articles h3 {
+    color: var(--secondaryColor);
+    font-size: 2em;
+    font-weight: 700;
+    font-family: var(--pff);
+  }
+
+  section#hot-articles #cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    overflow-x: scroll;
+    gap: 16px;
+  }
+
+  .cover#web {
+    background-image: url(./images/web.jpg);
+  }
+
+  .cover#mobile {
+    background-image: url(./images/mobile.jpg);
+  }
+
+  .cover#software {
+    background-image: url(./images/software.jpg);
+  }
+}

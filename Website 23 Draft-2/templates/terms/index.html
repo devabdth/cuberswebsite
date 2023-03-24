@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<head>
+  <title>Cubers</title>
+
+  <link
+    rel="stylesheet"
+    href="{{url_for('static', filename='global/styles/computer.css')}}"
+  />
+  <link
+    rel="stylesheet"
+    href="{{url_for('static', filename='global/styles/tablet.css')}}"
+  />
+  <link
+    rel="stylesheet"
+    href="{{url_for('static', filename='global/styles/mobile.css')}}"
+  />
+  <link
+    rel="stylesheet"
+    href="{{url_for('static', filename='terms/styles/computer.css')}}"
+  />
+  <link
+    rel="stylesheet"
+    href="{{url_for('static', filename='terms/styles/tablet.css')}}"
+  />
+  <link
+    rel="stylesheet"
+    href="{{url_for('static', filename='terms/styles/mobile.css')}}"
+  />
+  <script src="{{url_for('static', filename='global/scripts/header.js')}}"></script>
+  <script src="{{url_for('static', filename='global/scripts/drawer.js')}}"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link href="http://fonts.cdnfonts.com/css/agency-fb" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale= 1.0" />
+  <meta name="description" content="{{header_desc}}" />
+  <meta name="keywords" content="{{keywords}}" />
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="{{url_for('static', filename='./global/styles/icons/logo-accent.ico')}}"
+  />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Cubers IO - We take business to the next level!",
+      "description": {{header_desc}},
+      "image": "https://www.cubersio.com",
+      "url": "https://www.cubersio.com",
+      "datePublished": "2022-8-23",
+      "dateCreated": "2022-8-23",
+      "dateModified": "2022-8-23",
+      "publisher": "Cubers IO",
+      "author": {
+        "@type": "Company",
+        "name": "Cubers IO"
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <header id="header">
+    <button onclick="openDrawer()">
+      <img
+        id="drawer-icon"
+        src="{{url_for('static', filename='./global/styles/icons/menu.svg')}}"
+        alt="Cubers Drawer Icon"
+      />
+    </button>
+    <a href="/" id="header_title">CUBERS</a>
+    <nav>
+      <a href="/home">Home</a>
+      <a href="/about">About</a>
+      <a href="/services">Services</a>
+      <a href="/contact">Contact</a>
+      <a class="active_tab" href="/terms">Terms</a>
+      <a href="/portfolio">Portfolio</a>
+    </nav>
+  </header>
+
+  <section id="entry">
+    <div style="backdrop-filter: grayscale(100%)">
+      <h2><span>Trust</span> between us</h2>
+    </div>
+  </section>
+
+  <section id="terms">
+    {% for term in terms %}
+    <div class="term-container">
+      <h3>{{term['title']}}</h3>
+      <p>{{term['paragraph']}}</p>
+    </div>
+    {% endfor %}
+  </section>
+
+  <footer>
+    <div class="footer_column">
+      <div id="footer_logo"></div>
+      <h3>CUBERS</h3>
+      <p>{{meta_info['address']}}<br /></p>
+      <p>{{meta_info['phone']}}</p>
+      <div
+        style="
+          justify-content: space-between;
+          width: 70%;
+          margin-top: 10%;
+          height: 64px;
+          flex-direction: row;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <a
+          class="social_media_icon"
+          href="{{meta_info['facebook']}}"
+          id="facebook"
+        ></a>
+        <a
+          class="social_media_icon"
+          href="{{meta_info['linkedin']}}"
+          id="linkedin"
+        ></a>
+        <a
+          class="social_media_icon"
+          href="{{meta_info['instagram']}}"
+          id="instagram"
+        ></a>
+      </div>
+    </div>
+    <div id="tabs" class="footer_column">
+      <a class="footer_tab" href="/">Home<br /></a>
+      <a class="footer_tab" href="/about">About<br /></a>
+      <a class="footer_tab" href="/services">Services<br /></a>
+      <a class="footer_tab" href="terms">Terms<br /></a>
+      <a class="footer_tab" href="/portfolio">Portfolio<br /></a>
+    </div>
+    <div class="footer_column"></div>
+  </footer>
+
+  
+  <div id="drawer-overlay" onclick="closeDrawer()"></div>
+  <div id="drawer">
+    <div id="drawer-header">
+      <button id="drawer-icon" onclick="closeDrawer();">x</button>
+    </div>
+    <div id="footer_logo"></div>
+    <nav>
+      <a href="/home">Home</a>
+      <a href="/about">About</a>
+      <a href="/services">Services</a>
+      <a href="/contact">Contact</a>
+      <a href="/terms" class="active_tab">Terms</a>
+      <a href="/portfolio">Portfolio</a>
+
+    </nav>
+    <div
+      style="
+        justify-content: space-between;
+        width: 70%;
+        margin-top: 10%;
+        height: 64px;
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+      "
+    >
+      <a
+        class="social_media_icon"
+        href="{{meta_info['facebook']}}"
+        id="facebook"
+      ></a>
+      <a
+        class="social_media_icon"
+        href="{{meta_info['linkedin']}}"
+        id="linkedin"
+      ></a>
+      <a
+        class="social_media_icon"
+        href="{{meta_info['instagram']}}"
+        id="instagram"
+      ></a>
+    </div>
+  </div>
+
+
+</body>

@@ -1,0 +1,108 @@
+{
+  "0": {
+    "id": "0",
+    "title": "What's new in our website?",
+    "shortBrief": "As we've recently published our new website, Here's what's new in it and what you can do at it now!",
+    "category": 0,
+    "attachedUrl": "$url",
+    "cover": "",
+    "parts": [
+      {
+        "title": "More User Friendly",
+        "attachedUrl": "$url",
+        "attachedAsset": "28.png",
+        "desc": "We've made our website more user-friendly to users in case they are just intermediates, followers, or clients to allow them to get the maximum benefits they can take!"
+      },
+      {
+        "title": "New Projects",
+        "attachedUrl": "$url/projects/",
+        "attachedAsset": "29.png",
+        "desc": "We've added new projects recapping all of our efforts with our clients in 2022 and the first quarter of 2023. The new projects' blogs will be in a more detailed and organized form to allow you to make sure we've accomplished projects that are similar to what you're searching for or what you want to create!"
+      },
+      {
+        "title": "New Blog",
+        "attachedUrl": "$url/blog/",
+        "attachedAsset": "30.png",
+        "desc": "In 2023, We're looking forward to publishing 100 articles in many fields to deliver new concepts, information, and showreels to our followers to make them updated with the latest in the development and designing world."
+      },
+      {
+        "title": "Latest Updates Subscriptions",
+        "attachedUrl": "$url/contact/#subscription",
+        "attachedAsset": "31.png",
+        "desc": "To make our followers always updated, We've created a newsletter subscription section to make them get the latest updates by mail at the same time it's published."
+      },
+      {
+        "title": "Project Tracking System",
+        "attachedUrl": "$url/trackYourProject/",
+        "attachedAsset": "32.png",
+        "desc": "To make our clients always updated on their project's status and progress we've created a section for project tracking so we allow you if you're our client to track your project day by day!"
+      }
+    ],
+    "overallRating": 0,
+    "reviews": []
+  },"1": {
+    "id": "1",
+    "title": "All of the terms are updated!",
+    "shortBrief": "We've placed a major update in our terms to keep it up-to-date with your needs!",
+    "category": 0,
+    "attachedUrl": "$url",
+    "cover": "",
+    "parts": [
+      {
+        "title": "We've recently updated our structure, So we did to our terms!",
+        "attachedUrl": "$url/contact/",
+        "attachedAsset": null,
+        "desc": "We - Cubers IO - care the most about you and your business, So we updated our terms to fit exactly your needs!<br><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp- First things first: We updated our business to make it targeting only Software Development with all of its branches as Websites, Applications, Systems, etc...<br><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp- Second things second: We've freeze all of our marketing projects for a while to be fully focused in creating your software as it should be!<br><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp-Third Things third, We've created new approaches to make it easy for you and us to communicate, negotiate, and maintain!<br><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp- Last Things last: We've merged our two websites: Main Website and Academy Website to avoid giving dispersion to you. You can now find all of what you need from our services on one website."
+      }
+    ],
+    "overallRating": 0,
+    "reviews": []
+  },"2": {
+    "id": "2",
+    "title": "New Social Media Strategy!",
+    "shortBrief": "We've placed a major update in our terms to keep it up-to-date with your needs!",
+    "category": 0,
+    "attachedUrl": "$url",
+    "cover": "",
+    "parts": [
+      {
+        "title": "We've recently updated our structure, So we did to our terms!",
+        "attachedUrl": "https://www.instagram.com/cubersio/",
+        "attachedAsset": null,
+        "desc": "We've created a new publishment policy. The only reason behind it is to deliver educational content to intermediates. Here you can find examples!"
+      },
+      {
+        "title": "",
+        "attachedUrl": "",
+        "attachedAsset": "33.jpg",
+        "desc": ""
+      },
+      {
+        "title": "",
+        "attachedUrl": "",
+        "attachedAsset": "34.jpg",
+        "desc": ""
+      },
+      {
+        "title": "",
+        "attachedUrl": "",
+        "attachedAsset": "35.jpg",
+        "desc": ""
+      },
+      {
+        "title": "",
+        "attachedUrl": "",
+        "attachedAsset": "36.jpg",
+        "desc": ""
+      },
+      {
+        "title": "",
+        "attachedUrl": "",
+        "attachedAsset": "37.jpg",
+        "desc": ""
+      }
+    ],
+    "overallRating": 0,
+    "reviews": []
+  }
+}

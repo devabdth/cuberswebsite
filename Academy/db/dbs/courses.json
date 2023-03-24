@@ -1,0 +1,46 @@
+{
+  "0": {
+    "name": "Marketing for the Digial Age",
+    "instructorId": "0",
+    "space": "0",
+    "bio": "-Basics of Marketing\n-how to target your audience \n-how to make strategies \n-Content Creation from idea to insights \n-how to make content plan\n-how to manage account from any platform \n-how to market yourself",
+    "rates": [5.0],
+    "active": true,
+    "id": "0",
+    "lectures": 3,
+    "cost": "500"
+  },
+  "1": {
+    "name": "You from the viewer to the creator",
+    "instructorId": "1",
+    "space": "0",
+    "bio": "- Why the director considered as the most important person in any film making project and his presence in post credit scenes is the last.\n- How the Director control the set and supervise actors.\n- Shots Types, and the feelings/messages behind\n- The Shots List \"Decoupage\".\n- How the director use the crew to execute shots.\n- How to use the shots list \"Decoupage\" to deliver the message.",
+    "rates": [5.0],
+    "active": true,
+    "id": "1",
+    "lectures": 3,
+    "cost": "500"
+  },
+  "2": {
+    "name": "Put your thoughts into motion",
+    "instructorId": "2",
+    "space": "0",
+    "bio": "- Fundementals of Adobe Premiere Pro.\n- Essential, Effects, Editing, and Color Windows.\n- Media Operations.\n- Cut, Drag, Alignment, and Nesting.\n- Effects Fundementals.\n- Color Key, and Green Screen Handling.\n- Introduction to Coloring\n- Adjustemnt Layer.\n- Exporting, Rendering Fundementals.",
+    "rates": [5.0],
+    "active": true,
+    "id": "2",
+    "lectures": 4,
+    "cost": "1000"
+  },
+  "montageMasterClass": {
+    "name": "Video Editing Master Class",
+    "instructorId": "2",
+    "space": "0",
+    "bio": "- Video Editing Script\n- Video Planning\n- Fundementals of Adobe Premiere Pro.\n- Essential, Effects, Editing, and Color Windows.\n- Media Operations.\n- Cut, Drag, Alignment, and Nesting.\n- Effects Fundementals.\n- Color Key, and Green Screen Handling.\n- Introduction to Coloring\n- Adjustemnt Layer.\n- Exporting, Rendering Fundementals.\n\n- Lifetime Access to the course\n- Full Time Job for the best final assessment rating.",
+    "rates": [5.0],
+    "active": true,
+    "id": "montageMasterClass",
+    "lectures": 10,
+    "cost": "2000"
+  }
+}

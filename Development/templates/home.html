@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% if lang == "ar" %}
+	<html lang="{{lang}}" dir="rtl">
+{% else %}
+	<html lang="{{lang}}" dir="ltr">
+{% endif %}
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{content.tabs[lang]['home'] | safe}}</title>
+</head>
+<body>
+
+</body>
+</html>

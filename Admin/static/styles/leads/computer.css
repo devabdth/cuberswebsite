@@ -1,0 +1,382 @@
+body, * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+a {
+	text-decoration: none;
+}
+
+:root {
+	--main-color: #4e8ece;
+	--secondary-color: #555;
+}
+
+#dashboard {
+	flex-direction: row;
+	display: flex;
+	min-height: 100vh;
+	width: 100%;
+}
+
+
+#menu {
+	width: 12.5%;
+	height: 100vh;
+	display: flex;
+	background-color: var(--main-color);
+	position: fixed;
+	flex-direction: column;
+	align-items: end;
+	justify-content: space-between;
+	transition: 500ms ease;
+	padding: 12px 0;
+}
+
+#menu > button {
+	background-color: transparent;
+	border: none;
+	background: transparent;
+	color: white;
+	font-size: 2em;
+	cursor: pointer;
+	margin: 24px;
+}
+
+.menu-tab {
+	width: 100%;
+	height: 10vh;
+	background-color: transparent;
+	justify-content:  space-between;
+	align-items: center;
+	flex-direction: row;
+	overflow: hidden;
+	transition: 500ms ease;
+	display: flex;
+	padding: 0 12px;
+	cursor: pointer;
+}
+
+.active-tab {
+	background-color: rgba(0, 0, 0, 0.15);
+}
+
+.menu-tab-title {
+	color: ivory;
+	font-family: 'Raleway';
+}
+
+.menu-tab-icon {
+	width: 32px;
+	height: 32px;
+	display: flex;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.menu-tab:hover {
+	background-color: rgba(0, 0, 0, 0.15);
+}
+
+#leads-icon {
+	background-image: url(./icons/leads.png);
+}
+
+#mailing-icon {
+	background-image: url(./icons/mailing.png);
+}
+
+#processes-icon {
+	background-image: url(./icons/processes.png);
+}
+
+#logout-icon {
+	background-image: url(./icons/logout.png);
+}
+
+#fragment {
+	margin-left: 12.5%;
+	width: 100%;
+	min-height: 100vh;
+	background-color: ivory;
+	display: flex;
+	flex-direction: column;
+	padding: 8px 16px;
+	transition: 500ms ease;
+}
+
+#header {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	overflow: auto;
+}
+
+#options{
+	width: 30vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#options > button {
+	background-color: var(--main-color);
+	font-family: Raleway;
+	font-size: 1.5em;
+	color: white;
+	padding: 12px 24px;
+	border-radius: 12px;
+	border: 2px var(--main-color) solid;
+	transition: 500ms ease;
+	cursor: pointer	;
+}
+
+#options > button:hover{
+	background-color: transparent;
+	color: var(--main-color);
+}
+
+#title{
+	min-width: 60vw;
+}
+
+#title > h3 {
+	color: var(--main-color);
+	font-size: 3em;
+	font-weight: 900;
+	font-family: 'Raleway';
+}
+
+#title > p {
+	color: var(--secondary-color);
+	font-size: 0.75em;
+	font-weight: 300;
+	font-family: 'Poppins';
+}
+
+#leads {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+}
+
+#leads td, #leads th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  width: 30%;
+}
+#leads > td, #leads > th {
+  min-width: 20vh;
+}
+
+#leads tr:nth-child(even){background-color: #f2f2f2;}
+
+#leads tr:hover {background-color: #ddd;}
+
+#leads th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--main-color);
+  color: white;
+}
+
+#lead-dialog-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100vw;
+	height: 100vh;
+	z-index: 10;
+}
+
+#lead-dialog {
+	background-color: ivory;
+	width: 70vw;
+	height: 100vh;
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 15vw;
+	z-index: 20;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	border-radius: 12px;
+	padding: 12px 24px;
+}
+
+#lead-dialog > #header {
+	width: 100%;
+	height: 10%;
+	justify-content: space-between;
+	align-items: center;
+	display: flex;
+}
+
+#lead-dialog > #footer {
+	width: 100%;
+	height: 10%;
+	justify-content: space-between;
+	align-items: center;
+	display: flex;
+}
+
+#lead-dialog > #header > p {
+	color: var(--main-color);
+	font-size: 2em;
+	font-weight: 500;
+	font-family: 'Raleway';
+}
+
+#lead-dialog > #header > div {
+	color: var(--main-color);
+	font-size: 2em;
+	font-weight: 100;
+	font-family: 'Raleway';
+	cursor: pointer;
+}
+#lead-dialog > #footer > div {
+	background-color: var(--main-color);
+	font-family: Raleway;
+	font-size: 1.5em;
+	color: white;
+	padding: 12px 24px;
+	border-radius: 12px;
+	border: 2px var(--main-color) solid;
+	transition: 500ms ease;
+	cursor: pointer	;
+}
+
+#lead-dialog > #footer > div:hover{
+	background-color: transparent;
+	color: var(--main-color);
+}
+
+#lead-dialog > input {
+	background-color: transparent;
+	border: 1px #666 solid;
+	font-family: 'Raleway';
+	font-size: 1em;
+	width: 100%;
+	min-height: 8vh;
+	border-radius: 12px;
+	transition: 500ms ease;
+	text-decoration: none;
+	padding: 0 12px;
+	margin: 12px 0;
+}
+
+#lead-dialog > input:focus,
+#lead-dialog > input:active {
+	border: 2px var(--main-color) solid;
+}
+
+#submit-msg {
+	color: #333;
+	font-size: 1em;
+	font-weight: 300;
+	font-family: 'Raleway';
+}
+
+
+
+  .categories-dropbtn {
+    background-color: var(--main-bg-color);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 30px 1px #999;
+    border-radius: 12px;
+    width:  100%;
+    height:  8vh;
+    justify-content: start;
+    align-items: center;
+    display: flex;
+    transition: 500ms ease;
+    margin-bottom: 8vh;
+  }
+
+
+#gender-search {
+ 
+    width:  100%;
+    height:  7vh;
+    display:  flex;
+    padding:  4px 8px;
+    outline: none;
+    border: none;
+    transition: 500ms ease;
+    font-size: 1.25em;
+    font-weight: 500;
+    font-family: 'Cairo';
+    color:  var(--main-color);
+    background-color: transparent;
+}
+
+.categories-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.categories-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: ivory;
+  min-width: 90%;
+  max-height: 50vh;
+  overflow: auto;
+  border: 1px solid var(--main-color);
+  z-index: 1;
+  box-shadow: 0 0 30px 1px #999;
+  border-radius: 4px;
+  top: 25vh;
+}
+
+
+#category-search {
+    width:  100%;
+    height:  7vh;
+    display:  flex;
+    padding:  4px 8px;
+    outline: none;
+    border: none;
+    transition: 500ms ease;
+    font-size: 1.25em;
+    font-weight: 500;
+    font-family: 'Cairo';
+    color:  var(--main-color);
+    background-color: transparent;
+}
+
+
+
+.categories-dropdown-content button {
+  color: var(--main-color);
+  font-weight: 300;
+  font-size: 1.5em;
+  padding: 12px 16px;
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.categories-dropdown-content button:hover {
+  background-color: var(--main-color-variant);
+}
+
+.show {
+  display: block;
+}

@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("http://fonts.cdnfonts.com/css/agency-fb");
+:root {
+  --accentColor: #0081af;
+  font-family: "Raleway", "Poppins";
+}
+
+@media screen and (min-width: 1000px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 6px;
+    transition: 250ms ease;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #777;
+    border-radius: 12px;
+    transition: 250ms ease;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background: #444;
+    transition: 500ms ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accentColor);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+    outline: none;
+  }
+
+  header {
+    background-color: transparent;
+    padding: 0 5%;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 999;
+    transition: 500ms ease;
+  }
+
+  header > button {
+    display: none;
+  }
+
+  #header_title {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 900;
+    font-family: "Raleway";
+    letter-spacing: 2px;
+  }
+
+  a.active_tab {
+    color: var(--accentColor);
+    font-weight: 500;
+  }
+
+  header nav a {
+    color: #888;
+    font-weight: 100;
+    font-family: "Poppins";
+    font-size: 1em;
+    margin: 0 6px;
+    transition: 500ms ease;
+  }
+
+  header nav {
+    gap: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  header nav a:hover {
+    color: #fff;
+  }
+
+  div.black_color_layer {
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .main-button {
+    background-color: var(--accentColor);
+    display: flex;
+    border: 2px var(--accentColor) solid;
+    border-radius: 12px;
+    padding: 8px 16px;
+    color: #fff;
+    transition: 500ms ease;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .main-button:hover {
+    background-color: transparent;
+    color: var(--accentColor);
+  }
+
+  .shadow-button {
+    color: #fff;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-button-white {
+    background-color: white;
+    display: flex;
+    border: 2px white solid;
+    border-radius: 12px;
+    padding: 8px 16px;
+    color: var(--accentColor);
+    transition: 500ms ease;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: "Raleway";
+  }
+
+  .outline-button {
+    background-color: transparent;
+    display: flex;
+    border: 2px var(--accentColor) solid;
+    border-radius: 12px;
+    padding: 8px 16px;
+    color: var(--accentColor);
+    transition: 500ms ease;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: "Raleway";
+  }
+
+  .column_content {
+    height: 100%;
+    width: 30%;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    display: flex;
+    margin: 0 10%;
+    padding: 10% 0;
+  }
+
+  .column_content > h3 {
+    font-size: 3.5em;
+    font-weight: 500;
+    color: #fff;
+    font-family: "Raleway";
+    letter-spacing: 2px;
+  }
+
+  .column_content > p {
+    font-family: "Poppins";
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 100;
+    text-align: start;
+  }
+
+  .column_content > a {
+    font-family: "Poppins";
+  }
+
+  .vector {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+    display: flex;
+    background-repeat: no-repeat;
+  }
+
+  footer {
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+  }
+
+  .footer_column {
+    width: 25%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 10% 0;
+  }
+
+  #footer_logo {
+    width: 128px;
+    height: 128px;
+    background-image: url("./images/logo-white-128.png");
+    background-size: contain;
+    display: flex;
+  }
+
+  .footer_column > h3 {
+    font-family: "Raleway";
+    color: white;
+    font-weight: 900;
+    font-size: 2.5em;
+    margin: 12px 0;
+    letter-spacing: 4px;
+  }
+
+  .footer_column > p {
+    font-size: 1em;
+    font-weight: 100;
+    font-family: "Poppins";
+    margin: 6px;
+    color: rgba(255, 255, 255, 0.5);
+    padding-right: 12px;
+  }
+
+  a.social_media_icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 12px;
+  }
+
+  a#facebook {
+    background-image: url(./icons/facebook.png);
+  }
+
+  a#linkedin {
+    background-image: url(./icons/linkedin.png);
+  }
+
+  a#instagram {
+    background-image: url(./icons/instagram.png);
+  }
+
+  #tabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer_tab {
+    color: #888;
+    font-weight: 100;
+    font-family: "Poppins";
+    font-size: 1.25em;
+    margin: 12px;
+    transition: 500ms ease;
+  }
+
+  .footer_tab:hover {
+    color: #fff;
+  }
+
+  #drawer {
+    display: none;
+  }
+  #drawer-overlay {
+    display: none;
+  }
+}

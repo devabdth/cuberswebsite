@@ -1,0 +1,438 @@
+@media screen and (max-width: 870px) {
+  section#entry {
+    width: 100%;
+    height: 60vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-image: url(./images/entry.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+
+  section#entry #overlay {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  section#entry h2 {
+    font-size: 2em;
+    font-family: var(--pff);
+    font-weight: 900;
+    color: white;
+    text-align-last: center;
+  }
+
+  section#entry h2 span {
+    font-size: 2em;
+  }
+
+  section#story {
+    width: 100%;
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    gap: 5vh;
+    padding: 32px 5%;
+  }
+
+  section#story #content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 0 5%;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  section#story h3 {
+    color: var(--secondaryColor);
+    font-weight: 700;
+    font-size: 3em;
+    font-family: var(--pff);
+  }
+
+  section#story p {
+    font-weight: 100;
+    font-size: 0.7em;
+    font-family: var(--sff);
+    color: var(--secondaryVarientColor);
+  }
+
+  section#story #social-media-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  section#story #illustration {
+    width: 80%;
+    height: 40vh;
+    background: url(./images/whoWeAre.png);
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: scroll;
+  }
+
+  section#story .social-media-icon {
+    width: 24px;
+    height: 24px;
+    padding: 16px;
+    border-radius: 50%;
+    background-color: var(--secondaryColor);
+    color: var(--bg-color);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    transition: 500ms ease;
+  }
+
+  section#services {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./images/services.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  section#services #overlay {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 8px 32px;
+    background-color: rgba(0, 0, 0, 0.5);
+    gap: 5vh;
+  }
+
+  section#services #content {
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  section#services h2 {
+    color: white;
+    font-weight: 700;
+    font-size: 2em;
+    font-family: var(--pff);
+  }
+
+  section#services h3 {
+    color: var(--primaryColor);
+    font-weight: 500;
+    font-size: 1.5em;
+    font-family: var(--pff);
+  }
+
+  section#services p {
+    color: whitesmoke;
+    font-weight: 300;
+    font-size: 0.65em;
+    font-family: var(--sff);
+  }
+
+  section#fields {
+    width: 100%;
+    min-height: 120vh;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 4vh 8px;
+    gap: 5vh;
+  }
+
+  section#fields h3 {
+    font-weight: 900;
+    font-size: 3em;
+    font-family: var(--pff);
+    color: var(--secondaryColor);
+  }
+
+  section#fields h3 br {
+    display: none;
+  }
+
+  section#fields #cards {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 16px;
+  }
+
+  .field-card {
+    width: 30vh;
+    height: 30vh;
+    border-radius: 12px;
+    transition: 500ms ease;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .field-card #content {
+    position: absolute;
+    transition: 500ms ease;
+    bottom: -100%;
+    opacity: 0;
+    width: 30vh;
+    height: 30vh;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 8px 16px;
+    border-radius: 12px;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px var(--primaryColor) solid;
+    bottom: 0;
+    opacity: 1;
+  }
+
+  .field-card #content h4 {
+    color: var(--primaryColor);
+    font-family: var(--pff);
+    font-weight: 700;
+    font-size: 1em;
+  }
+
+  .field-card #content p {
+    color: whitesmoke;
+    font-family: var(--sff);
+    font-weight: 300;
+    font-size: 0.65em;
+  }
+
+  .field-card #content #actions {
+    width: 100%;
+    height: 100%;
+    align-items: end;
+    justify-content: end;
+    display: flex;
+  }
+
+  .field-card #action {
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
+
+  .field-card i {
+    color: white;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: var(--primaryColor);
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+
+  .field-card#ecommerce {
+    background-image: url(./images/ecommerce.jpg);
+  }
+
+  .field-card#portfolio {
+    background-image: url(./images/portfolio.jpg);
+  }
+
+  .field-card#marketingSystem {
+    background-image: url(./images/marketingSystem.jpg);
+  }
+
+  .field-card#managementSystems {
+    background-image: url(./images/managementSystems.png);
+  }
+
+  .field-card#saasCreation {
+    background-image: url(./images/saasCreation.webp);
+  }
+
+  .field-card#bookingPlatforms {
+    background-image: url(./images/bookingPlatforms.jpg);
+  }
+
+  section#technologies {
+    width: 100%;
+    max-height: 250vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 32px;
+    padding: 5vh 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  section#technologies h3 {
+    font-weight: 900;
+    font-size: 1.75em;
+    text-align: center;
+    font-family: var(--pff);
+    color: var(--secondaryColor);
+    text-align: center;
+  }
+
+  section#technologies p {
+    font-weight: 500;
+    font-size: 1em;
+    text-align: center;
+    font-family: var(--sff);
+    color: var(--secondaryVarientColor);
+  }
+
+  section#technologies h4 {
+    color: var(--primaryColor);
+    font-family: var(--pff);
+    font-weight: 500;
+    font-size: 1.5em;
+  }
+
+  section#technologies #cards {
+    max-width: 100%;
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 8px 16px;
+    margin-bottom: 5vh;
+    gap: 8px;
+    place-items: center;
+  }
+
+  #technologies-sections {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .technologies-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .technology-card {
+    margin: 0 2px;
+    min-width: 64px;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: 500ms ease;
+    flex-direction: column;
+    padding: 8px 16px;
+  }
+
+  .technology-card p {
+    transition: 500ms ease;
+    color: var(--secondaryColor);
+    font-weight: 300;
+    font-family: var(--sff);
+    opacity: 1;
+  }
+
+  .technology-card .icon {
+    justify-self: center;
+    margin: auto;
+    align-self: center;
+    width: 54px;
+    height: 54px;
+    transition: 500ms ease;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+
+  .technology-card#html .icon {
+    background-image: url(./icons/html.png);
+  }
+
+  .technology-card#react .icon {
+    background-image: url(./icons/react.png);
+  }
+
+  .technology-card#css .icon {
+    background-image: url(./icons/css.png);
+  }
+
+  .technology-card#bootstrap .icon {
+    background-image: url(./icons/bootstrap.png);
+  }
+
+  .technology-card#tailwind .icon {
+    background-image: url(./icons/tailwind.png);
+  }
+
+  .technology-card#python .icon {
+    background-image: url(./icons/python.png);
+  }
+
+  .technology-card#dart .icon {
+    background-image: url(./icons/dart.png);
+  }
+
+  .technology-card#js .icon {
+    background-image: url(./icons/js.png);
+  }
+
+  .technology-card#mongodb .icon {
+    background-image: url(./icons/mongodb.png);
+  }
+
+  .technology-card#postgresql .icon {
+    background-image: url(./icons/postgresql.png);
+  }
+
+  .technology-card#flutter .icon {
+    background-image: url(./icons/flutter.png);
+  }
+
+  .technology-card#nodejs .icon {
+    background-image: url(./icons/nodejs.png);
+  }
+}

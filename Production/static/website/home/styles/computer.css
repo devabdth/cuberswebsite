@@ -1,0 +1,301 @@
+@media screen and (min-width: 1024px) {
+  section#entry {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-attachment: fixed;
+  }
+
+  section#entry #overlay {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+    padding: 0 5%;
+  }
+
+  section#entry #content {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  section#entry #content h3 {
+    font-weight: 900;
+    font-family: var(--pff);
+    color: var(--primaryColor);
+    font-size: 8em;
+  }
+
+  section#entry #content h3 span {
+    font-weight: 500;
+    font-family: var(--sff);
+    color: var(--primaryVareintColor);
+    font-size: 0.25em;
+  }
+
+  section#entry #content p {
+    font-weight: 100;
+    font-family: var(--sff);
+    color: white;
+    font-size: 1em;
+  }
+
+  section#entry #content #actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  #see-projects {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #see-projects i {
+    width: 12px;
+    height: 12px;
+    margin: 4px;
+    display: flex;
+    background-image: url(./icons/watch.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @keyframes bouncing {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  section#entry #entry-illustration {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-left: 5%;
+    background-image: url(./images/entryIllus.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-animation-name: bouncing;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-delay: 1;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+  }
+
+  section#counts {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 5% 10%;
+    background-color: var(--bg-color);
+  }
+
+  section#counts h4 {
+    font-weight: 300;
+    font-size: 1em;
+    font-family: var(--pff);
+    color: var(--secondaryColor);
+    text-align: center;
+  }
+
+  section#counts h4 span {
+    font-weight: 900;
+    font-size: 6em;
+    font-family: var(--sff);
+    color: var(--primaryColor);
+  }
+
+  section#hot-articles {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+    flex-direction: row;
+    padding: 16px 5%;
+    background-color: var(--body-bg-color);
+  }
+
+  section#hot-articles h3 {
+    color: var(--secondaryColor);
+    font-size: 3em;
+    font-weight: 700;
+    font-family: var(--pff);
+  }
+
+  section#hot-articles #cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  section#services {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-direction: column;
+    padding: 16px 15%;
+    background-color: var(--body-bg-color);
+  }
+
+  section#services h3 {
+    color: var(--secondaryColor);
+    font-size: 3em;
+    font-weight: 700;
+    font-family: var(--pff);
+  }
+
+  section#services > p {
+    color: var(--secondaryVarientColor);
+    font-size: 1em;
+    font-weight: 300;
+    font-family: var(--sff);
+  }
+
+  section#services #cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .cover#web {
+    background-image: url(./images/web.jpg);
+  }
+
+  .cover#mobile {
+    background-image: url(./images/mobile.jpg);
+  }
+
+  .cover#software {
+    background-image: url(./images/software.jpg);
+  }
+
+  section#free-consultent {
+    width: 100%;
+    min-height: 50vh;
+    max-height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-direction: column;
+    background-image: url(./images/consultentImageBg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  section#free-consultent #overlay {
+    padding: 10vh 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  div#free-consultent-from {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  section#free-consultent h3 {
+    color: white;
+    font-size: 3em;
+    font-weight: 700;
+    font-family: var(--pff);
+  }
+
+  section#free-consultent #overlay > p {
+    color: white;
+    font-size: 1em;
+    font-weight: 300;
+    font-family: var(--sff);
+  }
+
+  div#free-consultent-from > p {
+    color: white;
+    opacity: 0.75;
+    font-size: 0.75em;
+    font-weight: 300;
+    font-family: var(--sff);
+    text-align: start;
+    width: 100%;
+    display: flex;
+  }
+
+  #free-consultent-form-status {
+    width: 100%;
+    display: flex;
+    text-align: center !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section#free-consultent div#free-consultent-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 10%;
+  }
+
+  #free-consultent-form-status {
+    font-weight: 100;
+    font-size: 1em;
+    font-family: var(--sff);
+    color: white;
+  }
+
+  section#free-consultent div#actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" name="description" content="{{cfg.header_desc}}" />
+    <meta charset="utf-8" name="keywords" content="{{cfg.header_keywords}}" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='website/global/styles/computer.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='website/global/styles/tablets.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='website/global/styles/mobile.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='website/about/styles/computer.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='website/about/styles/tablet.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='website/about/styles/mobile.css')}}"
+    />
+    <script src="{{url_for('static', filename='website/global/scripts/main.js')}}"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+    rel="icon"
+    type="image/x-icon"
+    href="{{url_for('static', filename='website/global/styles/icons/logo-accent.ico')}}"
+  />
+<title>
+      {{content.global_[lang]['name']}} - {{content.tabs[lang]['about']}}
+    </title>
+    
+  </head>
+  <body>
+    <style>
+      :root {
+        --pff: "{{primary_font_family}}";
+        --sff: "{{secondary_font_family}}";
+      }
+    </style>
+
+<header id="header">
+  <div id="brand">
+    <div id="open-drawer-header-icon" onclick="openDrawer();"></div>
+    <div id="logo" onclick="window.open('{{cfg.base_url |safe}}', '_self');"></div>
+    <h1 onclick="window.open('{{cfg.base_url |safe}}', '_self');">{{content.global_[lang]['name']}}</h1>
+  </div>
+  <nav id="tabs">
+    <a href="/" class="header-tab"
+      >{{content.tabs[lang]['home']}}</a
+    >
+    <a href="/about/" class="header-tab underline" id="active-tab">{{content.tabs[lang]['about']}}</a>
+    <a href="/projects/" class="header-tab"
+      >{{content.tabs[lang]['projects']}}</a
+    >
+    <a href="/blog/" class="header-tab">{{content.tabs[lang]['blog']}}</a>
+    <a href="/contact/" class="header-tab"
+      >{{content.tabs[lang]['contact']}}</a
+    >
+  </nav>
+  <nav id="actions">
+    <a href="/tracking/" class="main-button" id="track-project"
+      >{{content.actions[lang]['trackYourProject']}}</a
+    >
+    <a href="/contact/" class="shadow-button" id="contactUs"
+      >{{content.actions[lang]['pickQuote']}}</a
+    >
+    <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
+      <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+        <mask class="moon" id="moon-mask">
+          <rect x="0" y="0" width="100%" height="100%" fill="white" />
+          <circle cx="24" cy="10" r="6" fill="black" />
+        </mask>
+        <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+        <g class="sun-beams" stroke="currentColor">
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+         </g>
+      </svg>
+    </button>
+  </nav>
+</header>
+
+    <section id="entry">
+      <div id="overlay">
+        <h2>{{content.global_[lang]['trustBetweenUs'] | safe}}</h2>
+      </div>
+    </section>
+    <section id="story">
+      <div id="content">
+        <h3>{{content.global_[lang]['whoWeAre'] | safe}}</h3>
+        <p>{{content.global_[lang]['ourStory'] | safe}}</p>
+        <div id="social-media-icons">
+          {% if cfg.facebook_link %}
+          <a
+            href="{{cfg.facebook_link}}"
+            class="social-media-icon fa fa-facebook"
+            id="facebook"
+          ></a>
+          {% endif %} {% if cfg.instagram_link %}
+          <a
+            href="{{cfg.instagram_link}}"
+            class="social-media-icon fa fa-instagram"
+            id="instagram"
+          ></a>
+          {% endif %} {% if cfg.linkedin_link %}
+          <a
+            href="{{cfg.linkedin_link}}"
+            class="social-media-icon fa fa-linkedin"
+            id="linkedin"
+          ></a>
+          {% endif %} {% if cfg.twitter_link %}
+          <a
+            href="{{cfg.twitter_link}}"
+            class="social-media-icon fa fa-twitter"
+            id="twitter"
+          ></a>
+          {% endif %}
+        </div>
+      </div>
+      <div id="illustration"></div>
+    </section>
+    <section id="services">
+      <div id="overlay">
+        <h2>{{content.global_[lang]['whatWeProvide'] | safe}}</h2>
+        <div id="content">
+          <h3>{{content.global_[lang]['highReliability']}}<br></h3>
+          <p>{{content.global_[lang]['highReliabilityDesc']}}<br><br></p>
+          <h3>{{content.global_[lang]['highSupportAndService']}}<br></h3>
+          <p>{{content.global_[lang]['highSupportAndServiceDesc']}}<br><br></p>
+          <h3>{{content.global_[lang]['moderatePrices']}}<br></h3>
+          <p>{{content.global_[lang]['moderatePricesDesc']}}<br><br></p>
+          <h3>{{content.global_[lang]['speedImplementation']}}<br></h3>
+          <p>{{content.global_[lang]['speedImplementationDesc']}}<br><br></p>
+        </div>
+      </div>
+    </section>
+    <section id="fields">
+      <h3>{{content.global_[lang]['fieldsWeServe'] | safe}}</h3>
+      <div id="cards">
+        <div class="field-card" id="ecommerce">
+          <div id="content">
+            <h4>{{content.global_[lang]['ecommerce']}}</h4>
+            <p>{{content.global_[lang]['ecommerceDesc'] | safe}}</p>
+          </div>
+        </div>
+        <div class="field-card" id="portfolio">
+          <div id="content">
+            <h4>{{content.global_[lang]['portfolio']}}</h4>
+            <p>{{content.global_[lang]['portfolioDesc'] | safe}}</p>
+          </div>
+        </div>
+        <div class="field-card" id="marketingSystem">
+          <div id="content">
+            <h4>{{content.global_[lang]['marketingSystem']}}</h4>
+            <p>{{content.global_[lang]['marketingSystemDesc'] | safe}}</p>
+          </div>
+        </div>
+        <div class="field-card" id="managementSystems">
+          <div id="content">
+            <h4>{{content.global_[lang]['managementSystems']}}</h4>
+            <p>{{content.global_[lang]['managementSystemsDesc'] | safe}}</p>
+          </div>
+        </div>
+        <div class="field-card" id="saasCreation">
+          <div id="content">
+            <h4>{{content.global_[lang]['saasCreation']}}</h4>
+            <p>{{content.global_[lang]['saasCreationDesc'] | safe}}</p>
+          </div>
+        </div>
+        <div class="field-card" id="bookingPlatforms">
+          <div id="content">
+            <h4>{{content.global_[lang]['bookingPlatforms']}}</h4>
+            <p>{{content.global_[lang]['bookingPlatformsDesc'] | safe}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="technologies">
+      <h3>{{content.global_[lang]['technologiesWeSpecializedIn'] | safe}}</h3>
+      <p>{{content.global_[lang]['technologiesWeSpecializedInDesc'] | safe}}</p>
+      <div id="technologies-sections">
+        <div class="technologies-section">
+          <h4>{{content.global_[lang]['designLanguages']}}</h4>
+          <div id="cards">
+            <div class="technology-card" id="html">
+              <div class="icon"></div>
+              <p>HTML</p>
+            </div>
+            <div class="technology-card" id="css">
+              <div class="icon"></div>
+              <p>CSS</p>
+            </div>
+          </div>
+        </div>
+        <div class="technologies-section">
+          <h4>{{content.global_[lang]['programmingLanguages']}}</h4>
+          <div id="cards">
+            <div class="technology-card" id="python">
+              <div class="icon"></div>
+              <p>Python</p>
+            </div>
+            <div class="technology-card" id="dart">
+              <div class="icon"></div>
+              <p>Dart</p>
+            </div>
+            <div class="technology-card" id="js">
+              <div class="icon"></div>
+              <p>JavaScript</p>
+            </div>
+          </div>
+        </div>
+        <div class="technologies-section">
+          <h4>{{content.global_[lang]['frameworks']}}</h4>
+          <div id="cards">
+            <div class="technology-card" id="flutter">
+              <div class="icon"></div>
+              <p>Flutter</p>
+            </div>
+            <div class="technology-card" id="nodejs">
+              <div class="icon"></div>
+              <p>NodeJS</p>
+            </div>
+            <div class="technology-card" id="bootstrap">
+              <div class="icon"></div>
+              <p>Bootstrap</p>
+            </div>
+            <div class="technology-card" id="tailwind">
+              <div class="icon"></div>
+              <p>Tailwind</p>
+            </div>
+            <div class="technology-card" id="react">
+              <div class="icon"></div>
+              <p>React</p>
+            </div>
+          </div>
+        </div>
+        <div class="technologies-section">
+          <h4>{{content.global_[lang]['databases']}}</h4>
+          <div id="cards">
+            <div class="technology-card" id="mongodb">
+              <div class="icon"></div>
+              <p>Mongodb</p>
+            </div>
+            <div class="technology-card" id="postgresql">
+              <div class="icon"></div>
+              <p>Postgresql</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div id="meta-info">
+        <div id="logo"></div>
+        <h3>{{content.global_[lang]['name']}}</h3>
+        <p>{{content.global_[lang]['entryDesc']}}</p>
+        <div id="social-media-icons">
+          {% if cfg.facebook_link %}
+          <a
+            href="{{cfg.facebook_link}}"
+            class="social-media-icon fa fa-facebook"
+            id="facebook"
+          ></a>
+          {% endif %} {% if cfg.instagram_link %}
+          <a
+            href="{{cfg.instagram_link}}"
+            class="social-media-icon fa fa-instagram"
+            id="instagram"
+          ></a>
+          {% endif %} {% if cfg.linkedin_link %}
+          <a
+            href="{{cfg.linkedin_link}}"
+            class="social-media-icon fa fa-linkedin"
+            id="linkedin"
+          ></a>
+          {% endif %} {% if cfg.twitter_link %}
+          <a
+            href="{{cfg.twitter_link}}"
+            class="social-media-icon fa fa-twitter"
+            id="twitter"
+          ></a>
+          {% endif %}
+        </div>
+      </div>
+      <div id="tabs">
+        <a href="/home/" class="footer-tab">{{content.tabs[lang]['home']}}</a>
+        <a href="/projects/" class="footer-tab"
+          >{{content.tabs[lang]['projects']}}</a
+        >
+        <a href="/contact/" class="footer-tab"
+          >{{content.tabs[lang]['contact']}}</a
+        >
+        <a href="/blog/" class="footer-tab">{{content.tabs[lang]['blog']}}</a>
+      </div>
+    </footer>
+    <div id="copyright">{{cfg.copyright_msg}}</div>
+    <div id="drawer-overlay" onclick="closeDrawer()"></div>
+    <div id="drawer">
+      <div id="header">
+        <h3>{{content.global_[lang]['name']}}</h3>
+        <div onclick="closeDrawer();" id="drawer-header-close">x</div>
+      </div>
+      <div id="tabs">
+        <a href="/home/" class="header-tab">{{content.tabs[lang]['home']}}</a>
+        <a href="/about/" class="header-tab underline" id="active-tab">{{content.tabs[lang]['about']}}</a>
+        <a href="/projects/" class="header-tab">{{content.tabs[lang]['projects']}}</a>
+        <a href="/blog/" class="header-tab">{{content.tabs[lang]['blog']}}</a>
+        <a href="/contact/" class="header-tab">{{content.tabs[lang]['contact']}}</a>
+        <a href="/tracking/" class="header-tab">{{content.actions[lang]['trackYourProject']}}</a>
+      </div>
+      <div id="social-media-icons">
+        {% if cfg.facebook_link %}
+        <a
+          href="{{cfg.facebook_link}}"
+          class="social-media-icon fa fa-facebook"
+          id="facebook"
+        ></a>
+        {% endif %} {% if cfg.instagram_link %}
+        <a
+          href="{{cfg.instagram_link}}"
+          class="social-media-icon fa fa-instagram"
+          id="instagram"
+        ></a>
+        {% endif %} {% if cfg.linkedin_link %}
+        <a
+          href="{{cfg.linkedin_link}}"
+          class="social-media-icon fa fa-linkedin"
+          id="linkedin"
+        ></a>
+        {% endif %} {% if cfg.twitter_link %}
+        <a
+          href="{{cfg.twitter_link}}"
+          class="social-media-icon fa fa-twitter"
+          id="twitter"
+        ></a>
+        {% endif %}
+      </div>
+      <div id="copyright">
+				<div id="logo"></div>
+				<div id="copyright-msg">All rights reserved @ Cubers IO for Software Development</div>
+			</div>
+    </div>
+    <script type="text/javascript">
+      console.log("{{mode|lower}}");
+      document.firstElementChild.setAttribute("data-theme", "{{mode | lower}}");
+    </script>
+  </body>
+</html>

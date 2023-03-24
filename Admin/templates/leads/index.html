@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{{url_for('static', filename='./styles/leads/computer.css')}}"/>
+	<script type="text/javascript" src="{{url_for('static', filename='./scripts/leads/main.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static', filename='./scripts/global/menu.js')}}"></script>
+
+	<title>Cubers - Leads</title>
+</head>
+<body>
+	<div id="dashboard">
+		<div id="menu">
+			<button id="toggle-button" onclick="toggleMenu();">x</button>
+			<div onclick="leads();" class="menu-tab active-tab" id="leads">
+				<div class="menu-tab-icon" id="leads-icon"></div>
+				<p class="menu-tab-title" id="leads-title">Leads</p>
+			</div>
+			<div onclick="mailing();" class="menu-tab" id="mailing">
+				<div class="menu-tab-icon" id="mailing-icon"></div>
+				<p class="menu-tab-title" id="mailing-title">Mailing</p>
+			</div>
+			<div onclick="processes();" class="menu-tab" id="processes">
+				<div class="menu-tab-icon" id="processes-icon"></div>
+				<p class="menu-tab-title" id="processes-title">Processes</p>
+			</div>
+			<div style="height: 70%;"></div>
+			<a href="../logout/" onclick="logout();" class="menu-tab" id="logout">
+				<div class="menu-tab-icon" id="logout-icon"></div>
+				<p class="menu-tab-title" id="logout-title">Logout</p>
+			</a>
+		</div>
+		<div id="fragment">
+			<div id="header">
+				<div id="title">
+					<h3>Leads</h3>
+					<p>This page contains all the leads data of cubers academy. Only the raw data contained in this page without any taken actions.</p>
+				</div>
+				<div id="options">
+					<button id="add-lead" onclick="addLead();">Add</button>
+				</div>
+			</div>
+			<div id="leads-container">
+				
+				<table id="leads">
+				  <tr>
+				    <th id="company">Company</th>
+				    <th>Email</th>
+				    <th>Agent Name</th>
+				    <th>Phone</th>
+				    <th>Position</th>
+				    <th>Category</th>
+				    <th>Address</th>
+				  </tr>
+				  {% for lead in leads %}
+				  <tr>
+				    <td id="company">{{lead["name"]}}</td>
+				    <td>{{lead["email"]}}</td>
+				    <td>{{lead["agentName"]}}</td>
+				    <td>{{lead["phone"]}}</td>
+				    <td>{{lead["position"]}}</td>
+				    <td>{{categories[lead['category']]}}</td>
+				    <td>{{lead["address"]}}</td>
+				  {% endfor %}
+				  </tr>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<div id="lead-dialog-overlay" onclick="closeLeadsDialog();"></div>
+	<div id="lead-dialog">
+		<div id="header">
+			<p>Add</p>
+			<div onclick="closeLeadsDialog();">x</div>
+		</div>
+		<input type="name" name="name" id="name" placeholder="Name">
+		<input type="phone" name="phone" id="phone" placeholder="Phone">
+		<input type="email" name="email" id="email" placeholder="Email">
+		<input type="name" name="agentName" id="agentName" placeholder="Agent Name">
+		<input type="name" name="position" id="position" placeholder="Position">
+		<input type="address" name="address" id="address" placeholder="Address">
+		<button onclick="toggleCategoriesDropdown()" id="categories-dropbtn" class="categories-dropbtn">Pick company category...</button>
+      	<div id="categories-dropdown" class="categories-dropdown-content">
+        	<input type="text" placeholder="Search..." id="category-search" onkeyup="filter()">
+        	{% for category in categories %}
+           		<button style="font-family: 'Cairo';" onclick="chooseCategory('{{category}}');">{{category}}</button>
+        	{% endfor %}
+	    </div>
+
+		<div id="footer">
+			<p id="submit-msg"></p>
+			<div onclick="sumbitLead();">Submit</div>
+		</div>
+	</div>
+</body>
+</html>
