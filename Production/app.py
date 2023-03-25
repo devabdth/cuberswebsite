@@ -20,8 +20,9 @@ init.setup_app()
 init.setup_routers()
 
 # App Running without Gunicorn
-app.run(
-    port= cfg.port,
-    host= cfg.host,
-    debug= cfg.mode == "DEBUG"
-)
+if __name__ == '__main__':
+    app.run(
+        port= cfg.port,
+        host= cfg.host,
+        debug= cfg.mode == "DEBUG"
+    )
