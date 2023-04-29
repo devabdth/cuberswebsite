@@ -52,7 +52,7 @@
 		width: 100%;
 		max-height: 500vh;
 		display: flex;
-		align-items: center;
+		align-items: start;
 		justify-content: center;
 		flex-direction: column;
 		gap: 16px;
@@ -98,5 +98,11 @@
 		font-size: 2em;
 		color: var(--secondaryColor);
 		text-align: justify;
+	}
+
+	.article-part-container p span.underline {
+		font-weight: 300;
+		color: var(--primaryColor);
+		font-size: 1em;
 	}
 }

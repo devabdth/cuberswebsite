@@ -1,6 +1,6 @@
 {
-  "0": {
-    "id": "0",
+  "644cd087c348752bb5b8176b": {
+    "id": "644cd087c348752bb5b8176b",
     "title": "What's new in our website?",
     "shortBrief": "As we've recently published our new website, Here's what's new in it and what you can do at it now!",
     "category": 0,
@@ -40,8 +40,8 @@
     ],
     "overallRating": 0,
     "reviews": []
-  },"1": {
-    "id": "1",
+  },"644cd14af6d994bf0aa9daa2": {
+    "id": "644cd14af6d994bf0aa9daa2",
     "title": "All of the terms are updated!",
     "shortBrief": "We've placed a major update in our terms to keep it up-to-date with your needs!",
     "category": 0,
@@ -57,8 +57,8 @@
     ],
     "overallRating": 0,
     "reviews": []
-  },"2": {
-    "id": "2",
+  },"644cd0971effd8c27876697b": {
+    "id": "644cd0971effd8c27876697b",
     "title": "New Social Media Strategy!",
     "shortBrief": "We've placed a major update in our terms to keep it up-to-date with your needs!",
     "category": 0,
@@ -100,6 +100,55 @@
         "attachedUrl": "",
         "attachedAsset": "37.jpg",
         "desc": ""
+      }
+    ],
+    "overallRating": 0,
+    "reviews": []
+  },"644ccd445b36f3ee9a185c28": {
+    "id": "644ccd445b36f3ee9a185c28",
+    "title": "Sales Representatives!",
+    "shortBrief": "We -Cubers I.O.- are creating a sales team and searching for sales representatives.",
+    "category": 0,
+    "attachedUrl": "",
+    "cover": "",
+    "parts": [
+      {
+        "title": "",
+        "attachedUrl": "",
+        "attachedAsset": null,
+        "desc": "We -Cubers I.O.- are creating a sales team and searching for sales representatives."
+      },
+      {
+        "title": "Admission Test",
+        "attachedUrl": "",
+        "attachedAsset": null,
+        "desc": "We ask you for two weeks maximum to get a deal with at least 5,000 EGP to join our team <span class='underline'>(If you succeed in that, you will get a 15% commission on that deal)</span>"
+      },
+      {
+        "title": "Duties",
+        "attachedUrl": "",
+        "attachedAsset": null,
+        "desc": " - Creating a Contact list with prospects.<br>&nbsp; - Achieving at least the <span class='underline'>minimum target</span>.<br>&nbsp; - Contacting prospects, handling meetings, and finalizing deals.<br>&nbsp; - Deliver <span class='underline'>Daily, Weekly, and monthly</span> reports.<br>&nbsp; - <span class='underline'>No Office presence</span> is required.<br>&nbsp; - A <span class='underline'>weekly meeting</span> is a must."
+      },
+      {
+
+        "title": "Requirements",
+        "attachedUrl": "",
+        "attachedAsset": null,
+        "desc": " - Aware of <span class='underline'>Social Media Services</span> sales.<br>&nbsp - Aware of <span class='underline'>Software Services</span> sales.<br>&nbsp - Have good <span class='underline'>negotiation skills</span>.<br>&nbsp - Have a good English mouth.<br>&nbsp - At least <span class='underline'>one</span> year of Experience."
+      },
+      {
+
+        "title": "Salaries",
+        "attachedUrl": "",
+        "attachedAsset": null,
+        "desc": " (2,500 EGP) to (8,000 + Commission) <span class='underline'>Based on Target Achieving</span>."
+      },
+      {
+        "title": "KPIs",
+        "attachedUrl": "",
+        "attachedAsset": null,
+        "desc": " -3 Days in Ain Shukna Free of charge every there month <span class='underline'>(In case you get sales of at least 200K EGP)</span>.<br>&nbsp -A free car every year <span class='underline'>(In case you get projects of at least 2M EGP)</span>"
       }
     ],
     "overallRating": 0,
