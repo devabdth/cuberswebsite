@@ -30,7 +30,7 @@ class ProjectsRouter:
 			mode: str= "light" if session.get("MODE", "dark") == "dart" else "light"
 			lang= session.get("LANG", "en")
 			return render_template(
-				"website/ProjectsWebsites.html",
+				"website/projectsWebsites.html",
 				cfg= self.cfg,
 				projects=  list(self.db.websites_projects.values()),
 				content= self.content,
@@ -49,7 +49,7 @@ class ProjectsRouter:
 			mode: str= "light" if session.get("MODE", "dark") == "dart" else "light"
 			lang= session.get("LANG", "en")
 			return render_template(
-				"website/ProjectsApplications.html",
+				"website/projectsApplications.html",
 				cfg= self.cfg,
 				projects= list(self.db.applications_projects.values()),
 				content= self.content,
@@ -68,7 +68,7 @@ class ProjectsRouter:
 			mode: str= "light" if session.get("MODE", "dark") == "dart" else "light"
 			lang= session.get("LANG", "en")
 			return render_template(
-				"website/ProjectsSystems.html",
+				"website/projectsSystems.html",
 				cfg= self.cfg,
 				projects= list(self.db.systems_projects.values()),
 				content= self.content,
