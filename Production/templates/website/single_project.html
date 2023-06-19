@@ -132,13 +132,13 @@
 
     {% for content_snippet in project['content'] %}
     <section id="content">
+      <h4 style="margin-bottom: 2vw">{{content_snippet['title'] | safe}}</h4>
       {% if content_snippet['cover'] != None %}
       <div
         class="content-snippet-cover"
         style="background-image: url({{url}}/images/assets/{{content_snippet['cover']}});"
       ></div>
       {% endif %} {% if content_snippet['title'] != None %}
-      <h4>{{content_snippet['title'] | safe}}</h4>
       {% endif %}
       <p>
         <span style="font-size: 2em; font-weight: 900"

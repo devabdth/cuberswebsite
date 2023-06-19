@@ -92,6 +92,55 @@
 				}
 				
 			]
+		},
+		"cub-web-3": {
+			"title": "FOREXology",
+			"type": "Website",
+			"short_brief": "As an online magazine, You need more than a fancy UI or a strong-structured articles' base. We think you need an every-step-tracker and every-step-analyzer to figure out how to increase your performace by serving the fans of yours!",
+			"id": "cub-web-3",
+			"action": "$url/project/$id",
+			"content": [
+				{
+					"cover": "40.png",
+					"title": "Gamechanger",
+					"paragraph": "We wanted to take FOREXology to the next level! So, We aimed to make it a game-changer online news platform. We developed FOREXology to break all the stereotypes of news websites by making it as simple as possible, in addition to having a unique UI Pattern. We implemented that by applying the principles of minimalism by grouping elements that related in combined sections using fragments."
+				},
+				{
+					"cover": "41.png",
+					"title": "Monetization",
+					"paragraph": "We know that businesses like FOREXology have a business model of monetization and ads. So, We have made it with unlimited ad spaces! As we noticed that the platform has respectful production. So, We made the ad spaces based on the articles count, writers count, jobs count, and categories count."
+				},
+				{
+					"cover": "42.png",
+					"title": "Multiple Display",
+					"paragraph": "We want to serve all the users' tests. So, We have made the website's display dynamic as :\n            1- The user can toggle between his preferred languages.\n            2- The user can toggle between Light and Dark Modes\n            3- We made a based-on-interests feed display for each user that is logged in or joined the website by creating an account."
+				},
+				{
+					"cover": "47.png",
+					"title": "Context Display",
+					"paragraph": "We created the website to have multiple contexts for each section as the admins can create a category or classification and implement media pieces that shall create a context (vibe) for the interested users."
+				},
+				{
+					"cover": "43.png",
+					"title": "A.I. Implementation",
+					"paragraph": "We believe in the power of Artificial intelligence. So We have implemented it in nearly every single section of the website.\n        The clearest section to mention is the search and trending section. We've created a strong-based search A.I. Model as the user can get his desired result just by the sequence of 3 characters even if those characters aren't connected in any article."
+				},
+				{
+					"cover": "44.png",
+					"title": "Showcasing",
+					"paragraph": "We've designed the website to be a Showcase for every piece of content in it. We wanted FOREXology's website to be a portfolio for its clients and fans. A part of that showcasing was to create each writer's profile as a portfolio for him. Each writer mustn't create a portfolio for the writing skill of his own anymore. All he can do now is just join FOREXology!"
+				},
+				{
+					"cover": "45.png",
+					"title": "Simplicity",
+					"paragraph": "When we were designing the website we aimed to make it as simple as possible by providing all the features that can make the user journey simple. We cared about the user and the user's experience so we provided him multi-features in each section which may make him have the best reading experience ever!"
+				},
+				{
+					"cover": "46.png",
+					"title": "ALL-IN-ONE",
+					"paragraph": "We developed the FOREXology website to be all-in-one. The board of FOREXology can now, publish articles, and have its social media platform the connection between users and writers, course booking, chat rooms, consulting tickets reservation, job announcements, and job applications."
+				}
+			]
 		}
 	},
 	"applications": {
